@@ -1,5 +1,38 @@
 # Sharpa 番茄采摘数据接入 T-Rex
 
+## 可选：单 GPU LoRA 后训练
+
+在运行 `install_adapter.py` 后，再运行 `install_lora.py`。LoRA 补丁保留原有全参数训练入口；只有传入 `--lora_rank > 0` 才启用。它冻结原模型，向 MoT 的 action/tactile 注意力与 MLP，以及动作、触觉和 FLARE 投影中的线性层加入 LoRA；视觉编码器、形变编码器和嵌入式 VQ-VAE 保持冻结。当前是纯 LoRA 基线，未声称优于全参数训练。
+
+本机 RTX 5090 环境使用 Python 3.10、Torch 2.7.1+cu128、Torchvision 0.22.1+cu128；其他依赖见 `requirements-5090.txt`。请先安装适合本机 GPU 的 Torch，再运行 `python -m pip install -r requirements-5090.txt`，不要对官方 `pyproject.toml` 执行会把 Torch 降为 2.6/cu124 的依赖安装。已验证 `scripts/train.py --help`、真实 Qwen 处理器与 Sharpa 批数据整理，以及 LoRA 的保存/合并小模型测试。
+
+```bash
+python install_adapter.py --repo /path/to/T-Rex
+python install_lora.py --repo /path/to/T-Rex
+python test_sharpa_lora.py
+python validate_prepared.py --upstream /path/to/T-Rex \
+  --prepared /path/to/prepared_sharpa \
+  --processor-path /path/to/Qwen3-VL-2B-Instruct \
+  --output /path/to/processor_batch_validation.json
+```
+
+单卡入口为 `train_sharpa_lora.sh`，用普通 Python 启动，不使用官方 DeepSpeed ZeRO-2 配置。训练前设置 `TREX_ROOT`、`PREPARED_ROOT`、`ORIGIN_MODEL_PATH`、`RESUME_CHECKPOINT`、`OUTPUT_DIR`；可设置 `PYTHON`、`TRAIN_BSZ`、`GRAD_ACCUM`、`LORA_RANK`、`LORA_ALPHA`、`LORA_DROPOUT`。建议首先保留所有模态和损失，用 `TRAIN_BSZ=1`、`GRAD_ACCUM=1` 执行 20 batch 短跑：
+
+```bash
+bash train_sharpa_lora.sh --max_train_batches 20 --n_epochs 1 \
+  --save_freq 1 --val_freq 10 --max_val_batches 2
+```
+
+LoRA checkpoint 保存 `lora.pt`、`lora_config.json`、processor、统计与机器人动作元数据，不保存 8.5 GB 的完整模型。部署前使用 `merge_lora.py` 与**同一 midtrain** 的 `model.pt` 合并，输出官方 `scripts/test.py` 可加载的标准完整 checkpoint：
+
+```bash
+python merge_lora.py --base-checkpoint /path/to/trex_midtrain \
+  --adapter-checkpoint /path/to/lora-run/checkpoint-0-20 \
+  --output /path/to/merged_checkpoint
+```
+
+本地 RTX 5090 属于 sm_120，官方锁定的 Torch 2.6/cu124 不适用；应使用支持 sm_120 的 CUDA 12.8 构建，且单独验证 `transformers`、`accelerate` 与 T-Rex 自定义模块兼容。下载权重并完成真实前向/反向之前，以上只属于代码和 CPU 接口验证。
+
 结论：现有数据具备三路 RGB、双臂/双手状态与目标、十指力/力矩和十指形变图，可以作为 T-Rex post-training 的输入。它不能直接交给官方 LeRobot v3 loader：版本、字段和动作表示均不同。本适配器直接读取原来的 v2.1 Parquet/MP4，复用官方 `TRexLeRobotDataset.collate_fn`，不复制 RGB，不转存十路触觉视频。
 
 **已从提供的数采工程找到 FR3 名义运动学模型并补齐配置。** `robot/dual_fr3_kinematics.urdf` 直接来自工程的 Pico 资源目录。数据适配采用每臂 `fr3v2_link0 → fr3v2_link8`，即法兰参考帧；关节别名映射由采集工程 `teleop_core.contract` 确认。机械臂界面以 link8 为工具参考，Pico IK 则使用 link7，本适配明确采用前者。GELLO 采集的是关节命令，因此这里是新策略的笛卡尔动作约定，不声称原始 bag 已记录了法兰目标位姿。独立 FK、坐标还原和真实关节数据检查通过；这不是与实机笛卡尔测量对比的几何标定。证据见 `机器人模型与末端说明.md`、`collection_reference.json` 和 `fr3_validation.json`。

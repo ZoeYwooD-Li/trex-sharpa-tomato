@@ -58,6 +58,8 @@ python3 trex_sharpa_adapter/relocate_prepared.py \
   --prepared /workspace/trex_job/prepared_sharpa --data-root /data/sharpa
 ```
 
+若使用单卡 LoRA，还需执行 `python3 trex_sharpa_adapter/install_lora.py --repo /workspace/trex_job/T-Rex`，再按 [LoRA 步骤](trex_sharpa_adapter/README.md#可选单-gpu-lora-后训练)运行 `train_sharpa_lora.sh`。LoRA checkpoint 只保存适配参数；部署时用 `merge_lora.py` 与同一 midtrain 权重合并。
+
 适配器目录可以保留在本仓库；运行 `train_sharpa.sh` 时设置 `TREX_ROOT`、`PREPARED_ROOT`、`ORIGIN_MODEL_PATH`、`RESUME_CHECKPOINT`、`OUTPUT_DIR`、`NUM_PROCESSES`、`ACCELERATE_CONFIG`、`TRAIN_BSZ`。基础模型是 `Qwen/Qwen3-VL-2B-Instruct`；midtrain 权重是 `miniFranka/T-Rex_midtrain_mecka23k_ucb100_vqvae_epoch6`，交接时核对的 revision 为 `62efb3bcb45a3df0e088c8909d759b582cfb98af`。保持 `--resume_source midtrain`。完整验证与 20 batch 短跑步骤见适配器的 `README.md` 和 `train_sharpa.sh`。
 
 训练环境须按服务器 GPU 选择。官方固定的 Torch 2.6.0/cu124 不支持本地 RTX 5090（sm_120）；若服务器也是 5090，需要先解决 PyTorch/CUDA 与 DeepSpeed 兼容性，不能直接照抄官方安装命令。
