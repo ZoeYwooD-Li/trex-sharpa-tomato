@@ -8,7 +8,7 @@ from pathlib import Path
 import torch
 from torch import nn
 
-from sharpa_lora import inject_lora, lora_state_dict, merge_lora_weights, save_lora
+from sharpa_lora import LoRALinear, inject_lora, lora_state_dict, merge_lora_weights, save_lora
 
 
 class Tiny(nn.Module):
@@ -65,7 +65,15 @@ def test():
         restored = Tiny()
         restored.load_state_dict(merged)
         restored.eval()
-        assert torch.allclose(model(x), restored(x), atol=1e-5)
+    assert torch.allclose(model(x), restored(x), atol=1e-5)
+    # The real trainer uses bf16 activations with fp32 task heads outside
+    # Accelerator autocast during the cached action rollout.
+    mixed = LoRALinear(nn.Linear(4, 4), rank=2, alpha=4, dropout=0.0)
+    mixed_x = torch.randn(3, 4, dtype=torch.bfloat16)
+    mixed_y = mixed(mixed_x)
+    assert mixed_y.dtype == torch.bfloat16
+    mixed_y.float().square().mean().backward()
+    assert mixed.lora_b.grad is not None
     print("LoRA freeze/update/save/merge: passed")
 
 

@@ -6,9 +6,14 @@ import shutil
 from pathlib import Path
 
 
-def replace_once(source: str, old: str, new: str, label: str) -> str:
+def replace_once(source: str, old: str, new: str, label: str,
+                 previous: str | None = None) -> str:
     if new in source:
         return source
+    if previous is not None and previous in source:
+        if source.count(previous) != 1:
+            raise RuntimeError(f"Unexpected prior {label}; inspect before patching")
+        return source.replace(previous, new, 1)
     if source.count(old) != 1:
         raise RuntimeError(f"Unexpected upstream {label}; inspect before patching")
     return source.replace(old, new, 1)
@@ -17,6 +22,8 @@ def replace_once(source: str, old: str, new: str, label: str) -> str:
 def install(repo: Path) -> None:
     repo = repo.resolve()
     trainer = repo / "scripts" / "train.py"
+    modeling = repo / "qwen_vla" / "modeling_vla.py"
+    mot = repo / "qwen_vla" / "modeling_qwen3vl_mot.py"
     source = trainer.read_text(encoding="utf-8")
     if 'choices=["json", "lerobot", "sharpa"]' not in source:
         raise RuntimeError("Install the v3 Sharpa adapter before LoRA")
@@ -65,6 +72,24 @@ def install(repo: Path) -> None:
         '            args.train_bsz_per_gpu * accelerator.num_processes * accelerator.gradient_accumulation_steps)',
         "optional DeepSpeed")
     source = replace_once(source,
+        'def train(args):\n'
+        '    accelerator = Accelerator(',
+        'def train(args):\n'
+        '    if args.lora_rank > 0 and args.lora_sdpa_math:\n'
+        '        # On RTX 5090 with torch 2.7/cu128, the fused SDPA backward\n'
+        '        # produced non-finite expert gradients in this training path.\n'
+        '        torch.backends.cuda.enable_flash_sdp(False)\n'
+        '        torch.backends.cuda.enable_mem_efficient_sdp(False)\n'
+        '        torch.backends.cuda.enable_math_sdp(True)\n'
+        '    accelerator = Accelerator(',
+        "math SDPA for LoRA",
+        previous='def train(args):\n'
+                 '    if args.lora_rank > 0:\n'
+                 '        torch.backends.cuda.enable_flash_sdp(False)\n'
+                 '        torch.backends.cuda.enable_mem_efficient_sdp(False)\n'
+                 '        torch.backends.cuda.enable_math_sdp(True)\n'
+                 '    accelerator = Accelerator(')
+    source = replace_once(source,
         '        // dist.get_world_size()',
         '        // accelerator.num_processes',
         "single-GPU step count")
@@ -88,12 +113,67 @@ def install(repo: Path) -> None:
         '    parser.add_argument("--lora_rank", type=int, default=0, help="0: full fine-tuning; >0: train only LoRA matrices")\n'
         '    parser.add_argument("--lora_alpha", type=float, default=16.0)\n'
         '    parser.add_argument("--lora_dropout", type=float, default=0.05)\n'
-        '    parser.add_argument("--lora_gradient_checkpointing", type=int, default=1)',
-        "LoRA command-line options")
+        '    parser.add_argument("--lora_gradient_checkpointing", type=int, default=1)\n'
+        '    parser.add_argument("--lora_sdpa_math", type=int, default=1)',
+        "LoRA command-line options",
+        previous='    parser.add_argument("--max_train_batches", type=int, default=0, help="Stop after this many training batches; 0 disables the short-run limit")\n'
+                 '    parser.add_argument("--lora_rank", type=int, default=0, help="0: full fine-tuning; >0: train only LoRA matrices")\n'
+                 '    parser.add_argument("--lora_alpha", type=float, default=16.0)\n'
+                 '    parser.add_argument("--lora_dropout", type=float, default=0.05)\n'
+                 '    parser.add_argument("--lora_gradient_checkpointing", type=int, default=1)')
+    source = replace_once(source,
+        '                if args.max_grad_norm > 0:\n'
+        '                    accelerator.clip_grad_norm_(model.parameters(), args.max_grad_norm)',
+        '                if args.lora_rank > 0:\n'
+        '                    bad_grads = []\n'
+        '                    for grad_name, grad_param in model.named_parameters():\n'
+        '                        if grad_param.grad is not None and not torch.isfinite(grad_param.grad).all():\n'
+        '                            bad_grads.append(grad_name)\n'
+        '                    if bad_grads:\n'
+        '                        raise FloatingPointError(\n'
+        '                            f"Non-finite LoRA gradients before clipping: "\n'
+        '                            f"{len(bad_grads)} tensors; first={bad_grads[:12]}")\n'
+        '                if args.max_grad_norm > 0:\n'
+        '                    accelerator.clip_grad_norm_(model.parameters(), args.max_grad_norm)',
+        "non-finite LoRA gradient guard",
+        previous='                if args.lora_rank > 0:\n'
+                 '                    for grad_name, grad_param in model.named_parameters():\n'
+                 '                        if grad_param.grad is not None and not torch.isfinite(grad_param.grad).all():\n'
+                 '                            raise FloatingPointError(f"Non-finite LoRA gradient before clipping: {grad_name}")\n'
+                 '                if args.max_grad_norm > 0:\n'
+                 '                    accelerator.clip_grad_norm_(model.parameters(), args.max_grad_norm)')
+
+    model_source = modeling.read_text(encoding="utf-8")
+    model_source = replace_once(model_source,
+        '            flat = tactile_deform.view(-1, C, Hd, Wd).to(dtype)\n'
+        '            feats = self.deform_encoder(flat).view(Bd, nf, -1)',
+        '            # The frozen deform encoder can remain fp32 while the tactile\n'
+        '            # tokens use bf16, including outside Accelerator autocast.\n'
+        '            flat = tactile_deform.view(-1, C, Hd, Wd).to(\n'
+        '                next(self.deform_encoder.parameters()).dtype)\n'
+        '            feats = self.deform_encoder(flat).view(Bd, nf, -1)',
+        "deform encoder input dtype")
+    mot_source = mot.read_text(encoding="utf-8")
+    mot_source = replace_once(mot_source,
+        '            if self.gradient_checkpointing and self.training:\n'
+        '                layer_out = torch.utils.checkpoint.checkpoint(',
+        '            # A cached tactile forward mutates the KV cache; replaying it\n'
+        '            # during checkpoint backward would append keys twice.\n'
+        '            if self.gradient_checkpointing and self.training and not use_cache:\n'
+        '                layer_out = torch.utils.checkpoint.checkpoint(',
+        "KV-safe gradient checkpointing")
 
     shutil.copy2(Path(__file__).with_name("sharpa_lora.py"), repo / "qwen_vla" / "sharpa_lora.py")
+    model_backup = modeling.with_suffix(".py.pre_sharpa_lora")
+    if not model_backup.exists():
+        shutil.copy2(modeling, model_backup)
+    mot_backup = mot.with_suffix(".py.pre_sharpa_lora")
+    if not mot_backup.exists():
+        shutil.copy2(mot, mot_backup)
     trainer.write_text(source, encoding="utf-8")
-    print("Installed optional LoRA and single-GPU path; backup:", backup)
+    modeling.write_text(model_source, encoding="utf-8")
+    mot.write_text(mot_source, encoding="utf-8")
+    print("Installed optional LoRA and single-GPU path; backups:", backup, model_backup, mot_backup)
 
 
 if __name__ == "__main__":

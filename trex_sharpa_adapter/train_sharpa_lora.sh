@@ -23,6 +23,7 @@ cd "$TREX_ROOT"
   --flare_frame_stride 4 --flare_layer_index -1 --image_size 384 288 \
   --lora_rank "${LORA_RANK:-8}" --lora_alpha "${LORA_ALPHA:-16}" \
   --lora_dropout "${LORA_DROPOUT:-0.05}" --lora_gradient_checkpointing 1 \
+  --lora_sdpa_math "${LORA_SDPA_MATH:-1}" \
   --n_epochs "${N_EPOCHS:-1}" --max_train_batches "${MAX_TRAIN_BATCHES:-20}" \
   --save_freq "${SAVE_FREQ:-1}" --learning_rate "${LEARNING_RATE:-1e-4}" \
   --min_lr_ratio 0 --weight_decay 0 \

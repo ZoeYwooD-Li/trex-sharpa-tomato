@@ -4,7 +4,7 @@
 
 在运行 `install_adapter.py` 后，再运行 `install_lora.py`。LoRA 补丁保留原有全参数训练入口；只有传入 `--lora_rank > 0` 才启用。它冻结原模型，向 MoT 的 action/tactile 注意力与 MLP，以及动作、触觉和 FLARE 投影中的线性层加入 LoRA；视觉编码器、形变编码器和嵌入式 VQ-VAE 保持冻结。当前是纯 LoRA 基线，未声称优于全参数训练。
 
-本机 RTX 5090 环境使用 Python 3.10、Torch 2.7.1+cu128、Torchvision 0.22.1+cu128；其他依赖见 `requirements-5090.txt`。请先安装适合本机 GPU 的 Torch，再运行 `python -m pip install -r requirements-5090.txt`，不要对官方 `pyproject.toml` 执行会把 Torch 降为 2.6/cu124 的依赖安装。已验证 `scripts/train.py --help`、真实 Qwen 处理器与 Sharpa 批数据整理，以及 LoRA 的保存/合并小模型测试。
+本机 RTX 5090 环境使用 Python 3.10、Torch 2.7.1+cu128、Torchvision 0.22.1+cu128；其他依赖见 `requirements-5090.txt`。请先安装适合本机 GPU 的 Torch，再运行 `python -m pip install -r requirements-5090.txt`，不要对官方 `pyproject.toml` 执行会把 Torch 降为 2.6/cu124 的依赖安装。本机测试中，默认快速 SDPA 反向产生非有限梯度，因此 LoRA 入口默认使用 math SDPA；其他 GPU 可在验证后设置 `LORA_SDPA_MATH=0`。已验证 `scripts/train.py --help`、真实 Qwen 处理器与 Sharpa 批数据整理，以及 LoRA 的保存/合并小模型测试。
 
 ```bash
 python install_adapter.py --repo /path/to/T-Rex
@@ -30,7 +30,7 @@ python merge_lora.py --base-checkpoint /path/to/trex_midtrain \
   --output /path/to/merged_checkpoint
 ```
 
-本地 RTX 5090 属于 sm_120，官方锁定的 Torch 2.6/cu124 不适用；应使用支持 sm_120 的 CUDA 12.8 构建，且单独验证 `transformers`、`accelerate` 与 T-Rex 自定义模块兼容。下载权重并完成真实前向/反向之前，以上只属于代码和 CPU 接口验证。
+本地 RTX 5090 属于 sm_120，官方锁定的 Torch 2.6/cu124 不适用；本次已用 Torch 2.7.1+cu128、`transformers` 4.57.3 和 `accelerate` 1.8.1 完成真实 midtrain 权重加载、20 batch 前向/反向、两次验证和 LoRA checkpoint 合并。midtrain 加载、合并后官方 `scripts/test.py` 加载均为 `missing=0, unexpected=0`，20 步损失及梯度均保持有限。详细结果见 `lora_smoke_5090.json`。这只验证软件链路和本机短跑，不代表模型已学会番茄采摘；LoRA checkpoint 仅含参数，不含优化器状态，不能原样续训。
 
 结论：现有数据具备三路 RGB、双臂/双手状态与目标、十指力/力矩和十指形变图，可以作为 T-Rex post-training 的输入。它不能直接交给官方 LeRobot v3 loader：版本、字段和动作表示均不同。本适配器直接读取原来的 v2.1 Parquet/MP4，复用官方 `TRexLeRobotDataset.collate_fn`，不复制 RGB，不转存十路触觉视频。
 
@@ -119,7 +119,7 @@ python /path/to/trex_sharpa_adapter/relocate_prepared.py \
 
 训练使用官方发布的 [midtrain checkpoint](https://huggingface.co/miniFranka/T-Rex_midtrain_mecka23k_ucb100_vqvae_epoch6)，设置 `--resume_source midtrain`，以保留触觉专家。不要改成 pretrain，否则官方代码会重新初始化触觉专家。设置 `--action_dim 62 --action_chunk 16 --use_robot_state 0`；完整命令见 `train_sharpa.sh`。已嵌入 VQ-VAE 的 checkpoint 由官方脚本读取 `training_args.json` 自动配置，不需要离线烘焙 tactile codes。checkpoint 的 `action_dim/action_chunk` 必须匹配，不能依赖官方的 shape mismatch 跳过逻辑。
 
-`train_sharpa.sh` 需要填写 `TREX_ROOT/PREPARED_ROOT/ORIGIN_MODEL_PATH/RESUME_CHECKPOINT/DEFORM_ENCODER_PATH/OUTPUT_DIR/NUM_PROCESSES/ACCELERATE_CONFIG/TRAIN_BSZ`；这些路径与进程数保留给训练端配置。可以追加参数覆盖实验设置。本次没有评估服务器硬件或启动训练。
+`train_sharpa.sh` 需要填写 `TREX_ROOT/PREPARED_ROOT/ORIGIN_MODEL_PATH/RESUME_CHECKPOINT/DEFORM_ENCODER_PATH/OUTPUT_DIR/NUM_PROCESSES/ACCELERATE_CONFIG/TRAIN_BSZ`；这些路径与进程数保留给训练端配置。可以追加参数覆盖实验设置。服务器硬件尚未评估；本地 RTX 5090 的单卡 LoRA 短跑结果见上文。
 
 ## 验证范围
 
@@ -127,7 +127,7 @@ python /path/to/trex_sharpa_adapter/relocate_prepared.py \
 - 剪切边界填充、固定嵌套 Arrow 数组、URDF 变换顺序测试通过。
 - 合成小数据的完整 prepare 流程通过，验证了按原始轨迹分组、只用训练集算统计，以及动作分位数形状。
 - 四个真实子集均抽取首条轨迹，读取首尾 RGB、十指形变和六轴力，运行了官方 collate。报告分别见 `validation*.json` / `validation_*/validation.json`。
-- collate 测试用小型 processor 替身隔离 VLM 依赖；没有运行真实 Qwen processor、模型前向/反向或 CKPT 加载。
+- 原始数据适配测试用小型 processor 替身隔离 VLM 依赖；之后新增了真实 Qwen processor 的 `processor_batch_validation_5090.json` 和完整模型 20 batch 的 `lora_smoke_5090.json`。
 - 实际 FR3 URDF 已从工程中补齐；新增 `validate_fr3_model.py` 在四个子集的真实关节数据上核对了转换与还原，并与独立 SciPy FK 对比。没有采集侧同步笛卡尔位姿，不能把模型计算一致性解释为实机绝对位姿精度验证。
 - 已检查全部 251 份准备后的数值缓存：维度及有限性通过，训练/验证采集 ID 无交叉。`prepared_batch_validation.json` 记录了使用工程 FR3 模型缓存的官方 collate 检查；`checkpoint_metadata_validation.json` 验证了独立的 checkpoint 元数据保存钩子。
 - 原数据已有的 `conversion/verification.json` 均显示通过，但其中 `lossless_sensor_rows_compared=0`、`independent_alignment=false`。本次没有把该记录当作逐像素与原始 ROS bag 独立核验的证据。

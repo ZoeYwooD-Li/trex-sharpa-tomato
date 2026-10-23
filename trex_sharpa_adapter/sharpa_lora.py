@@ -46,9 +46,12 @@ class LoRALinear(nn.Module):
             p.requires_grad_(False)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        base = self.base(x)
+        # T-Rex calls some expert methods through the unwrapped model, outside
+        # Accelerator's autocast context. Its new task heads remain fp32 while
+        # the activations from the Qwen visual/text tower are often bf16.
+        base = self.base(x.to(self.base.weight.dtype))
         delta = F.linear(F.linear(self.dropout(x).float(), self.lora_a), self.lora_b)
-        return base + (delta * self.scale).to(base.dtype)
+        return (base.float() + delta * self.scale).to(x.dtype)
 
 
 def inject_lora(model: nn.Module, rank: int, alpha: float, dropout: float,

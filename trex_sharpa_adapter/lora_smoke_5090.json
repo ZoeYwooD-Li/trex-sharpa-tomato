@@ -1,0 +1,79 @@
+{
+  "date_local": "2026-10-23",
+  "upstream_commit": "ba4047ce3e9f3d2013d60de600e136897e90ccb8",
+  "hardware": "NVIDIA GeForce RTX 5090, 32607 MiB VRAM",
+  "environment": {
+    "python": "3.10.21",
+    "torch": "2.7.1+cu128",
+    "transformers": "4.57.3",
+    "accelerate": "1.8.1"
+  },
+  "models": {
+    "origin": "Qwen/Qwen3-VL-2B-Instruct",
+    "midtrain": "miniFranka/T-Rex_midtrain_mecka23k_ucb100_vqvae_epoch6",
+    "midtrain_revision": "62efb3bcb45a3df0e088c8909d759b582cfb98af",
+    "checkpoint_load_missing": 0,
+    "checkpoint_load_unexpected": 0
+  },
+  "data": {
+    "train_episodes": 238,
+    "train_frames": 232570,
+    "val_episodes": 13,
+    "val_frames": 12845,
+    "processor": "real Qwen processor",
+    "inputs": "head RGB, left/right wrist RGB, 62D action chunk, F6 history, ten deformation images, FLARE future frames"
+  },
+  "lora": {
+    "rank": 8,
+    "alpha": 16,
+    "dropout": 0.05,
+    "target_linear_layers": 406,
+    "trainable_parameters": 14930432,
+    "base_parameters_frozen": true,
+    "gradient_checkpointing": true,
+    "sdpa_backend": "math"
+  },
+  "smoke_run": {
+    "train_batches": 20,
+    "validation_batches_each": 2,
+    "first_step_losses": {
+      "action": 0.719697,
+      "tactile": 0.837113,
+      "flare": 0.011836,
+      "total": 1.562727
+    },
+    "last_step_losses": {
+      "action": 0.550372,
+      "tactile": 0.529518,
+      "flare": 0.010936,
+      "total": 1.085358
+    },
+    "validation": {
+      "step_9": {
+        "action": 0.56525,
+        "tactile": 0.830342
+      },
+      "step_19": {
+        "action": 0.332219,
+        "tactile": 0.748453
+      }
+    },
+    "all_steps_completed": true,
+    "nonfinite_gradients_detected": false
+  },
+  "checkpoint": {
+    "lora_tensors": 812,
+    "all_finite": true,
+    "lora_bytes": 59929489,
+    "merged_model_bytes": 8505205031,
+    "merged_state_keys": 1412,
+    "merge_formula_checked_for_first_and_last_targets": true,
+    "standard_test_py_load_missing": 0,
+    "standard_test_py_load_unexpected": 0,
+    "action_stats_shape": [
+      16,
+      62
+    ]
+  },
+  "scope": "Short software/hardware smoke test only; no robot task success or policy quality established."
+}
