@@ -29,6 +29,16 @@ c2cb7894a5926152dcd674d4da28eba8f293cc840535f2e3eb6c806ec4e28330  prepared_sharp
 
 源数据的 A/54 和 B/56 是符号链接；传输时需要跟随链接复制内容，例如使用 `rsync -aL`。训练时建议读取服务器本地磁盘，不要依赖不稳定的网络挂载。
 
+仓库提供 `transfer_raw_data.sh`。从能访问原始数据的机器运行，先在服务器创建目标目录，例如：
+
+```bash
+export SOURCE_ROOT=/path/to/data-lerobot/sharpa
+export DEST_ROOT=user@training-server:/data/sharpa/
+bash transfer_raw_data.sh
+```
+
+脚本只传这四个数据集，且会跟随 A/54 与 B/56 的符号链接；服务器上需要已存在 `/data/sharpa/`。传完后检查四个目录均有 `data/`、`videos/`、`meta/`，再运行下方的缓存重定位。
+
 ```bash
 mkdir -p /workspace/trex_job
 git clone https://github.com/ZhuoyangLiu2005/T-Rex.git /workspace/trex_job/T-Rex
