@@ -17,7 +17,16 @@ c2cb7894a5926152dcd674d4da28eba8f293cc840535f2e3eb6c806ec4e28330  prepared_sharp
 
 ## 在训练服务器准备
 
-先安装 Git LFS；克隆本仓库后运行 `git lfs pull`，并确认缓存 ZIP 的实际大小约为 221 MiB，而非几百字节的 LFS 指针。把原始四个数据集放在同一个数据根目录，布局如下：
+先在训练服务器配置对这个**私有仓库**的读取权限并安装 Git LFS，然后：
+
+```bash
+git clone https://github.com/ZoeYwooD-Li/trex-sharpa-tomato.git
+cd trex-sharpa-tomato
+git lfs pull
+sha256sum -c <(printf '%s  %s\n' c2cb7894a5926152dcd674d4da28eba8f293cc840535f2e3eb6c806ec4e28330 prepared_sharpa_link8.zip)
+```
+
+确认缓存 ZIP 的实际大小约为 221 MiB，而非几百字节的 LFS 指针。把原始四个数据集放在同一个数据根目录，布局如下：
 
 ```text
 /data/sharpa/
