@@ -16,11 +16,10 @@ python validate_prepared.py --upstream /path/to/T-Rex \
   --output /path/to/processor_batch_validation.json
 ```
 
-单卡入口为 `train_sharpa_lora.sh`，用普通 Python 启动，不使用官方 DeepSpeed ZeRO-2 配置。训练前设置 `TREX_ROOT`、`PREPARED_ROOT`、`ORIGIN_MODEL_PATH`、`RESUME_CHECKPOINT`、`OUTPUT_DIR`；可设置 `PYTHON`、`TRAIN_BSZ`、`GRAD_ACCUM`、`LORA_RANK`、`LORA_ALPHA`、`LORA_DROPOUT`。建议首先保留所有模态和损失，用 `TRAIN_BSZ=1`、`GRAD_ACCUM=1` 执行 20 batch 短跑：
+单卡入口为 `train_sharpa_lora.sh`，用普通 Python 启动，不使用官方 DeepSpeed ZeRO-2 配置。训练前设置 `TREX_ROOT`、`PREPARED_ROOT`、`ORIGIN_MODEL_PATH`、`RESUME_CHECKPOINT`、`OUTPUT_DIR`；可设置 `PYTHON`、`TRAIN_BSZ`、`GRAD_ACCUM`、`LORA_RANK`、`LORA_ALPHA`、`LORA_DROPOUT`。默认只执行 20 batch、2 个验证 batch 并保存 checkpoint，便于先检查显存和损失。正式实验时显式设置 `MAX_TRAIN_BATCHES=0`、`N_EPOCHS`、`SAVE_FREQ`、`VAL_FREQ` 和 `MAX_VAL_BATCHES`。首次运行保留所有模态和损失，用 `TRAIN_BSZ=1`、`GRAD_ACCUM=1`：
 
 ```bash
-bash train_sharpa_lora.sh --max_train_batches 20 --n_epochs 1 \
-  --save_freq 1 --val_freq 10 --max_val_batches 2
+bash train_sharpa_lora.sh
 ```
 
 LoRA checkpoint 保存 `lora.pt`、`lora_config.json`、processor、统计与机器人动作元数据，不保存 8.5 GB 的完整模型。部署前使用 `merge_lora.py` 与**同一 midtrain** 的 `model.pt` 合并，输出官方 `scripts/test.py` 可加载的标准完整 checkpoint：

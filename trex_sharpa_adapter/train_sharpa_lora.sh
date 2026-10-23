@@ -23,7 +23,9 @@ cd "$TREX_ROOT"
   --flare_frame_stride 4 --flare_layer_index -1 --image_size 384 288 \
   --lora_rank "${LORA_RANK:-8}" --lora_alpha "${LORA_ALPHA:-16}" \
   --lora_dropout "${LORA_DROPOUT:-0.05}" --lora_gradient_checkpointing 1 \
-  --n_epochs 100 --save_freq 50 --learning_rate "${LEARNING_RATE:-1e-4}" \
+  --n_epochs "${N_EPOCHS:-1}" --max_train_batches "${MAX_TRAIN_BATCHES:-20}" \
+  --save_freq "${SAVE_FREQ:-1}" --learning_rate "${LEARNING_RATE:-1e-4}" \
   --min_lr_ratio 0 --weight_decay 0 \
   --train_bsz_per_gpu "${TRAIN_BSZ:-1}" --gradient_accumulation_steps "${GRAD_ACCUM:-1}" \
-  --seed 42 --val_ratio 0.05 --val_freq 500 --max_val_batches 30 "$@"
+  --seed 42 --val_ratio 0.05 --val_freq "${VAL_FREQ:-10}" \
+  --max_val_batches "${MAX_VAL_BATCHES:-2}" "$@"
