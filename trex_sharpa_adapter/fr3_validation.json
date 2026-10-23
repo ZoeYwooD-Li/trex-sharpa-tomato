@@ -1,0 +1,55 @@
+{
+  "geometry": "nominal URDF supplied in collection project; no hardware Cartesian ground-truth comparison",
+  "chosen_reference": "per-arm base link0 -> link8 flange",
+  "sources": [
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\A\\121_430_data_lerobot",
+      "real_frames_converted": 1674,
+      "segments": 8,
+      "absolute_pose_roundtrip_max_error": 7.256075185146926e-08,
+      "rotation_orthogonality_max_error": 1.2212453270876722e-15,
+      "hand_targets_preserved": true
+    },
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\A\\54_120_data_lerobot",
+      "real_frames_converted": 1866,
+      "segments": 13,
+      "absolute_pose_roundtrip_max_error": 5.916665557492706e-08,
+      "rotation_orthogonality_max_error": 9.992007221626409e-16,
+      "hand_targets_preserved": true
+    },
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\B\\130_423_data_lerobot",
+      "real_frames_converted": 1547,
+      "segments": 7,
+      "absolute_pose_roundtrip_max_error": 7.373092258955438e-08,
+      "rotation_orthogonality_max_error": 1.1102230246251565e-15,
+      "hand_targets_preserved": true
+    },
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\B\\56_106_data_lerobot",
+      "real_frames_converted": 1243,
+      "segments": 6,
+      "absolute_pose_roundtrip_max_error": 4.612755866162388e-08,
+      "rotation_orthogonality_max_error": 1.1102230246251565e-15,
+      "hand_targets_preserved": true
+    }
+  ],
+  "random_fk_max_error": 1.7763568394002505e-15,
+  "link7_to_link8_max_error": 0.0,
+  "mount_invariance_max_error": 3.8436449322268827e-16,
+  "prepared_dataset": {
+    "episodes": 251,
+    "frames": 245415,
+    "train_sources": 238,
+    "val_sources": 13,
+    "normalization": {
+      "frames": 20000,
+      "total_training_frames": 232570,
+      "exact": false,
+      "seed": 42
+    },
+    "finite": true,
+    "split_disjoint": true
+  }
+}

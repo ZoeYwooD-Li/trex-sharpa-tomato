@@ -1,0 +1,53 @@
+{
+  "archive": "D:\\Downloads\\gello_upper_body_teleop.zip",
+  "archive_bytes": 2172894261,
+  "files": [
+    {
+      "archive_member": "gello_upper_body_teleop/config/workcell/current.yaml",
+      "sha256": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435",
+      "copy": "collection_evidence\\current.yaml"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/ros_ws/src/teleop_core/teleop_core/contract.py",
+      "sha256": "0d5c2159d2644882926ac390884dc3e6ed43da7c0de547c6c8fb59e000f6c42e",
+      "copy": "collection_evidence\\contract.py"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/apps/arm_ui/runtime.py",
+      "sha256": "1a36d25451b4f5826938350755d80697b360c884be130f65a90ec22194b2ba9f",
+      "copy": "collection_evidence\\runtime.py"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/adapters/pico/src/pico_bimanual_franka_teleop/ik.py",
+      "sha256": "7818ba38ce29502497442e2003378e3382617bb7602a598872ee1b222e0dd6a2",
+      "copy": "collection_evidence\\ik.py"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/adapters/pico/assets/dual_fr3/dual_fr3_kinematics.urdf",
+      "sha256": "6be9900731b19bfb3edd56e08d63feb9112de3045957f84088b0fe6c7c873939",
+      "copy": "collection_evidence\\dual_fr3_kinematics.urdf"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/portable_deps/litchi_hardware/src/litchi_hardware/hardware/sharpa/schema.py",
+      "sha256": "81cd73d4fc4ad4a602cbd5cb71f1a7b179e4d1e30ea671cf9e14ff71a9ef8b49",
+      "copy": "collection_evidence\\schema.py"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/portable_deps/litchi_hardware/src/litchi_hardware/hardware/sharpa/tactile.py",
+      "sha256": "9496785d5296e9787d376937d435345368b68e8474ce9dae23aaa202c5109c98",
+      "copy": "collection_evidence\\tactile.py"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/portable_deps/litchi_hardware/src/litchi_hardware/hardware/sharpa/sdk_driver.py",
+      "sha256": "ef87df09928be62bb39ba0aa419c7a9dac705c5e41d26a58b98de9e9384073cb",
+      "copy": "collection_evidence/sdk_driver.py"
+    },
+    {
+      "archive_member": "gello_upper_body_teleop/portable_deps/litchi_hardware/ros2/src/sharpa_hand/sharpa_driver/sharpa_driver/messages.py",
+      "sha256": "cfd87856305be264542a1e195db71009cc55ae04457fd22bed9521efdddec46c",
+      "copy": "collection_evidence/sharpa_messages.py"
+    }
+  ],
+  "chosen_reference": "link8 flange",
+  "note": "GELLO records joint commands; link8 is the offline adaptation convention, not an asserted recorded Cartesian target. Pico IK instead uses link7."
+}

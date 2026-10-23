@@ -1,0 +1,103 @@
+{
+  "numerical_tests": {
+    "official_delta_math": "passed (4 random chunks including episode tail)",
+    "cut_boundary_padding": "passed",
+    "cut_detection": "passed",
+    "nested_parquet_arrays": "passed",
+    "urdf_transform_order": "passed"
+  },
+  "prepare_integration": "passed (synthetic source fixtures; grouped split, training-only stats, [16,62] quantiles)",
+  "real_data_smoke": {
+    "source": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\A\\121_430_data_lerobot",
+    "frames_loaded": 1674,
+    "continuous_segments": 8,
+    "batch_shapes": {
+      "input_ids": [
+        2,
+        3
+      ],
+      "attention_mask": [
+        2,
+        3
+      ],
+      "pixel_values": [
+        6,
+        4
+      ],
+      "image_grid_thw": [
+        6,
+        3
+      ],
+      "noisy_actions": [
+        2,
+        16,
+        62
+      ],
+      "target": [
+        2,
+        16,
+        62
+      ],
+      "timesteps": [
+        2
+      ],
+      "norm_actions": [
+        2,
+        16,
+        62
+      ],
+      "tactile_f6s": [
+        2,
+        10,
+        6
+      ],
+      "tactile_deforms": [
+        2,
+        10,
+        1,
+        240,
+        240
+      ],
+      "tactile_f6s_delayed": [
+        2,
+        10,
+        6
+      ],
+      "tactile_deforms_delayed": [
+        2,
+        10,
+        1,
+        240,
+        240
+      ],
+      "tactile_f6_history": [
+        2,
+        16,
+        10,
+        6
+      ],
+      "time_r": [
+        2
+      ],
+      "eps_r": [
+        2,
+        16,
+        62
+      ],
+      "flare_pixel_values": [
+        16,
+        4
+      ],
+      "flare_grid_thw": [
+        16,
+        3
+      ]
+    },
+    "real_video_decode": "passed (first and last frame with future windows)",
+    "real_deformation_decode": "passed (10 fingers, first and last frame)",
+    "official_collate": "passed with a small test processor",
+    "robot_geometry": "SYNTHETIC TEST ONLY; actual FR3 calibration remains required",
+    "camera_roles": "cam0=head; cam1=wrist_right; cam2=wrist_left (collection_state.json)",
+    "full_model_forward": "not run"
+  }
+}

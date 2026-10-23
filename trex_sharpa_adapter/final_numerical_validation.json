@@ -1,0 +1,10 @@
+{
+  "numerical_tests": {
+    "official_delta_math": "passed (4 random chunks including episode tail)",
+    "cut_boundary_padding": "passed",
+    "cut_detection": "passed",
+    "nested_parquet_arrays": "passed",
+    "urdf_transform_order": "passed"
+  },
+  "prepare_integration": "passed (synthetic source fixtures; grouped split, training-only stats, [16,62] quantiles)"
+}

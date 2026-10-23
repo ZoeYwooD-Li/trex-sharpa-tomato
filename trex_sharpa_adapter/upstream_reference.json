@@ -1,0 +1,11 @@
+{
+  "repository": "https://github.com/ZhuoyangLiu2005/T-Rex",
+  "branch_read": "main",
+  "inspected_date": "2026-10-23",
+  "files": {
+    "qwen_vla/lerobot_dataset.py": "cc8695e47ea62ab8757bf286de50e3a9aac93f1154db4349c22c015c3b87b506",
+    "utils/lerobot_common.py": "93eb92443b3e4b0a6f6ebb2e3154332db56bb13deb8934c14c60f58936c7d647",
+    "scripts/train.py": "bb1128c94e376fc1da9cf4f8ce69b8b278d773340acd2d742d6db86a4d62ee6e",
+    "scripts/train.sh": "07f3fdacb02819a37827587037582ac41b2ae3293cd15af7d4eb439b2edb3c51"
+  }
+}

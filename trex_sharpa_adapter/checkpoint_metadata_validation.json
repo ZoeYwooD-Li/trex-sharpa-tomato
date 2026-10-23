@@ -1,0 +1,6 @@
+{
+  "isolated_official_save_checkpoint_hook": "passed",
+  "action_reference_metadata_preserved": true,
+  "left_and_right_urdf_preserved": true,
+  "checkpoint_model_state": "tiny test tensor only; not a real VLA checkpoint test"
+}

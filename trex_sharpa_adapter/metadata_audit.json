@@ -1,0 +1,40 @@
+{
+  "datasets": [
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\A\\121_430_data_lerobot",
+      "episodes": 168,
+      "frames": 157442,
+      "verification_status": "passed",
+      "failed_episodes": 0,
+      "rows_independently_compared": 0
+    },
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\A\\54_120_data_lerobot",
+      "episodes": 41,
+      "frames": 37145,
+      "verification_status": "passed",
+      "failed_episodes": 0,
+      "rows_independently_compared": 0
+    },
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\B\\130_423_data_lerobot",
+      "episodes": 34,
+      "frames": 40221,
+      "verification_status": "passed",
+      "failed_episodes": 0,
+      "rows_independently_compared": 0
+    },
+    {
+      "root": "R:\\real\\harvest-tomato\\data\\data-lerobot\\sharpa\\B\\56_106_data_lerobot",
+      "episodes": 8,
+      "frames": 10607,
+      "verification_status": "passed",
+      "failed_episodes": 0,
+      "rows_independently_compared": 0
+    }
+  ],
+  "episodes": 251,
+  "frames": 245415,
+  "unique_source_ids": 251,
+  "duplicate_source_ids": []
+}

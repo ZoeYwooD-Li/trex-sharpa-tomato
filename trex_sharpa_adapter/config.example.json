@@ -1,0 +1,57 @@
+{
+  "dataset_roots": [
+    "R:/real/harvest-tomato/data/data-lerobot/sharpa/A/121_430_data_lerobot",
+    "R:/real/harvest-tomato/data/data-lerobot/sharpa/A/54_120_data_lerobot",
+    "R:/real/harvest-tomato/data/data-lerobot/sharpa/B/130_423_data_lerobot",
+    "R:/real/harvest-tomato/data/data-lerobot/sharpa/B/56_106_data_lerobot"
+  ],
+  "cameras": {
+    "head": "cam0",
+    "wrist_right": "cam1",
+    "wrist_left": "cam2"
+  },
+  "arms": {
+    "left": {
+      "urdf": "robot/dual_fr3_kinematics.urdf",
+      "base_link": "left_fr3v2_link0",
+      "tip_link": "left_fr3v2_link8",
+      "joint_names": [
+        "left_fr3v2_joint1",
+        "left_fr3v2_joint2",
+        "left_fr3v2_joint3",
+        "left_fr3v2_joint4",
+        "left_fr3v2_joint5",
+        "left_fr3v2_joint6",
+        "left_fr3v2_joint7"
+      ]
+    },
+    "right": {
+      "urdf": "robot/dual_fr3_kinematics.urdf",
+      "base_link": "right_fr3v2_link0",
+      "tip_link": "right_fr3v2_link8",
+      "joint_names": [
+        "right_fr3v2_joint1",
+        "right_fr3v2_joint2",
+        "right_fr3v2_joint3",
+        "right_fr3v2_joint4",
+        "right_fr3v2_joint5",
+        "right_fr3v2_joint6",
+        "right_fr3v2_joint7"
+      ]
+    }
+  },
+  "hand_scale": 1.0,
+  "wrench_scale": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "gap_factor": 1.5,
+  "seed": 42,
+  "val_ratio": 0.05,
+  "stats_max_frames": 20000,
+  "action_reference": "per-arm link8 flange, nominal model from supplied collection project"
+}

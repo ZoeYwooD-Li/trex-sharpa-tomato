@@ -1,0 +1,74 @@
+[
+  {
+    "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode121\\collection_state.json",
+    "device_identities": {
+      "cam0_semantic": "cam_high",
+      "cam0_serial": "CP4N651006F",
+      "cam1_semantic": "cam_right_wrist",
+      "cam1_serial": "CV2756100018",
+      "cam2_semantic": "cam_left_wrist",
+      "cam2_serial": "CV2L761000F8",
+      "workcell": "config/workcell/current.yaml"
+    },
+    "calibration_ids": {
+      "cameras": "data_collection/config/cameras.yaml",
+      "hands": "manus_sharpa_record/record.py",
+      "left_arm": "config/modes/gello.yaml",
+      "right_arm": "config/modes/gello.yaml"
+    }
+  },
+  {
+    "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode54\\collection_state.json",
+    "device_identities": {
+      "cam0_semantic": "cam_high",
+      "cam0_serial": "CP4N651006F",
+      "cam1_semantic": "cam_right_wrist",
+      "cam1_serial": "CV2756100018",
+      "cam2_semantic": "cam_left_wrist",
+      "cam2_serial": "CV2L761000F8",
+      "workcell": "config/workcell/current.yaml"
+    },
+    "calibration_ids": {
+      "cameras": "data_collection/config/cameras.yaml",
+      "hands": "manus_sharpa_record/record.py",
+      "left_arm": "config/modes/gello.yaml",
+      "right_arm": "config/modes/gello.yaml"
+    }
+  },
+  {
+    "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode130\\collection_state.json",
+    "device_identities": {
+      "cam0_semantic": "cam_high",
+      "cam0_serial": "CP4N651006F",
+      "cam1_semantic": "cam_right_wrist",
+      "cam1_serial": "CV2756100018",
+      "cam2_semantic": "cam_left_wrist",
+      "cam2_serial": "CV2L761000F8",
+      "workcell": "config/workcell/current.yaml"
+    },
+    "calibration_ids": {
+      "cameras": "data_collection/config/cameras.yaml",
+      "hands": "manus_sharpa_record/record.py",
+      "left_arm": "config/modes/gello.yaml",
+      "right_arm": "config/modes/gello.yaml"
+    }
+  },
+  {
+    "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode56\\collection_state.json",
+    "device_identities": {
+      "cam0_semantic": "cam_high",
+      "cam0_serial": "CP4N651006F",
+      "cam1_semantic": "cam_right_wrist",
+      "cam1_serial": "CV2756100018",
+      "cam2_semantic": "cam_left_wrist",
+      "cam2_serial": "CV2L761000F8",
+      "workcell": "config/workcell/current.yaml"
+    },
+    "calibration_ids": {
+      "cameras": "data_collection/config/cameras.yaml",
+      "hands": "manus_sharpa_record/record.py",
+      "left_arm": "config/modes/gello.yaml",
+      "right_arm": "config/modes/gello.yaml"
+    }
+  }
+]

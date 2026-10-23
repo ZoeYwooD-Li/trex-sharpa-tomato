@@ -1,0 +1,9 @@
+# Large raw datasets and local training artifacts are transferred separately.
+sharpa/
+prepared_sharpa/
+T-Rex/
+models/
+runs/
+__pycache__/
+*.pyc
+Linux_Codex_HANDOFF_2026-10-23.md

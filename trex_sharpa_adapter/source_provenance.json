@@ -1,0 +1,4534 @@
+{
+  "records": 251,
+  "missing": [],
+  "camera_mappings": {
+    "{\"cam0_semantic\": \"cam_high\", \"cam1_semantic\": \"cam_right_wrist\", \"cam2_semantic\": \"cam_left_wrist\"}": 251
+  },
+  "quality_labels": {
+    "优等": 209,
+    "一般": 42
+  },
+  "workcells": {
+    "gello-dual-fr3-sharpa-tactile": 251
+  },
+  "records_detail": [
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode121\\collection_state.json",
+      "source_recording_id": "51efbc8499074ef48af0bfdcfdc5c3d7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode123\\collection_state.json",
+      "source_recording_id": "908a6e4fec4b45e0936296ed81b7b913",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode124\\collection_state.json",
+      "source_recording_id": "75e4320ab28541d7aa23e471769a0987",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode125\\collection_state.json",
+      "source_recording_id": "2a48ea6c85be4b3ba7df0098a7086ea0",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode126\\collection_state.json",
+      "source_recording_id": "6de4ba50f59842899a743153681c68a9",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode127\\collection_state.json",
+      "source_recording_id": "317de8752b8440209d7cc1bc5617cd3f",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode131\\collection_state.json",
+      "source_recording_id": "f11fda21d6f342b9b7a7e7117aced7a2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode136\\collection_state.json",
+      "source_recording_id": "d78944ee265c401bb401dacef8f61c8c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode140\\collection_state.json",
+      "source_recording_id": "82cbf78a36f04410b63b46c6f36bb1c9",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode142\\collection_state.json",
+      "source_recording_id": "90c5625a88fa4c7d8ef424101cedde65",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode143\\collection_state.json",
+      "source_recording_id": "16c74645dd3b4b10b99a73482f9a724b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode146\\collection_state.json",
+      "source_recording_id": "e338425588974a3fa551660032706d12",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode148\\collection_state.json",
+      "source_recording_id": "ddf874ca27034b8995b887ed2e44bb24",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode154\\collection_state.json",
+      "source_recording_id": "c27fb9c05533482d924ea8d9023d6615",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode156\\collection_state.json",
+      "source_recording_id": "771b92b8f2144c8eb22d0419324fb292",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode157\\collection_state.json",
+      "source_recording_id": "2d6000f8168b4f2ab8a596a9e0235fbd",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode158\\collection_state.json",
+      "source_recording_id": "88fd1415fd0444bb9cf30a6c74b2c072",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode159\\collection_state.json",
+      "source_recording_id": "3a5f8283244843cfaab2f56d613bad9e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode160\\collection_state.json",
+      "source_recording_id": "29ac9a4a403c4dafadc1d4a257cb5401",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode167\\collection_state.json",
+      "source_recording_id": "2939f3c125054f4389b1647cec8dc8ab",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode168\\collection_state.json",
+      "source_recording_id": "6eb52455ce9847b0b4ceba2d3053fea5",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode193\\collection_state.json",
+      "source_recording_id": "73716e8bac894857970af6999e415add",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode194\\collection_state.json",
+      "source_recording_id": "0283f1ca5190454c935b8253d653996a",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode195\\collection_state.json",
+      "source_recording_id": "b4105efcd3e440689bc14e84f28c2bfa",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode196\\collection_state.json",
+      "source_recording_id": "43d943d269124d14952dd1083e16a968",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode198\\collection_state.json",
+      "source_recording_id": "c453574b6576439e85680d2f211f85e4",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode199\\collection_state.json",
+      "source_recording_id": "0a3962be7a7a49fd98836386c295f6d9",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode200\\collection_state.json",
+      "source_recording_id": "1ae0506b498343ecb728a6220bf3550d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode201\\collection_state.json",
+      "source_recording_id": "adb830aa8638406293ac50847d583f3d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode204\\collection_state.json",
+      "source_recording_id": "eb4195fedc89401f9d373e688a6c5654",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode206\\collection_state.json",
+      "source_recording_id": "cbb2fed7b43348f6adff79af121d618e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode210\\collection_state.json",
+      "source_recording_id": "84cd0c94ecc545bdae80246ecc4f748e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode211\\collection_state.json",
+      "source_recording_id": "b02c3702d2544483a5323e9698f03a14",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode212\\collection_state.json",
+      "source_recording_id": "2406b46270dc4ac097ff972bfa305c5c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode213\\collection_state.json",
+      "source_recording_id": "ba5eeee6701c40dfa1dbfe452936f8ef",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode214\\collection_state.json",
+      "source_recording_id": "d1f3aed08a2a4e8e956f6093d7e79596",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode215\\collection_state.json",
+      "source_recording_id": "be9a3e6984ae4db9a5aad3ce360fe62a",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode217\\collection_state.json",
+      "source_recording_id": "03a5977eea004b5086f9a2aac032ca06",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode218\\collection_state.json",
+      "source_recording_id": "bc5b4398bc0c454fa13d1947f020cbbb",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode219\\collection_state.json",
+      "source_recording_id": "8aa4e99681304abfb1b9817ce7f360cf",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode221\\collection_state.json",
+      "source_recording_id": "c6cda075791b4d6394e8217a08409a7b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode223\\collection_state.json",
+      "source_recording_id": "8ca1fd44da2c486a881aab75e423c1c1",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode227\\collection_state.json",
+      "source_recording_id": "a4897b2c95e64369b3fa85da93cb6c54",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode228\\collection_state.json",
+      "source_recording_id": "e6f61f503ba74a0fbd47562ae9b9a5cd",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode232\\collection_state.json",
+      "source_recording_id": "e63c9c304f65438e812b5086f343e5ad",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode233\\collection_state.json",
+      "source_recording_id": "ec860ce05d4244cf96adafaabb1d6ed2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode235\\collection_state.json",
+      "source_recording_id": "abfacbb56d1e470daa7c46299df349b5",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode236\\collection_state.json",
+      "source_recording_id": "ab230a28d4e641f0be639e55c0371029",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode238\\collection_state.json",
+      "source_recording_id": "63d4ba2ac6504f1c9033bd7781f66f43",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode240\\collection_state.json",
+      "source_recording_id": "1077759841dd46f4aacab39720402686",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode244\\collection_state.json",
+      "source_recording_id": "5c9724a10e474266a63a72b2c89de7f2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode246\\collection_state.json",
+      "source_recording_id": "37a74d11f219411e8aa034b8e75b1ad3",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode247\\collection_state.json",
+      "source_recording_id": "6a089b30f67d44d79b5638830d966f9b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode249\\collection_state.json",
+      "source_recording_id": "ec4405440d89425cab5fe105b7d36666",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode251\\collection_state.json",
+      "source_recording_id": "ffbe2196938e4b7ea81d3d1ec6ac8de7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode253\\collection_state.json",
+      "source_recording_id": "c0201f6dcc67460f9f4f4611dd87141c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode255\\collection_state.json",
+      "source_recording_id": "0b69896791934517a88ba1a8d6fc9743",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode256\\collection_state.json",
+      "source_recording_id": "efdfff98eff4401da4274e2a2a53ba30",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode257\\collection_state.json",
+      "source_recording_id": "3d5a1a7da2334ef4b8b63482c48714f8",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode259\\collection_state.json",
+      "source_recording_id": "73fc97b1e9de48eaba9620065a3c7279",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode260\\collection_state.json",
+      "source_recording_id": "7ab19b022d7a46128f3007cb6d3846c2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode261\\collection_state.json",
+      "source_recording_id": "6c0458a448254ea8bccc92b158662e34",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode262\\collection_state.json",
+      "source_recording_id": "6711bbdec2a149b997f73aa681c35517",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode263\\collection_state.json",
+      "source_recording_id": "d0818f8853d8417e9e6b60a2c88ee141",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode266\\collection_state.json",
+      "source_recording_id": "0a92ee518c5746dc98f71ab0d172c3fb",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode269\\collection_state.json",
+      "source_recording_id": "05d014a6de4e4f5a81681049e94afaab",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode271\\collection_state.json",
+      "source_recording_id": "bbc0757b7a074f74a052b167a8f03e10",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode272\\collection_state.json",
+      "source_recording_id": "fc051fd00bd74504a2047b6334e95e27",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode273\\collection_state.json",
+      "source_recording_id": "7332bb9c555649cc987b7b57e7edc9d1",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode274\\collection_state.json",
+      "source_recording_id": "17c0d176a1ad471e8070c9993c1467a6",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode276\\collection_state.json",
+      "source_recording_id": "57bd44480d094c91a38a753dc3979a74",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode278\\collection_state.json",
+      "source_recording_id": "4b0eee8a639a4f668b0f19b6aded8780",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode279\\collection_state.json",
+      "source_recording_id": "dbcb1a8bca684f2f9d03e3a2691b7d5d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode282\\collection_state.json",
+      "source_recording_id": "0810bb6231884e3eab296ca8871970e7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode284\\collection_state.json",
+      "source_recording_id": "9b2bc46b1f59487888ef7037c5098123",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode285\\collection_state.json",
+      "source_recording_id": "be59afd25573442290104584aa3696be",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode287\\collection_state.json",
+      "source_recording_id": "3a3764bccf6640cca8993889e34d7bfd",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode288\\collection_state.json",
+      "source_recording_id": "f2331e1efac94d4fbe71a268ecacbd51",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode289\\collection_state.json",
+      "source_recording_id": "e1feaf4869894b3ea37ccc9c92fb7b2b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode290\\collection_state.json",
+      "source_recording_id": "da655bceeac54d108a41968538a397aa",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode291\\collection_state.json",
+      "source_recording_id": "3214ac1865d144adba4c24102da0eb34",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode292\\collection_state.json",
+      "source_recording_id": "c3a0aecdeb36469095fa92c571b6cee3",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode294\\collection_state.json",
+      "source_recording_id": "19d3212a1ccc45348d424dbac297754b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode296\\collection_state.json",
+      "source_recording_id": "d18c91afa4e242e98315610463413f28",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode298\\collection_state.json",
+      "source_recording_id": "b7965832072649a4b449e0775cbe7d57",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode299\\collection_state.json",
+      "source_recording_id": "34df3772710e41ad9a514160c0eeadc7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode301\\collection_state.json",
+      "source_recording_id": "7eddabaa4e8940529b5327a3db668eda",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode302\\collection_state.json",
+      "source_recording_id": "6d3b331deadc4b8a87e92264c1d861c9",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode305\\collection_state.json",
+      "source_recording_id": "cefd8b520511468282c815912fd0059d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode307\\collection_state.json",
+      "source_recording_id": "a67c82076603469e8b838292d5389314",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode308\\collection_state.json",
+      "source_recording_id": "7b373c1887b546ec809fcf8c6a159dce",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode310\\collection_state.json",
+      "source_recording_id": "70d5f80b998c490cb6f07cb30c8cc922",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode312\\collection_state.json",
+      "source_recording_id": "29017efa47d84611a8e24ab422ecd3dc",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode313\\collection_state.json",
+      "source_recording_id": "a48024dc9af0417cb9f678c0bd5bbddf",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode315\\collection_state.json",
+      "source_recording_id": "fe6d0bcb233e4d419e8ec8e49cf2b85d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode316\\collection_state.json",
+      "source_recording_id": "35dd5fb18e804ba9a385a81bae7009de",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode317\\collection_state.json",
+      "source_recording_id": "80b17171e861420eb1ea01e974a78151",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode318\\collection_state.json",
+      "source_recording_id": "220abc54ef524a94a59689462ae61073",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode321\\collection_state.json",
+      "source_recording_id": "837dd7e1c1ef4fe19a152f57194b0cbb",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode322\\collection_state.json",
+      "source_recording_id": "faca0a5a2b2341719180fe869f94b246",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode323\\collection_state.json",
+      "source_recording_id": "ad572c7a8e0b434db9fe0a6f2f6d3a38",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode324\\collection_state.json",
+      "source_recording_id": "aeb8156b46ba4889955641a6afc09738",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode325\\collection_state.json",
+      "source_recording_id": "d5954048b21e477a8a788bbdd69a0b73",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode328\\collection_state.json",
+      "source_recording_id": "818ddf891165473c8eab60b24144823e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode329\\collection_state.json",
+      "source_recording_id": "0da66b94229a4e31b5d63a022322e91d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode331\\collection_state.json",
+      "source_recording_id": "9cac40da668448ddb2ece53b210e439d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode333\\collection_state.json",
+      "source_recording_id": "8ad55a75f43a40d3bcab26fd4f8e69e7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode334\\collection_state.json",
+      "source_recording_id": "a26aad3a3a244f06a557c6d00185243b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode335\\collection_state.json",
+      "source_recording_id": "c57091c7cac2435483748a15020a3c10",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode337\\collection_state.json",
+      "source_recording_id": "afcfabcb1bad47a7aa6bfb4d370b25d5",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode339\\collection_state.json",
+      "source_recording_id": "82a65e98e520479c8649d1d4b5217022",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode342\\collection_state.json",
+      "source_recording_id": "d4fdae639fd24af08f3526f3bd3543f0",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode344\\collection_state.json",
+      "source_recording_id": "eb50bbcaa2f24176942f4507275fb522",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode348\\collection_state.json",
+      "source_recording_id": "d0aaf871d3c54fb4a1d60d8e86f0691e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode349\\collection_state.json",
+      "source_recording_id": "c1f9901d75db4898afbdece788455c53",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode350\\collection_state.json",
+      "source_recording_id": "e15f233ffd744c37822c7fda9b512e4c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode351\\collection_state.json",
+      "source_recording_id": "0b42421240f7424c94411a5017a0e326",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode357\\collection_state.json",
+      "source_recording_id": "31c06df2cb3c4ecaaec03a241faa803d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode358\\collection_state.json",
+      "source_recording_id": "6097c00c66964b7c90140791dadfc266",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode359\\collection_state.json",
+      "source_recording_id": "e0675a201f13425db7bd6e63d0e73009",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode360\\collection_state.json",
+      "source_recording_id": "971bb7691c184ff988294b528267f14b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode361\\collection_state.json",
+      "source_recording_id": "8dd7756d0d9848ea92ea966a0bc86190",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode362\\collection_state.json",
+      "source_recording_id": "7e9cbefd6db148d092e6c6c2e7ae3baa",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode364\\collection_state.json",
+      "source_recording_id": "1f7f94e0a303476c94b674b47051e2d9",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode367\\collection_state.json",
+      "source_recording_id": "28c7d6785f26420989c34edd65a86a4c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode368\\collection_state.json",
+      "source_recording_id": "903d8ee010cb4f05b10e2f40001a732e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode369\\collection_state.json",
+      "source_recording_id": "e952285575544265aad39a70d9630727",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode371\\collection_state.json",
+      "source_recording_id": "d2e9a91678f444528c6ce7aaa554f7d7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode373\\collection_state.json",
+      "source_recording_id": "4d874620fe3d4fb4842b666e81f47c30",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode375\\collection_state.json",
+      "source_recording_id": "f1eec037643649b8be0ca9f9e9dd358e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode377\\collection_state.json",
+      "source_recording_id": "cd9d694d75614bdabcffe025a03f79c5",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode378\\collection_state.json",
+      "source_recording_id": "c87f6e8ac44549538522134fa9183bf6",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode379\\collection_state.json",
+      "source_recording_id": "94acf247ce894ef188a8a43fe0b2d75f",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode381\\collection_state.json",
+      "source_recording_id": "00735d1ff11a4ff3a45ca5f2ac299835",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode382\\collection_state.json",
+      "source_recording_id": "294050f1774945e493abaf9c3034ea61",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode383\\collection_state.json",
+      "source_recording_id": "8b96316b86334dfa82cfe2af0a00f54f",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode386\\collection_state.json",
+      "source_recording_id": "c2490b80e72d421e91e6c606e0a0e678",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode387\\collection_state.json",
+      "source_recording_id": "a7d05a17b1b54973ab2afbbfc7c93e84",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode388\\collection_state.json",
+      "source_recording_id": "474fd3d0f4134ff8b721b7df56142b0d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode389\\collection_state.json",
+      "source_recording_id": "13b1feffb7c645f5b029515ab4d417ea",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode393\\collection_state.json",
+      "source_recording_id": "e79ef4588049426cb4152269c195a38f",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode394\\collection_state.json",
+      "source_recording_id": "f6d4dc2de7e848ae8e99040c6a2ad36e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode395\\collection_state.json",
+      "source_recording_id": "015fa4ee8c84476688e4248a96257f19",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode397\\collection_state.json",
+      "source_recording_id": "270a847cf4eb4a7e96e9c7202c893297",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode398\\collection_state.json",
+      "source_recording_id": "a65362dbcf6c42e7aa43678aa829625d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode399\\collection_state.json",
+      "source_recording_id": "8f2dd85178ad49dbadd4a2a2344a2768",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode400\\collection_state.json",
+      "source_recording_id": "6bc2441fb7a84e2698b6caa5a326993d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode401\\collection_state.json",
+      "source_recording_id": "2a0004fd08904502b9c0da29d31be4aa",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode403\\collection_state.json",
+      "source_recording_id": "d821c156a2f14c789e13cfd24a175591",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode405\\collection_state.json",
+      "source_recording_id": "06e64a50e8bb41d7b2f8c4ee4d664b94",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode406\\collection_state.json",
+      "source_recording_id": "2cd1384b098948799bbf7fc8ce7406c2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode409\\collection_state.json",
+      "source_recording_id": "fca5fff88b7e4a0abc32acb7cfa7f72c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode410\\collection_state.json",
+      "source_recording_id": "46469d3079a847cf8cc3413f2304e52b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode413\\collection_state.json",
+      "source_recording_id": "281a5804f4ab4154b88451d88e5382a5",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode414\\collection_state.json",
+      "source_recording_id": "79b9980d46f54e03839d4959bf697d67",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode415\\collection_state.json",
+      "source_recording_id": "f86bfc4ef587445ebbf3048b85aed4f7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode416\\collection_state.json",
+      "source_recording_id": "cba5a589c9b24ca4a7786b905b90f45c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode417\\collection_state.json",
+      "source_recording_id": "f659adea6cc34ed5b87f7013e8270f37",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode418\\collection_state.json",
+      "source_recording_id": "92a668feb28d45fea006ccc33f3cbd36",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode420\\collection_state.json",
+      "source_recording_id": "06733421e97c4447b39fb4cf4e7d2eae",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode421\\collection_state.json",
+      "source_recording_id": "6ae270b91edd437c8a8830d707964f73",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode422\\collection_state.json",
+      "source_recording_id": "28808713e44b48cfa6fbde113d4565f2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode424\\collection_state.json",
+      "source_recording_id": "10f800b87aba4aaf958e3cba79a37dbc",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode425\\collection_state.json",
+      "source_recording_id": "fc3c9d17451f4a68821c1aa291749006",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode426\\collection_state.json",
+      "source_recording_id": "b9c4e494b55a4360883a4d633d801971",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode427\\collection_state.json",
+      "source_recording_id": "23e0ddb99375414c9ab25f4dd0d2cff6",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode428\\collection_state.json",
+      "source_recording_id": "846be1d8e9744789a567cb8a4c3bd10a",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode430\\collection_state.json",
+      "source_recording_id": "2b182253ad9c49eca8616528d44d5e40",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode54\\collection_state.json",
+      "source_recording_id": "6fc2686e176d4677ade795e71fbdafc2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode57\\collection_state.json",
+      "source_recording_id": "9139f69b8ada405f809f924b16d42685",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode59\\collection_state.json",
+      "source_recording_id": "935f1127f4a844c19318c86a808a8f26",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode60\\collection_state.json",
+      "source_recording_id": "f62ccb6fcea94686aac2eeaef9dcaff5",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode61\\collection_state.json",
+      "source_recording_id": "79e37f43ad8e47e3aab0a67b9733f016",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode62\\collection_state.json",
+      "source_recording_id": "4bd71ef59aa94b63aee74ae5f3352abc",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode63\\collection_state.json",
+      "source_recording_id": "065010ecd2a4443ea84bf71c630df90c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode64\\collection_state.json",
+      "source_recording_id": "eff75752dcc74892af8f66b68d302673",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode66\\collection_state.json",
+      "source_recording_id": "75971ebd95d14494920ae60f8e027856",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode67\\collection_state.json",
+      "source_recording_id": "9b3e4af4c58a41aab6cca85bc90d0e39",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode68\\collection_state.json",
+      "source_recording_id": "10a4bde206f044229a22b856321b644d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode69\\collection_state.json",
+      "source_recording_id": "5d628436d6b049628f7b114c18be96c6",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode74\\collection_state.json",
+      "source_recording_id": "86093ae59b7545a888f64eedf6fef6a4",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode77\\collection_state.json",
+      "source_recording_id": "9e91837947df4f4c9119314aff63618d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode78\\collection_state.json",
+      "source_recording_id": "fb771badbdc2476fac5a64004ef9cb18",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode81\\collection_state.json",
+      "source_recording_id": "0d662d06fae04c93a8320230ef548d71",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode82\\collection_state.json",
+      "source_recording_id": "1b46637f3b9048879639c8eda174550a",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode83\\collection_state.json",
+      "source_recording_id": "0aa267e420fc42f3a2350981634e2876",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode84\\collection_state.json",
+      "source_recording_id": "1b54889072544a5f95bdff2cb45dc2d4",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode85\\collection_state.json",
+      "source_recording_id": "e267253a79dc4b35be63fa0a9019d654",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode86\\collection_state.json",
+      "source_recording_id": "9ff196137eaf4edaa5ab6ddbd39db55d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode87\\collection_state.json",
+      "source_recording_id": "588d13509782442f8f86b835ea8fb0b7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode90\\collection_state.json",
+      "source_recording_id": "4c0e9872d6a148ffb656ca43c75b2a46",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode92\\collection_state.json",
+      "source_recording_id": "7e089b86a14a4883970828d4476c26ac",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode93\\collection_state.json",
+      "source_recording_id": "46b8ac192e7940c5af7d2790467be97e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode94\\collection_state.json",
+      "source_recording_id": "71cbbef4786b4a5d9d56f711ad62a019",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode98\\collection_state.json",
+      "source_recording_id": "5e04932d92de401bb2ae9f1b75ffeebc",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode100\\collection_state.json",
+      "source_recording_id": "ff7546d093af49a3bd97b8d6b0805a91",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode101\\collection_state.json",
+      "source_recording_id": "45770e64822f4838a4e747f0b5b58adb",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode102\\collection_state.json",
+      "source_recording_id": "05b80a2df1374fb8af649a1d0e210399",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode103\\collection_state.json",
+      "source_recording_id": "9d53432040984659919913fa16200752",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode104\\collection_state.json",
+      "source_recording_id": "55208e94968f41149385cc82b373de0d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode107\\collection_state.json",
+      "source_recording_id": "ed3e1d0ce438414ebe51e2a29d9214ca",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode109\\collection_state.json",
+      "source_recording_id": "5b953b9ef7424c96bae7c5914b95e137",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode110\\collection_state.json",
+      "source_recording_id": "604f3dd0b86b40369bb4d43dc6199419",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode112\\collection_state.json",
+      "source_recording_id": "74bac4781be544ab953506d066298b8a",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode114\\collection_state.json",
+      "source_recording_id": "db08d685bb4d4a20b7cc871d9c1996b6",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode116\\collection_state.json",
+      "source_recording_id": "dca4a37b4c0045a0a85d038ac0e9e546",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode117\\collection_state.json",
+      "source_recording_id": "6ae17e2b52ac457fa464fcc0516e7100",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode120\\collection_state.json",
+      "source_recording_id": "f174b3307dca4a45a7e1262be5430bf5",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\A\\episode99\\collection_state.json",
+      "source_recording_id": "949561b0b2814bf9b314af305c3f968c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "优等",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode130\\collection_state.json",
+      "source_recording_id": "4fc2939659b046839965a9c73d3fd9e1",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode132\\collection_state.json",
+      "source_recording_id": "e7421e3367cc4f74a3ab867c64225a03",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode133\\collection_state.json",
+      "source_recording_id": "4d2ff6484cee4ee5bddd50e43eaeb5da",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode139\\collection_state.json",
+      "source_recording_id": "9ff419722c3e40328fee8ec5200dbe4d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode151\\collection_state.json",
+      "source_recording_id": "9bf49aa5c9bf481b96c42e5290e06e14",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode152\\collection_state.json",
+      "source_recording_id": "c0dd9146642f457aa03391f7fbb3528e",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode155\\collection_state.json",
+      "source_recording_id": "b9808eb7c2b44a22b02e04b73eacb099",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode162\\collection_state.json",
+      "source_recording_id": "42466ea48f3e47e6b2d31e0a38023a3d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode165\\collection_state.json",
+      "source_recording_id": "7adc7a4f0bd84250923ebe1ea5062eaf",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode166\\collection_state.json",
+      "source_recording_id": "ff841ab2dc1842cfa7dda1d818182489",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode207\\collection_state.json",
+      "source_recording_id": "0d546c51c50f4c4c85ae969f5eeb6f51",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode208\\collection_state.json",
+      "source_recording_id": "1679d4b20016446785eeecf582264d9b",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode216\\collection_state.json",
+      "source_recording_id": "c8693059336c42bf989ae8853ddbea33",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode225\\collection_state.json",
+      "source_recording_id": "6c3453c7640d4d8c9fd59f29366518b6",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode226\\collection_state.json",
+      "source_recording_id": "72bfd9a8166645339fd1bd45af03baea",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode254\\collection_state.json",
+      "source_recording_id": "9cd2d7ecf1284289858a65a616b30fb7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode280\\collection_state.json",
+      "source_recording_id": "b18a98abcb384d718c27a5ad99c0f22d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode281\\collection_state.json",
+      "source_recording_id": "008bf81378634b96aa2ea2b12d02cfe7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode295\\collection_state.json",
+      "source_recording_id": "d5de6956e5e24bfda5f5acc35a6a6808",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode297\\collection_state.json",
+      "source_recording_id": "8b24615c54734efca8ae3b0f733965b2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode306\\collection_state.json",
+      "source_recording_id": "44a59659abec41bd8102fe172cdbe3dd",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode327\\collection_state.json",
+      "source_recording_id": "f134276a5ab440f9a5c97fca1a1b3a1f",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode343\\collection_state.json",
+      "source_recording_id": "ed3e13a41e2447ac8b71185e900be076",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode353\\collection_state.json",
+      "source_recording_id": "69715a24fa824c0a8232b27e447a30dc",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode356\\collection_state.json",
+      "source_recording_id": "c6426f54a3f544e5a4fb10a812c73f0d",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode370\\collection_state.json",
+      "source_recording_id": "be79493d531944aba5bc9e85eeaa7af2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode372\\collection_state.json",
+      "source_recording_id": "23eb45c9143d452aa2c5208433ab8f72",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode374\\collection_state.json",
+      "source_recording_id": "fcf53635fe86424e8f31ec21aa018e64",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode390\\collection_state.json",
+      "source_recording_id": "ee0ba033bb4b4a5b917b13919b8889b7",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode392\\collection_state.json",
+      "source_recording_id": "909ea7a6e8b24913a068710540896c41",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode396\\collection_state.json",
+      "source_recording_id": "63f654013e4642ccbe040fcdce001178",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode402\\collection_state.json",
+      "source_recording_id": "8f676088423849c58c2500475fbb7809",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode407\\collection_state.json",
+      "source_recording_id": "b04465f5da93484196f0e0285c433f29",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode423\\collection_state.json",
+      "source_recording_id": "d731d83afa1c499c817911ac59a54476",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode56\\collection_state.json",
+      "source_recording_id": "f0e62cb87c014009a28a02e5e97c0b89",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode58\\collection_state.json",
+      "source_recording_id": "a5cf3e74f82c419899add559b0dc21b2",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode65\\collection_state.json",
+      "source_recording_id": "a43e001074564dc48b6914f4ebbcb317",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode70\\collection_state.json",
+      "source_recording_id": "9576b51163274115b36691769dfa37c8",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode79\\collection_state.json",
+      "source_recording_id": "728591e9e93640bd83dd0e23acc4c82c",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode80\\collection_state.json",
+      "source_recording_id": "cea8cb05615945349aeee2555f32b078",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode91\\collection_state.json",
+      "source_recording_id": "ef98f56cdc6b48cf8f539c5aeb024e16",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    },
+    {
+      "source": "R:\\real\\harvest-tomato\\data\\origin-rosbag\\sharpa\\B\\episode106\\collection_state.json",
+      "source_recording_id": "1758eaac8ab34016bca5305c4823d12f",
+      "cameras": {
+        "cam0_semantic": "cam_high",
+        "cam1_semantic": "cam_right_wrist",
+        "cam2_semantic": "cam_left_wrist"
+      },
+      "quality": "一般",
+      "calibration_ids": {
+        "cameras": "data_collection/config/cameras.yaml",
+        "hands": "manus_sharpa_record/record.py",
+        "left_arm": "config/modes/gello.yaml",
+        "right_arm": "config/modes/gello.yaml"
+      },
+      "workcell_id": "gello-dual-fr3-sharpa-tactile",
+      "workcell_config_hash": "f8f2568e41233e5ce94d0ce933176c9b0bb623234d69d060357ee091fda62435"
+    }
+  ]
+}
