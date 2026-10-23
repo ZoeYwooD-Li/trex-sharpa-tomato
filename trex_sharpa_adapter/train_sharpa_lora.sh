@@ -25,7 +25,8 @@ cd "$TREX_ROOT"
   --lora_dropout "${LORA_DROPOUT:-0.05}" --lora_gradient_checkpointing 1 \
   --lora_sdpa_math "${LORA_SDPA_MATH:-1}" \
   --n_epochs "${N_EPOCHS:-1}" --max_train_batches "${MAX_TRAIN_BATCHES:-20}" \
-  --save_freq "${SAVE_FREQ:-1}" --learning_rate "${LEARNING_RATE:-1e-4}" \
+  --save_freq "${SAVE_FREQ:-1}" --save_steps "${SAVE_STEPS:-0}" \
+  --learning_rate "${LEARNING_RATE:-1e-4}" \
   --min_lr_ratio 0 --weight_decay 0 \
   --train_bsz_per_gpu "${TRAIN_BSZ:-1}" --gradient_accumulation_steps "${GRAD_ACCUM:-1}" \
   --seed 42 --val_ratio 0.05 --val_freq "${VAL_FREQ:-10}" \

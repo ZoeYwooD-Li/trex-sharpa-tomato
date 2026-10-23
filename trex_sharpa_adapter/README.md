@@ -16,9 +16,20 @@ python validate_prepared.py --upstream /path/to/T-Rex \
   --output /path/to/processor_batch_validation.json
 ```
 
-单卡入口为 `train_sharpa_lora.sh`，用普通 Python 启动，不使用官方 DeepSpeed ZeRO-2 配置。训练前设置 `TREX_ROOT`、`PREPARED_ROOT`、`ORIGIN_MODEL_PATH`、`RESUME_CHECKPOINT`、`OUTPUT_DIR`；可设置 `PYTHON`、`TRAIN_BSZ`、`GRAD_ACCUM`、`LORA_RANK`、`LORA_ALPHA`、`LORA_DROPOUT`。默认只执行 20 batch、2 个验证 batch 并保存 checkpoint，便于先检查显存和损失。正式实验时显式设置 `MAX_TRAIN_BATCHES=0`、`N_EPOCHS`、`SAVE_FREQ`、`VAL_FREQ` 和 `MAX_VAL_BATCHES`。首次运行保留所有模态和损失，用 `TRAIN_BSZ=1`、`GRAD_ACCUM=1`：
+单卡入口为 `train_sharpa_lora.sh`，用普通 Python 启动，不使用官方 DeepSpeed ZeRO-2 配置。训练前设置 `TREX_ROOT`、`PREPARED_ROOT`、`ORIGIN_MODEL_PATH`、`RESUME_CHECKPOINT`、`OUTPUT_DIR`；可设置 `PYTHON`、`TRAIN_BSZ`、`GRAD_ACCUM`、`LORA_RANK`、`LORA_ALPHA`、`LORA_DROPOUT`。默认只执行 20 batch、2 个验证 batch 并保存 checkpoint，便于先检查显存和损失。正式实验时显式设置 `MAX_TRAIN_BATCHES`、`N_EPOCHS`、`SAVE_STEPS`、`VAL_FREQ` 和 `MAX_VAL_BATCHES`。有 `MAX_TRAIN_BATCHES` 时，余弦学习率周期按该上限计算；`TRAIN_BSZ=1`、`GRAD_ACCUM=1` 时每个 batch 对应一次优化器更新：
 
 ```bash
+bash train_sharpa_lora.sh
+```
+
+25,000 次更新示例（路径按机器修改；每 5,000 步保存并验证）：
+
+```bash
+TREX_ROOT=/path/to/T-Rex PREPARED_ROOT=/path/to/prepared_sharpa \
+ORIGIN_MODEL_PATH=/path/to/Qwen3-VL-2B-Instruct \
+RESUME_CHECKPOINT=/path/to/trex_midtrain OUTPUT_DIR=/path/to/runs/lora_25k \
+TRAIN_BSZ=1 GRAD_ACCUM=1 N_EPOCHS=1 MAX_TRAIN_BATCHES=25000 \
+SAVE_STEPS=5000 VAL_FREQ=5000 MAX_VAL_BATCHES=30 \
 bash train_sharpa_lora.sh
 ```
 

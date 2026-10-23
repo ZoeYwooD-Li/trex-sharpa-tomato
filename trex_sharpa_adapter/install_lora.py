@@ -94,6 +94,45 @@ def install(repo: Path) -> None:
         '        // accelerator.num_processes',
         "single-GPU step count")
     source = replace_once(source,
+        '    num_training_steps = (\n'
+        '        int(len(dataloader) * args.n_epochs)\n'
+        '        // accelerator.gradient_accumulation_steps\n'
+        '        // accelerator.num_processes\n'
+        '    )',
+        '    total_train_batches = int(len(dataloader) * args.n_epochs)\n'
+        '    if args.max_train_batches > 0:\n'
+        '        total_train_batches = min(total_train_batches, args.max_train_batches)\n'
+        '    num_training_steps = max(1,\n'
+        '        total_train_batches\n'
+        '        // accelerator.gradient_accumulation_steps\n'
+        '        // accelerator.num_processes\n'
+        '    )',
+        "bounded learning-rate schedule")
+    source = replace_once(source,
+        '    global_step = 0\n'
+        '    T_per_frame = args.n_flare_tokens_per_frame',
+        '    global_step = 0\n'
+        '    last_saved_step = -1\n'
+        '    T_per_frame = args.n_flare_tokens_per_frame',
+        "periodic checkpoint state")
+    source = replace_once(source,
+        '            global_step += 1\n'
+        '            if args.max_train_batches > 0 and global_step >= args.max_train_batches:',
+        '            global_step += 1\n'
+        '            if args.save_steps > 0 and global_step % args.save_steps == 0:\n'
+        '                accelerator.wait_for_everyone()\n'
+        '                save_checkpoint(model, processor, accelerator, args,\n'
+        '                                epoch, global_step, dataset.stats_data)\n'
+        '                last_saved_step = global_step\n'
+        '            if args.max_train_batches > 0 and global_step >= args.max_train_batches:',
+        "periodic checkpoint save")
+    source = replace_once(source,
+        '        if (epoch + 1) % args.save_freq == 0 or epoch == args.n_epochs - 1 or short_run_done:',
+        '        if (global_step != last_saved_step and\n'
+        '                ((epoch + 1) % args.save_freq == 0 or\n'
+        '                 epoch == args.n_epochs - 1 or short_run_done)):',
+        "avoid duplicate final checkpoint")
+    source = replace_once(source,
         '        else:\n'
         '            param.requires_grad = True\n\n'
         '    # Keep the embedded VQ-VAE',
@@ -121,6 +160,12 @@ def install(repo: Path) -> None:
                  '    parser.add_argument("--lora_alpha", type=float, default=16.0)\n'
                  '    parser.add_argument("--lora_dropout", type=float, default=0.05)\n'
                  '    parser.add_argument("--lora_gradient_checkpointing", type=int, default=1)')
+    source = replace_once(source,
+        '    parser.add_argument("--save_freq", type=int, default=50)',
+        '    parser.add_argument("--save_freq", type=int, default=50)\n'
+        '    parser.add_argument("--save_steps", type=int, default=0, '
+        'help="Save every N training batches; 0 disables periodic saves")',
+        "periodic checkpoint option")
     source = replace_once(source,
         '                if args.max_grad_norm > 0:\n'
         '                    accelerator.clip_grad_norm_(model.parameters(), args.max_grad_norm)',
