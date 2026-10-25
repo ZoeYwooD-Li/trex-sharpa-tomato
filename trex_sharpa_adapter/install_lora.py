@@ -128,16 +128,16 @@ def install(repo: Path) -> None:
         '    T_per_frame = args.n_flare_tokens_per_frame',
         "periodic checkpoint state")
     source = replace_once(source,
-        '        model, optimizer, dataloader, val_dataloader = accelerator.prepare(\n'
-        '            model, optimizer, dataloader, val_dataloader)\n'
-        '    else:\n'
-        '        model, optimizer, dataloader = accelerator.prepare(model, optimizer, dataloader)',
         '        model, optimizer, dataloader, val_dataloader, lr_scheduler = accelerator.prepare(\n'
         '            model, optimizer, dataloader, val_dataloader, lr_scheduler)\n'
         '    else:\n'
         '        model, optimizer, dataloader, lr_scheduler = accelerator.prepare(\n'
         '            model, optimizer, dataloader, lr_scheduler)',
-        "prepare learning-rate scheduler with DeepSpeed")
+        '        model, optimizer, dataloader, val_dataloader = accelerator.prepare(\n'
+        '            model, optimizer, dataloader, val_dataloader)\n'
+        '    else:\n'
+        '        model, optimizer, dataloader = accelerator.prepare(model, optimizer, dataloader)',
+        "one scheduler step per optimizer update")
     source = replace_once(source,
         '            global_step += 1\n'
         '            if args.max_train_batches > 0 and global_step >= args.max_train_batches:',
