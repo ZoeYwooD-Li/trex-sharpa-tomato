@@ -6,7 +6,7 @@
 
 此处“全参数”是指原 T-Rex post-training 代码中的**全部可训练策略参数**，而非把视觉编码器、形变编码器和嵌入式 VQ-VAE 也解冻；这三个模块在官方训练器中保持冻结。使用 `--resume_source midtrain` 从官方 midtrain 启动新的实验，不要把已有的 LoRA 合并权重当成官方初始权重。
 
-8 卡 72 GB 的起点是每卡 batch 1、梯度累积 1、DeepSpeed ZeRO-2 和学习率 `1e-5`。这只是待实测的配置，先运行 20 batch 并检查显存、有限损失和验证结果。服务器的 RTX PRO 5000 Blackwell 属于 sm_120；官方固定的 Torch 2.6/cu124 环境不适用。先测试 Torch 2.7.1/cu128 与 DeepSpeed 0.15.4 的组合，验证通过后再启动正式训练。
+8 卡 72 GB 的起点是每卡 batch 1、梯度累积 1、DeepSpeed ZeRO-2 和学习率 `1e-5`。当前 DeepSpeed 入口仅支持 `GRAD_ACCUM=1`，传入其他值会直接报错；增加梯度累积前须改用 `accelerator.accumulate(model)` 并实测更新步数。安装补丁会将学习率调度器一同交给 `accelerator.prepare`，使 DeepSpeed 在反向传播后的优化器更新时同步推进调度器。这只是待实测的配置，先运行 20 batch 并检查显存、有限损失和验证结果。服务器的 RTX PRO 5000 Blackwell 属于 sm_120；官方固定的 Torch 2.6/cu124 环境不适用。先测试 Torch 2.7.1/cu128 与 DeepSpeed 0.15.4 的组合，验证通过后再启动正式训练。
 
 在隔离的 Python 3.10 环境内安装 Blackwell 可用的 Torch，再安装已在 RTX 5090 短跑使用的其余依赖及官方 DeepSpeed 版本；不要执行会重新锁定 Torch 2.6/cu124 的 `pip install -e T-Rex`：
 

@@ -15,6 +15,11 @@ export TRAIN_BSZ="${TRAIN_BSZ:-1}"
 export GRAD_ACCUM="${GRAD_ACCUM:-1}"
 export RUN_NAME="${RUN_NAME:-sharpa_full_smoke}"
 
+if [[ "$GRAD_ACCUM" != 1 ]]; then
+  echo "This DeepSpeed training entry point currently requires GRAD_ACCUM=1." >&2
+  exit 2
+fi
+
 bash "$(dirname "$0")/train_sharpa.sh" \
   --lora_rank 0 \
   --n_epochs "${N_EPOCHS:-1}" \

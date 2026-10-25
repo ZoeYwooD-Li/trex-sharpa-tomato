@@ -7,7 +7,7 @@ set -euo pipefail
 : "${RESUME_CHECKPOINT:?Set the local T-Rex MIDTRAIN checkpoint directory}"
 : "${OUTPUT_DIR:?Set training output directory}"
 : "${NUM_PROCESSES:?Set training process count for your machine}"
-: "${ACCELERATE_CONFIG:?Set your machine's DeepSpeed accelerate YAML}"
+: "${ACCELERATE_CONFIG:?Set the DeepSpeed accelerate YAML for this machine}"
 export PYTHONPATH="${TREX_ROOT}:${PYTHONPATH:-}"
 export WANDB_MODE="${WANDB_MODE:-offline}"
 cd "${TREX_ROOT}"
