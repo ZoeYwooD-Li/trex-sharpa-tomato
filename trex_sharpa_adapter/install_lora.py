@@ -99,15 +99,27 @@ def install(repo: Path) -> None:
         '        // accelerator.gradient_accumulation_steps\n'
         '        // accelerator.num_processes\n'
         '    )',
-        '    total_train_batches = int(len(dataloader) * args.n_epochs)\n'
-        '    if args.max_train_batches > 0:\n'
-        '        total_train_batches = min(total_train_batches, args.max_train_batches)\n'
-        '    num_training_steps = max(1,\n'
-        '        total_train_batches\n'
-        '        // accelerator.gradient_accumulation_steps\n'
+        '    # max_train_batches counts batches processed by each rank.\n'
+        '    # Convert the unsharded loader length before applying that cap.\n'
+        '    per_rank_batches = (\n'
+        '        (len(dataloader) + accelerator.num_processes - 1)\n'
         '        // accelerator.num_processes\n'
+        '    ) * args.n_epochs\n'
+        '    if args.max_train_batches > 0:\n'
+        '        per_rank_batches = min(per_rank_batches, args.max_train_batches)\n'
+        '    num_training_steps = max(1,\n'
+        '        per_rank_batches\n'
+        '        // accelerator.gradient_accumulation_steps\n'
         '    )',
-        "bounded learning-rate schedule")
+        "bounded learning-rate schedule",
+        previous='    total_train_batches = int(len(dataloader) * args.n_epochs)\n'
+                 '    if args.max_train_batches > 0:\n'
+                 '        total_train_batches = min(total_train_batches, args.max_train_batches)\n'
+                 '    num_training_steps = max(1,\n'
+                 '        total_train_batches\n'
+                 '        // accelerator.gradient_accumulation_steps\n'
+                 '        // accelerator.num_processes\n'
+                 '    )')
     source = replace_once(source,
         '    global_step = 0\n'
         '    T_per_frame = args.n_flare_tokens_per_frame',

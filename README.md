@@ -60,6 +60,8 @@ python3 trex_sharpa_adapter/relocate_prepared.py \
 
 若使用单卡 LoRA，还需执行 `python3 trex_sharpa_adapter/install_lora.py --repo /workspace/trex_job/T-Rex`，再按 [LoRA 步骤](trex_sharpa_adapter/README.md#可选单-gpu-lora-后训练)运行 `train_sharpa_lora.sh`。LoRA checkpoint 只保存适配参数；部署时用 `merge_lora.py` 与同一 midtrain 权重合并。
 
+8 卡全参数后训练也应执行 `install_lora.py`，但使用新增的 `train_sharpa_full.sh`（强制 `--lora_rank 0`）；该安装器同时提供按步保存和多卡学习率步数修正。先用默认 20 batch 短跑，再启动新的正式输出目录。命令及训练语义见[全参数后训练步骤](trex_sharpa_adapter/README.md#8-卡全参数后训练rtx-pro-5000-blackwell)。
+
 本地 RTX 5090 已用完整 midtrain checkpoint、三路 RGB、十指触觉和 FLARE 跑通 20 个 LoRA 训练 batch 与两次验证，结果和适用范围记录在 [短跑报告](trex_sharpa_adapter/lora_smoke_5090.json)。服务器上的正式实验仍需把原始四个 LeRobot 数据集复制到本地磁盘，并按服务器 GPU 重新验证环境。
 
 适配器目录可以保留在本仓库；运行 `train_sharpa.sh` 时设置 `TREX_ROOT`、`PREPARED_ROOT`、`ORIGIN_MODEL_PATH`、`RESUME_CHECKPOINT`、`OUTPUT_DIR`、`NUM_PROCESSES`、`ACCELERATE_CONFIG`、`TRAIN_BSZ`。基础模型是 `Qwen/Qwen3-VL-2B-Instruct`；midtrain 权重是 `miniFranka/T-Rex_midtrain_mecka23k_ucb100_vqvae_epoch6`，交接时核对的 revision 为 `62efb3bcb45a3df0e088c8909d759b582cfb98af`。保持 `--resume_source midtrain`。完整验证与 20 batch 短跑步骤见适配器的 `README.md` 和 `train_sharpa.sh`。
