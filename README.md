@@ -5,7 +5,7 @@
 ## 内容
 
 - `trex_sharpa_adapter/`：适配器源码、FR3 名义模型、检查报告及训练脚本。
-- `trex_sharpa_adapter/INFERENCE.md`：全参数 checkpoint 的 GPU 推理启动、无机械臂探针与真机接口合同。
+- `trex_sharpa_adapter/INFERENCE.md`：全参数及已合并 LoRA checkpoint 的 GPU 推理启动、无机械臂探针与真机接口合同。
 - `trex_sharpa_adapter_v3.zip`：Windows 交接时的原始 v3 包。解压目录中的 `relocate_prepared.py` 另有一个 Linux 依赖修复：重定位只读 JSON，不再因导入 `sharpa_core` 要求预先安装 PyArrow。
 - `prepared_sharpa_link8.zip`：A+B 的数值缓存与训练集统计，使用 Git LFS 管理。
 
@@ -60,6 +60,8 @@ python3 trex_sharpa_adapter/relocate_prepared.py \
 ```
 
 若使用单卡 LoRA，还需执行 `python3 trex_sharpa_adapter/install_lora.py --repo /workspace/trex_job/T-Rex`，再按 [LoRA 步骤](trex_sharpa_adapter/README.md#可选单-gpu-lora-后训练)运行 `train_sharpa_lora.sh`。LoRA checkpoint 只保存适配参数；部署时用 `merge_lora.py` 与同一 midtrain 权重合并。
+
+本仓库已有 LoRA 训练与合并代码。部署时可使用全参数 `checkpoint-0-N/`，或使用**已合并**的 LoRA 完整 checkpoint；两者共用 `serve_sharpa.sh`。原始 `lora.pt` 目录不能直接作为服务权重，具体步骤见 [推理交接](trex_sharpa_adapter/INFERENCE.md)。
 
 8 卡全参数后训练也应执行 `install_lora.py`，但使用新增的 `train_sharpa_full.sh`（强制 `--lora_rank 0`）；该安装器同时提供按步保存和多卡学习率步数修正。先用默认 20 batch 短跑，再启动新的正式输出目录。命令及训练语义见[全参数后训练步骤](trex_sharpa_adapter/README.md#8-卡全参数后训练rtx-pro-5000-blackwell)。
 

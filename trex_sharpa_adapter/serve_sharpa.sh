@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Start the T-Rex GPU inference server for the full Sharpa checkpoint.
+# Start the T-Rex GPU inference server for a full-trained or merged-LoRA checkpoint.
 set -euo pipefail
 
 : "${TREX_ROOT:?Set TREX_ROOT to the patched T-Rex checkout}"
-: "${CHECKPOINT:?Set CHECKPOINT to a complete checkpoint-0-N directory}"
+: "${CHECKPOINT:?Set CHECKPOINT to a full-trained or merged-LoRA checkpoint directory}"
 
 PYTHON_BIN=${PYTHON_BIN:-python3}
 CUDA_DEVICE=${CUDA_DEVICE:-0}

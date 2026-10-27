@@ -1,4 +1,4 @@
-# T-Rex × 双 FR3 / Sharpa：全参数权重推理交接
+# T-Rex × 双 FR3 / Sharpa：全参数与 LoRA 权重推理交接
 
 本目录提供 **GPU 侧模型服务** 的安装补丁、启动和无机械臂探针。它不包含真机 SDK 客户端、机器人控制程序、数据集或权重；机械臂运动需在独立部署代码中实现并验收。
 
@@ -18,7 +18,21 @@ python3 trex-sharpa-tomato/trex_sharpa_adapter/install_inference.py --repo T-Rex
 
 `install_lora.py` 也安装全参数训练时使用的模型修正；推理完整权重时不注入 LoRA。安装器仅对固定基准源码应用可核对补丁，遇到未识别的代码会报错。**训练服务器当时的完整源码状态仍应与此结果比较**；若存在额外未记录补丁，先核对再加载实机权重。
 
-只把选中的完整 `checkpoint-0-N/` 目录传到 GPU 机器。目录至少包含 `model.pt`、`config.json`、`training_args.json`、`stats_data.json`、`adapter_metadata.json`、`processor/` 和 `robot/`。原始训练数据、`prepared_sharpa/`、midtrain 权重均不是完整全参数 checkpoint 推理的必需输入。不要把 checkpoint 提交到 Git。
+可选择以下一种**完整**权重目录，传到 GPU 机器的 Git 目录之外：
+
+- 全参数训练：选定的 `checkpoint-0-N/`。
+- LoRA 训练：先用 `merge_lora.py` 把所选 `checkpoint-0-N/` 中的 `lora.pt` 与**训练时同一份** midtrain `model.pt` 合并，再传合并目录。仓库已有 25,000 步 LoRA 训练与合并代码；本机 25,000 步合并包见训练交接记录，不能凭步数认定它优于全参数权重。
+
+在有足够磁盘和内存的机器上合并，例如：
+
+```bash
+python3 trex-sharpa-tomato/trex_sharpa_adapter/merge_lora.py \
+  --base-checkpoint /path/to/trex_midtrain \
+  --adapter-checkpoint /path/to/lora_run/checkpoint-0-25000 \
+  --output /path/to/trex_sharpa_lora_25000_merged
+```
+
+合并目录至少包含 `model.pt`、`config.json`、`training_args.json`、`stats_data.json`、`adapter_metadata.json`、`processor/`、`robot/` 和 `lora_origin.json`；全参数目录无需 `lora_origin.json`。`training_args.json` 中的 `lora_rank=8` 在**已合并**目录仍是训练来源记录，服务不再注入 LoRA。单独的 `lora.pt` 目录不能直接提供推理。原始训练数据与 `prepared_sharpa/` 不用于推理；合并完成后 GPU 推理机器也无需 midtrain 权重。不要把任何 checkpoint 提交到 Git。
 
 本仓库的脚本用 `PYTHON_BIN` 指定已安装 T-Rex 依赖的 Python。需在目标 GPU 上确认 CUDA 可用，且环境有与训练兼容的 Qwen3-VL `transformers`、PyTorch、`pyzmq`、Pillow、NumPy 等依赖。此前训练环境用 `transformers==4.57.3`、`huggingface-hub==0.36.2`；不要把 π0.5/JAX 公共环境当作 T-Rex 环境。
 
@@ -28,13 +42,13 @@ python3 trex-sharpa-tomato/trex_sharpa_adapter/install_inference.py --repo T-Rex
 
 ```bash
 export TREX_ROOT=/path/to/T-Rex
-export CHECKPOINT=/path/to/checkpoint-0-6250
+export CHECKPOINT=/path/to/checkpoint-0-6250  # 或 /path/to/trex_sharpa_lora_25000_merged
 export PYTHON_BIN=/path/to/trex-env/bin/python
 export CUDA_DEVICE=0 PORT=5678 BIND_HOST=127.0.0.1
 bash trex-sharpa-tomato/trex_sharpa_adapter/serve_sharpa.sh
 ```
 
-脚本先检查权重目录、62D/16 帧动作、十指触觉、相机身份和 link8 URDF 哈希，然后加载模型并做一次零值预热。服务端使用 ZMQ REP；出现 `Warm-up output shape: (16, 62)` 和监听日志才表示启动成功。另一终端用同一环境运行：
+脚本先检查完整权重类型、62D/16 帧动作、十指触觉、相机身份和 link8 URDF 哈希，然后加载模型并做一次零值预热。全参数和已合并 LoRA 使用同一入口；检查器会拒绝未合并的 LoRA 目录或不一致的合并来源记录。服务端使用 ZMQ REP；出现 `Warm-up output shape: (16, 62)` 和监听日志才表示启动成功。另一终端用同一环境运行：
 
 ```bash
 /path/to/trex-env/bin/python \
