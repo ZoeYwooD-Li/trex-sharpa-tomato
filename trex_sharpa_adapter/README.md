@@ -53,7 +53,6 @@ bash train_sharpa_full.sh
 ```bash
 python install_adapter.py --repo /path/to/T-Rex
 python install_lora.py --repo /path/to/T-Rex
-python test_sharpa_lora.py
 python validate_prepared.py --upstream /path/to/T-Rex \
   --prepared /path/to/prepared_sharpa \
   --processor-path /path/to/Qwen3-VL-2B-Instruct \

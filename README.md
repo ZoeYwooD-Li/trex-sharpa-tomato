@@ -5,6 +5,7 @@
 ## 内容
 
 - `trex_sharpa_adapter/`：适配器源码、FR3 名义模型、检查报告及训练脚本。
+- `trex_sharpa_adapter/INFERENCE.md`：全参数 checkpoint 的 GPU 推理启动、无机械臂探针与真机接口合同。
 - `trex_sharpa_adapter_v3.zip`：Windows 交接时的原始 v3 包。解压目录中的 `relocate_prepared.py` 另有一个 Linux 依赖修复：重定位只读 JSON，不再因导入 `sharpa_core` 要求预先安装 PyArrow。
 - `prepared_sharpa_link8.zip`：A+B 的数值缓存与训练集统计，使用 Git LFS 管理。
 
