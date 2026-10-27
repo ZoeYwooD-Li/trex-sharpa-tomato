@@ -5,6 +5,7 @@
 ## 内容
 
 - `trex_sharpa_adapter/`：适配器源码、FR3 名义模型、检查报告及训练脚本。
+- `trex_sharpa_adapter/INFERENCE.md`：全参数 checkpoint 的 GPU 推理启动、无机械臂探针与真机接口合同。
 - `trex_sharpa_adapter_v3.zip`：Windows 交接时的原始 v3 包。解压目录中的 `relocate_prepared.py` 另有一个 Linux 依赖修复：重定位只读 JSON，不再因导入 `sharpa_core` 要求预先安装 PyArrow。
 - `prepared_sharpa_link8.zip`：A+B 的数值缓存与训练集统计，使用 Git LFS 管理。
 
@@ -59,6 +60,8 @@ python3 trex_sharpa_adapter/relocate_prepared.py \
 ```
 
 若使用单卡 LoRA，还需执行 `python3 trex_sharpa_adapter/install_lora.py --repo /workspace/trex_job/T-Rex`，再按 [LoRA 步骤](trex_sharpa_adapter/README.md#可选单-gpu-lora-后训练)运行 `train_sharpa_lora.sh`。LoRA checkpoint 只保存适配参数；部署时用 `merge_lora.py` 与同一 midtrain 权重合并。
+
+8 卡全参数后训练也应执行 `install_lora.py`，但使用新增的 `train_sharpa_full.sh`（强制 `--lora_rank 0`）；该安装器同时提供按步保存和多卡学习率步数修正。先用默认 20 batch 短跑，再启动新的正式输出目录。命令及训练语义见[全参数后训练步骤](trex_sharpa_adapter/README.md#8-卡全参数后训练rtx-pro-5000-blackwell)。
 
 本地 RTX 5090 已用完整 midtrain checkpoint、三路 RGB、十指触觉和 FLARE 跑通 20 个 LoRA 训练 batch 与两次验证，结果和适用范围记录在 [短跑报告](trex_sharpa_adapter/lora_smoke_5090.json)。服务器上的正式实验仍需把原始四个 LeRobot 数据集复制到本地磁盘，并按服务器 GPU 重新验证环境。
 

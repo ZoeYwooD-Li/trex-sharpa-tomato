@@ -1,5 +1,49 @@
 # Sharpa 番茄采摘数据接入 T-Rex
 
+## 8 卡全参数后训练（RTX PRO 5000 Blackwell）
+
+先准备四个原始数据集、`prepared_sharpa` 缓存、Qwen3-VL-2B 底座和**官方 midtrain** 权重；缓存不能代替 Parquet/MP4。用 `relocate_prepared.py` 将缓存索引重连到服务器本地数据目录，执行 `validate_prepared.py` 后再训练。官方仓库固定在本项目验证过的 `ba4047ce3e9f3d2013d60de600e136897e90ccb8`，依次运行 `install_adapter.py` 和 `install_lora.py`。后者同时提供按步保存和多卡步数修正；`--lora_rank 0` 仍走全参数训练。
+
+此处“全参数”是指原 T-Rex post-training 代码中的**全部可训练策略参数**，而非把视觉编码器、形变编码器和嵌入式 VQ-VAE 也解冻；这三个模块在官方训练器中保持冻结。使用 `--resume_source midtrain` 从官方 midtrain 启动新的实验，不要把已有的 LoRA 合并权重当成官方初始权重。
+
+8 卡 72 GB 的起点是每卡 batch 1、梯度累积 1、DeepSpeed ZeRO-2 和峰值学习率 `1e-5`。当前 DeepSpeed 入口仅支持 `GRAD_ACCUM=1`，传入其他值会直接报错；增加梯度累积前须改用 `accelerator.accumulate(model)` 并实测更新步数。余弦调度器保持官方训练器的用法：不交给 `accelerator.prepare`，在每次优化更新后调用一次 `lr_scheduler.step()`。Accelerate 1.13.0 对传入 `prepare` 的调度器在未拆分 batch 的 8 卡配置下每次调用会推进 8 次，造成周期过快。2026-10-25 的首次 20-batch 服务器短跑完成前向、反向、验证和保存，但第 10、20 个 batch 的学习率均为 `1e-5`，与上述周期错误吻合；需重新安装本补丁并重跑短跑确认。服务器使用 RTX PRO 5000 Blackwell（sm_120）、Torch 2.10/cu128、DeepSpeed 0.18.9 和 Accelerate 1.13.0；官方固定的 Torch 2.6/cu124 环境不适用。
+
+以下是先前建议的独立环境安装示例；当前服务器已使用 Python 3.12 / Torch 2.10/cu128 / DeepSpeed 0.18.9 跑通短跑，继续训练应使用现有环境。不要执行会重新锁定 Torch 2.6/cu124 的 `pip install -e T-Rex`：
+
+```bash
+python -m pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cu128
+python -m pip install -r /path/to/trex_sharpa_adapter/requirements-5090.txt
+python -m pip install deepspeed==0.15.4
+python -c 'import torch; assert torch.cuda.device_count() == 8; print(torch.__version__, torch.version.cuda, torch.cuda.get_device_capability(0))'
+```
+
+现有环境已通过 8 卡 20-batch 短跑；修正学习率调度后仍需重跑，确认第 10 次更新后约 `5e-6`、第 20 次更新后约 `0`。
+
+`train_sharpa_full.sh` 默认只跑 20 batch，且不会覆盖 LoRA 实验输出：
+
+```bash
+export TREX_ROOT=/path/to/T-Rex
+export PREPARED_ROOT=/path/to/prepared_sharpa
+export ORIGIN_MODEL_PATH=/path/to/Qwen3-VL-2B-Instruct
+export RESUME_CHECKPOINT=/path/to/official_trex_midtrain
+export OUTPUT_DIR=/path/to/new/full_smoke_output
+export NUM_PROCESSES=8 TRAIN_BSZ=1 GRAD_ACCUM=1
+export ACCELERATE_CONFIG="$TREX_ROOT/config/sft_qwen.yaml"
+bash train_sharpa_full.sh
+```
+
+修正后的 20 batch 通过后，从原始 midtrain 权重用**新**输出目录启动 25,000 次更新；每 5,000 步保存和验证一次。8 卡全局 batch 为 8，约消费 200,000 个训练样本，接近当前 232,570 帧训练集的一轮。`max_train_batches` 在训练器中按每个进程的 batch 计数；余弦学习率周期先计算每卡数据量，再应用上限。不要从首次短跑的 `checkpoint-0-20` 接着训练。
+
+```bash
+export OUTPUT_DIR=/path/to/new/full_25k_output
+export RUN_NAME=sharpa_full_25k
+export MAX_TRAIN_BATCHES=25000 SAVE_STEPS=5000
+export VAL_FREQ=5000 MAX_VAL_BATCHES=30 N_EPOCHS=1
+bash train_sharpa_full.sh
+```
+
+每个全量 checkpoint 包含 `model.pt`，约 8 GB；默认最多保留 5 份。当前保存逻辑不保存优化器与学习率调度器状态，中断后不能将 `--resume_checkpoint` 指向中途 checkpoint 并声称是同一次训练的严格续跑。
+
 ## 可选：单 GPU LoRA 后训练
 
 在运行 `install_adapter.py` 后，再运行 `install_lora.py`。LoRA 补丁保留原有全参数训练入口；只有传入 `--lora_rank > 0` 才启用。它冻结原模型，向 MoT 的 action/tactile 注意力与 MLP，以及动作、触觉和 FLARE 投影中的线性层加入 LoRA；视觉编码器、形变编码器和嵌入式 VQ-VAE 保持冻结。当前是纯 LoRA 基线，未声称优于全参数训练。
@@ -9,7 +53,6 @@
 ```bash
 python install_adapter.py --repo /path/to/T-Rex
 python install_lora.py --repo /path/to/T-Rex
-python test_sharpa_lora.py
 python validate_prepared.py --upstream /path/to/T-Rex \
   --prepared /path/to/prepared_sharpa \
   --processor-path /path/to/Qwen3-VL-2B-Instruct \
