@@ -1,0 +1,84 @@
+{
+  "engine": "custom quasi-static tetrahedral FEM using SciPy sparse direct solve",
+  "material_model": "homogeneous isotropic linear elastic tetrahedra with unilateral penalty contact",
+  "units": {
+    "length": "m",
+    "mass": "kg",
+    "force": "N",
+    "youngs_modulus": "Pa"
+  },
+  "provenance": {
+    "radius_m": "existing project setting; not measured",
+    "mass_kg": "existing project setting; not measured",
+    "poissons_ratio": "assumed 0.42",
+    "youngs_modulus_Pa": "sweep values; none calibrated",
+    "contact_penalty_N_per_m": "numerical assumption; penetration reported"
+  },
+  "mesh": {
+    "node_count": 698,
+    "tetrahedron_count": 1958,
+    "surface_triangle_count": 1280,
+    "density_kg_m3": 946.4764847905831,
+    "min_quality_rest": 0.2645183800932606,
+    "mean_quality_rest": 0.5917449043222196,
+    "all_rest_tets_positive": true
+  },
+  "settle_tests": {
+    "settle_200000Pa": {
+      "youngs_modulus_Pa": 200000.0,
+      "minimum_node_z_m": 0.0,
+      "ground_penetration_depth_m": 0.0,
+      "deformed_height_m": 0.034243393218299424,
+      "height_change_from_rest_m": 0.0001566067817005759,
+      "active_ground_contact_area_m2": 1.72652335282359e-05,
+      "volume_change_fraction": -0.0001255240818298642,
+      "tet_count": 1958,
+      "node_count": 698,
+      "min_tet_quality_rest": 0.2645183800932606,
+      "min_tet_quality_settled": 0.2643799713886829,
+      "min_tet_volume_m3": 1.946722222138851e-09,
+      "inverted_tets": 0,
+      "solver_iterations": 2,
+      "solver_converged": true
+    },
+    "settle_800000Pa": {
+      "youngs_modulus_Pa": 800000.0,
+      "minimum_node_z_m": 0.0,
+      "ground_penetration_depth_m": 0.0,
+      "deformed_height_m": 0.03436084830457486,
+      "height_change_from_rest_m": 3.915169542514224e-05,
+      "active_ground_contact_area_m2": 1.7319153765631543e-05,
+      "volume_change_fraction": -3.180040369854531e-05,
+      "tet_count": 1958,
+      "node_count": 698,
+      "min_tet_quality_rest": 0.2645183800932606,
+      "min_tet_quality_settled": 0.2644838122354012,
+      "min_tet_volume_m3": 1.9468636815121435e-09,
+      "inverted_tets": 0,
+      "solver_iterations": 2,
+      "solver_converged": true
+    },
+    "settle_2000000Pa": {
+      "youngs_modulus_Pa": 2000000.0,
+      "minimum_node_z_m": 0.0,
+      "ground_penetration_depth_m": 0.0,
+      "deformed_height_m": 0.034384339321829945,
+      "height_change_from_rest_m": 1.566067817005551e-05,
+      "active_ground_contact_area_m2": 1.7329984800756893e-05,
+      "volume_change_fraction": -7.762854771997674e-06,
+      "tet_count": 1958,
+      "node_count": 698,
+      "min_tet_quality_rest": 0.2645183800932606,
+      "min_tet_quality_settled": 0.26450446467898076,
+      "min_tet_volume_m3": 1.946902527975494e-09,
+      "inverted_tets": 0,
+      "solver_iterations": 2,
+      "solver_converged": true
+    }
+  },
+  "compression_rows": 9,
+  "physics_notes": [
+    "Contact forces are computed from the FEM contact penalty reaction, not measured fruit data.",
+    "This quasi-static baseline does not model viscoelasticity, fracture, skin/pulp layering, or large-strain hyperelasticity."
+  ]
+}

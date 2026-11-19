@@ -1,0 +1,706 @@
+# Stem-up, original natural right-hand grip, recalibrated left harvest attitude.
+# Left pad+distal contacts limit force; only target contacts qualify the grasp.
+# Preview recording is disabled. See docs/stem_up_natural.md for validation scope.
+sim:
+  dt: 0.005
+  substeps: 2
+  duration: 28.0
+  gravity:
+  - 0.0
+  - 0.0
+  - -9.81
+  device: cuda:0
+assets:
+  cache_dir: .cache/lycheesim/cherry_tomato_pick
+  target_visual_npz: demos/cherry_tomato_pick/assets/runtime/target_tomato_visual.npz
+  support_visual_npz: demos/cherry_tomato_pick/assets/runtime/support_tomato_visual.npz
+  cluster_visual_npz: demos/cherry_tomato_pick/assets/runtime/tomato_cluster_visual.npz
+  fruit_visual_dir: demos/cherry_tomato_pick/assets/runtime
+  stem_visual_npz: demos/cherry_tomato_pick/assets/runtime/stem_visual.npz
+  fruit_albedo_texture: demos/cherry_tomato_pick/assets/runtime/tomato_fruit_basecolor.png
+  visual_metadata: demos/cherry_tomato_pick/assets/runtime/metadata.json
+  albedo_texture: demos/cherry_tomato_pick/assets/runtime/tomato_basecolor.png
+scene:
+  support_mode: stem_and_fruit
+  branch_mass_kg: 0.01
+  stem_grasp_offset_m:
+  - 0.0259
+  - -0.105
+  - -0.0151
+  target_name: tomato_10
+  support_name: tomato_07
+  detachable_targets:
+  - tomato_07
+  - tomato_02
+  - tomato_10
+  - tomato_09
+  cluster_quaternion_xyzw:
+  - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+  tomato_position:
+  - 0.37492
+  - 0.01933
+  - 0.08386
+  tomato_radius_m: 0.0172
+  tomato_mass_kg: 0.02
+  tomato_friction:
+  - 4.0
+  - 0.05
+  - 0.005
+  tomato_linear_damping: 5.0
+  tomato_angular_damping: 3.0
+  max_linear_velocity_m_s: 0.35
+  max_angular_velocity_rad_s: 8.0
+  stem_anchor:
+  - 0.37373139
+  - 0.02001533
+  - 0.09765979
+  branch_length_m: 0.205
+  branch_radius_m: 0.004
+  branch_collision_axis:
+  - 0.0
+  - 1.0
+  - 0.0
+  branch_collision_center_offset_m:
+  - 0.0259
+  - -0.105
+  - -0.0151
+  support_tomato_offset_m:
+  - -0.04673
+  - -0.18492
+  - -0.00068
+  hand_friction:
+  - 6.0
+  - 0.1
+  - 0.01
+robot:
+  carrier_mjcf: demos/assets/robots/dual_fr3_linker_l20/model.collision.xml
+  wuji_left_mjcf: demos/assets/robots/wuji_hand2_beta2_official/mjcf/left_with_mount.xml
+  wuji_right_mjcf: demos/assets/robots/wuji_hand2_beta2_official/mjcf/right_with_mount.xml
+  fr3_visual_mesh_dir: demos/assets/robots/dual_fr3_linker_l20/meshes/fr3v2/visual
+  default_arm_q:
+  - 0.0
+  - -0.48
+  - 0.0
+  - -2.55
+  - 0.0
+  - 2.75
+  - 0.78
+  source_mounts:
+    base_link:
+      pos:
+      - 0.0
+      - 0.0
+      - 0.0
+      quat_xyzw:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 1.0
+    left_base:
+      pos:
+      - 0.038
+      - 0.18
+      - 0.304
+      quat_xyzw:
+      - -0.3385606822175297
+      - 0.16663917149299404
+      - 0.3800209992006355
+      - 0.8445070107151746
+    right_base:
+      pos:
+      - 0.038
+      - -0.18
+      - 0.304
+      quat_xyzw:
+      - 0.3385606822175297
+      - 0.16663917149299404
+      - -0.3800209992006355
+      - 0.8445070107151746
+  mount_offset_m:
+  - 0.0
+  - 0.0
+  - 0.001
+  mount_quat_xyzw:
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  left_harvest_quat_xyzw:
+  - -0.3718294095297791
+  - 0.6472979506700796
+  - -0.1983757501596568
+  - 0.6351340921534953
+  minimum_interhand_distance_m: 0.005
+  left_harvest_depth_m: 0.002
+  right_cluster_grasp_quat_xyzw:
+  - -0.114514745
+  - -0.414701132
+  - 0.749464296
+  - 0.503202358
+  right_cluster_grasp_center_bias_m:
+  - -0.009234196
+  - -0.000192398
+  - -0.009820221
+  right_grasp_opposing_fingers:
+  - index
+  - middle
+  - ring
+  - pinky
+  right_force_fingers:
+  - thumb
+  - index
+  - middle
+  - ring
+  - pinky
+  right_distal_first_fingers:
+  - thumb
+  - index
+  right_fit_contact_fruits:
+  - tomato_01
+  - tomato_00
+  - tomato_00
+  - tomato_04
+  - tomato_04
+  right_pregrasp_hand:
+    joint_order:
+    - thumb_cmc_flex
+    - thumb_cmc_abd
+    - thumb_mcp
+    - thumb_ip
+    - index_finger_mcp_flex
+    - index_finger_mcp_abd
+    - index_finger_pip
+    - index_finger_dip
+    - middle_finger_mcp_flex
+    - middle_finger_mcp_abd
+    - middle_finger_pip
+    - middle_finger_dip
+    - ring_finger_mcp_flex
+    - ring_finger_mcp_abd
+    - ring_finger_pip
+    - ring_finger_dip
+    - pinky_mcp_flex
+    - pinky_mcp_abd
+    - pinky_pip
+    - pinky_dip
+    positions:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+  left_pregrasp_offset_m:
+  - 0.0
+  - 0.08
+  - 0.04
+  left_pregrasp_hand:
+    joint_order:
+    - thumb_cmc_flex
+    - thumb_cmc_abd
+    - thumb_mcp
+    - thumb_ip
+    - index_finger_mcp_flex
+    - index_finger_mcp_abd
+    - index_finger_pip
+    - index_finger_dip
+    - middle_finger_mcp_flex
+    - middle_finger_mcp_abd
+    - middle_finger_pip
+    - middle_finger_dip
+    - ring_finger_mcp_flex
+    - ring_finger_mcp_abd
+    - ring_finger_pip
+    - ring_finger_dip
+    - pinky_mcp_flex
+    - pinky_mcp_abd
+    - pinky_pip
+    - pinky_dip
+    positions:
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 0.0
+    - 1.2
+    - 0.0
+    - 1.5
+    - 1.2
+    - 1.2
+    - 0.0
+    - 1.5
+    - 1.2
+  right_pregrasp_offset_m:
+  - 0.0
+  - -0.03
+  - 0.1
+  left_workspace_min:
+  - 0.2
+  - -0.2
+  - 0.06
+  left_workspace_max:
+  - 0.6
+  - 0.6
+  - 0.65
+  right_workspace_min:
+  - 0.2
+  - -0.6
+  - 0.06
+  right_workspace_max:
+  - 0.6
+  - 0.2
+  - 0.65
+  left_harvest_hand:
+    joint_order:
+    - thumb_cmc_flex
+    - thumb_cmc_abd
+    - thumb_mcp
+    - thumb_ip
+    - index_finger_mcp_flex
+    - index_finger_mcp_abd
+    - index_finger_pip
+    - index_finger_dip
+    - middle_finger_mcp_flex
+    - middle_finger_mcp_abd
+    - middle_finger_pip
+    - middle_finger_dip
+    - ring_finger_mcp_flex
+    - ring_finger_mcp_abd
+    - ring_finger_pip
+    - ring_finger_dip
+    - pinky_mcp_flex
+    - pinky_mcp_abd
+    - pinky_pip
+    - pinky_dip
+    positions:
+    - 0.497326096
+    - -0.091648287
+    - 0.512081777
+    - 0.489129223
+    - 0.468071108
+    - 0.005305589
+    - 0.412652401
+    - 0.47559355
+    - 0.464210711
+    - -0.002037262
+    - 0.960711247
+    - 0.849978169
+    - 1.2
+    - 0.0
+    - 1.5
+    - 1.2
+    - 1.2
+    - 0.0
+    - 1.5
+    - 1.2
+  left_retention_joint_offsets_rad:
+    thumb_cmc_flex: 0.006
+    middle_finger_mcp_flex: 0.02
+  right_cluster_grasp_hand:
+    joint_order:
+    - thumb_cmc_flex
+    - thumb_cmc_abd
+    - thumb_mcp
+    - thumb_ip
+    - index_finger_mcp_flex
+    - index_finger_mcp_abd
+    - index_finger_pip
+    - index_finger_dip
+    - middle_finger_mcp_flex
+    - middle_finger_mcp_abd
+    - middle_finger_pip
+    - middle_finger_dip
+    - ring_finger_mcp_flex
+    - ring_finger_mcp_abd
+    - ring_finger_pip
+    - ring_finger_dip
+    - pinky_mcp_flex
+    - pinky_mcp_abd
+    - pinky_pip
+    - pinky_dip
+    positions:
+    - 0.245459027
+    - 0.347905244
+    - 0.754070998
+    - 1.10590353
+    - 0.963221268
+    - 0.244494857
+    - 1.072068014
+    - 1.287230645
+    - 0.817199651
+    - 0.006169678
+    - 0.859920566
+    - 1.132781509
+    - 0.811790314
+    - 0.138796091
+    - 0.835085203
+    - 1.13538463
+    - 0.797455801
+    - -0.027802694
+    - 0.731918313
+    - 0.983094089
+attachment:
+  tomato_local_point:
+  - 0.00118861
+  - 0.00068533
+  - -0.01379979
+  break_direction_world:
+  - 0.0
+  - 0.0
+  - -1.0
+  rest_quaternion_xyzw:
+  - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+  axial_stiffness_N_m: 200.0
+  lateral_stiffness_N_m: 50.0
+  axial_damping_N_s_m: 3.0
+  lateral_damping_N_s_m: 1.0
+  bending_stiffness_Nm_rad: 0.015
+  torsional_stiffness_Nm_rad: 0.1
+  bending_damping_Nm_s_rad: 0.0003
+  torsional_damping_Nm_s_rad: 0.001
+  break_force_N: 2.0
+  break_torque_Nm: 0.2
+  break_ema_time_constant_s: 0.03
+  minimum_break_overload_s: 0.08
+support_attachment:
+  linear_stiffness_N_m: 1000.0
+  linear_damping_N_s_m: 3.0
+  torsional_stiffness_Nm_rad: 0.1
+  torsional_damping_Nm_s_rad: 0.001
+contact:
+  mu: 4.0
+  ke: 4.0e3
+  kd: 6.0e1
+  kh: 1.0e6
+  gap: 0.001
+  margin: 0.0015
+  is_hydroelastic: false
+solver:
+  backend: newton_mujoco_hydro
+  ground_z: 0.041
+  ground_friction:
+  - 1.0
+  - 0.0
+  - 0.0
+  xpbd_iterations: 12
+  mujoco_iterations: 15
+  mujoco_ls_iterations: 40
+  rigid_contact_max: 256
+  broad_phase: sap
+  use_capture: false
+camera:
+  model: orbbec_gemini_435le
+  optical_position_m:
+  - 0.1
+  - 0.0
+  - 0.48
+  look_at_target_m:
+  - 0.398285
+  - -0.00313
+  - 0.0842
+  world_up:
+  - 0.0
+  - 0.0
+  - 1.0
+  housing_dimensions_m:
+  - 0.1385
+  - 0.0405
+  - 0.07
+  stereo_baseline_m: 0.095
+  frustum_length_m: 0.18
+  mount:
+    pedestal_size_m:
+    - 0.045
+    - 0.055
+    - 0.43
+    pedestal_center_m:
+    - 0.075
+    - 0.0
+    - 0.215
+    bracket_size_m:
+    - 0.065
+    - 0.05
+    - 0.042
+    bracket_center_m:
+    - 0.055
+    - 0.0
+    - 0.451
+  sensor:
+    enabled: true
+    width: 320
+    height: 200
+    sample_hz: 10.0
+    horizontal_fov_deg: 94.0
+    vertical_fov_deg: 68.0
+    clipping_range_m:
+    - 0.31
+    - 10.0
+    channels:
+    - color
+    - forward_depth
+    load_textures: true
+    textures: true
+    default_light: true
+    ambient_lighting: true
+    shadows: true
+    backface_culling: true
+    light_direction:
+    - -1.0
+    - 1.0
+    - -1.0
+wrist_cameras:
+  model: orbbec_gemini_305
+  housing_dimensions_m:
+  - 0.042
+  - 0.042
+  - 0.023
+  stereo_baseline_m: 0.018
+  frustum_length_m: 0.15
+  mounts:
+    left:
+      optical_position_in_wrist_m:
+      - 0.0
+      - -0.08
+      - -0.025
+      optical_quat_in_wrist_xyzw:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 1.0
+      bracket_anchor_in_wrist_m:
+      - 0.0
+      - -0.01
+      - 0.0
+    right:
+      optical_position_in_wrist_m:
+      - 0.08
+      - 0.0
+      - -0.025
+      optical_quat_in_wrist_xyzw:
+      - 0.0
+      - 0.0
+      - 0.0
+      - 1.0
+      bracket_anchor_in_wrist_m:
+      - 0.01
+      - 0.0
+      - 0.0
+  sensor:
+    enabled: true
+    width: 320
+    height: 200
+    sample_hz: 30.0
+    horizontal_fov_deg: 94.0
+    vertical_fov_deg: 68.0
+    clipping_range_m:
+    - 0.04
+    - 1.0
+    channels:
+    - color
+    - forward_depth
+    load_textures: true
+    textures: true
+    default_light: true
+    ambient_lighting: true
+    shadows: true
+    backface_culling: true
+    light_direction:
+    - -1.0
+    - 1.0
+    - -1.0
+recording:
+  enabled: false
+  output_path: outputs/stem_up_natural/episode_000001.h5
+  robot_sample_hz: 30.0
+  seed: 42
+  vary_seed_by_episode: true
+  auto_increment: true
+  overwrite: false
+  randomization:
+    enabled: true
+    position_xy_m: 0.015
+    position_z_m: 0.0
+    cluster_rotation_xyz_deg:
+    - 2.0
+    - 2.0
+    - 12.0
+    light_azimuth_jitter_deg: 30.0
+    light_elevation_jitter_deg: 15.0
+    visual:
+      enabled: true
+      exposure_gain:
+      - 0.85
+      - 1.15
+      fruit_tint_rgb:
+      - - 0.92
+        - 1.0
+      - - 0.9
+        - 1.0
+      - - 0.9
+        - 1.0
+      tabletop_gain:
+      - 0.85
+      - 1.0
+  scene_validation:
+    enabled: true
+    max_attempts: 64
+    plate_margin_m: 0.001
+    max_height_correction_m: 0.015
+    max_initial_gap_m: 0.025
+  target_condition:
+    mode: uniform
+    box_indices:
+    - 0
+    - 1
+    - 2
+  quality_filter:
+    enabled: true
+    min_valid_depth_fraction: 0.001
+task:
+  harvest_contact_control: true
+  harvest_contact_target_N: 5.0
+  harvest_retention_contact_target_N: 2.0
+  minimum_grip: 0.72
+  minimum_support_grip: 0.72
+  support_contact_target_N: 5.0
+  support_contact_gain_s_N: 0.015
+  support_free_closure_rate_s: 0.2
+  minimum_support_contact_fingers: 3
+  minimum_support_finger_contact_N: 0.5
+  minimum_support_wrap_closure: 1.1
+  support_maximum_closure: 1.15
+  minimum_support_bilateral_contact_N: 3.0
+  minimum_support_hold_s: 0.25
+  minimum_support_retention_contact_N: 0.2
+  support_loss_timeout_s: 0.08
+  minimum_cluster_lift_m: 0.04
+  maximum_support_distance_m: 0.03
+  maximum_grasp_distance_m: 0.032
+  minimum_support_contact_N: 0.005
+  minimum_bilateral_contact_N: 1.0
+  minimum_retention_bilateral_contact_N: 0.1
+  minimum_grasp_hold_s: 0.15
+  minimum_post_detach_hold_s: 0.5
+  minimum_harvest_command_motion_m: 0.005
+  minimum_harvest_command_rotation_rad: 0.08
+  minimum_harvest_distance_m: 0.015
+  maximum_hold_distance_m: 0.015
+  drop_height_m: 0.025
+  unsafe_contact_force_N: 35.0
+script:
+  post_detach_retreat_m: 0.02
+  post_detach_retreat_duration_s: 1.5
+  harvest_pull_along_stem_axis: true
+  support_close_on_early_contact: false
+  support_require_reached_pose: true
+  support_follow_bunch_pitch: false
+  harvest_track_target_until_contact: true
+  support_approach_end_s: 1.0
+  support_reach_end_s: 1.6
+  support_close_end_s: 2.1
+  support_lift_end_s: 4.6
+  support_lift_offset_m:
+  - 0.0
+  - 0.0
+  - 0.12
+  harvest_approach_end_s: 5.3
+  harvest_reach_end_s: 5.9
+  harvest_close_end_s: 6.4
+  settle_end_s: 6.65
+  pull_end_s: 9.15
+  carry_end_s: 9.65
+  pull_offset_m:
+  - 0.0
+  - 0.0
+  - 0.07
+  twist_rad: 0.0
+  carry_offset_m:
+  - -0.03
+  - 0.0
+  - 0.03
+  retention_tighten_duration_s: 0.25
+rl:
+  decimation: 4
+  episode_length_s: 6.0
+  start_from_pregrasp: true
+  randomization:
+    position_xy_m: 0.015
+    break_force_fraction: 0.2
+    tomato_mass_fraction: 0.15
+render:
+  out_path: outputs/stem_up_natural.rrd
+  fps: 50
+  every: 4
+  view_up: z
+  camera:
+    position:
+    - 0.88
+    - -0.92
+    - 0.62
+    look_target:
+    - 0.4
+    - 0.0
+    - 0.18
+tableware:
+  enabled: true
+  plate_center_xy:
+  - 0.4
+  - -0.105
+  plate_radii_m:
+  - 0.14
+  - 0.14
+  plate_rim_height_m: 0.014
+  floor_top_z_m: 0.045
+  wall_thickness_m: 0.004
+  box_width_m: 0.085
+  box_height_m: 0.045
+  box_centers_xy:
+  - - 0.245
+    - 0.3
+  - - 0.34
+    - 0.3
+  - - 0.435
+    - 0.3
+  tabletop:
+    enabled: true
+    center_xy:
+    - 0.38
+    - 0.05
+    size_xy_m:
+    - 0.62
+    - 1.0
+    thickness_m: 0.025
+deposit:
+  enabled: true
+  target_box: 1
+  travel_s: 1.6
+  release_s: 0.4
+  # Raise the held fruit and left hand over the box rim before release.
+  drop_center_z_m: 0.21

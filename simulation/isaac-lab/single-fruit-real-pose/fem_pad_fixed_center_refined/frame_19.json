@@ -1,0 +1,59 @@
+{
+  "frame": 19,
+  "iterations": 3,
+  "material_E_Pa": 281000.0,
+  "material_nu": 0.335,
+  "density_kg_m3": 474.0465825581235,
+  "contact_model": "two measured Sharpa pad tangent planes; nodal unilateral penalty",
+  "contact_penalty_N_per_m": 10000000.0,
+  "fruit_fixture": "zero mean translation and rotation; local FEM deformation free",
+  "contact_force_on_tomato_N": {
+    "support": [
+      0.0,
+      0.0,
+      0.027316338080396463
+    ],
+    "thumb": [
+      0.29254624190261347,
+      -0.04911518149463531,
+      -0.08454185586552256
+    ],
+    "index": [
+      -0.6956040743042424,
+      0.33029034759941217,
+      0.4401039141946472
+    ]
+  },
+  "max_numerical_penetration_m": {
+    "support": 2.7316338080396463e-09,
+    "thumb": 1.3955589732849667e-08,
+    "index": 2.7010073337816216e-08
+  },
+  "active_contact_nodes": {
+    "support": 1,
+    "thumb": 4,
+    "index": 6
+  },
+  "fixture_holding_force_N": [
+    0.40305783240162896,
+    -0.2811751661047769,
+    -0.3177007564095212
+  ],
+  "gauge_residual": [
+    2.190076477019898e-19,
+    -1.808613865734944e-19,
+    -8.163362747224575e-20,
+    -6.647918234190675e-19,
+    -7.526379908818928e-19,
+    6.020799524589723e-19
+  ],
+  "mean_node_displacement_m": [
+    2.186315815316959e-19,
+    -1.8402700914787984e-19,
+    -8.452248110201902e-20
+  ],
+  "max_node_displacement_m": 0.0004738794100603548,
+  "inverted_tetrahedra": 0,
+  "min_tetra_quality": 0.2617715009083519,
+  "limitation": "First tangent-plane contact approximation; FEM reaction is not Sharpa Wrench or a calibrated tomato force."
+}

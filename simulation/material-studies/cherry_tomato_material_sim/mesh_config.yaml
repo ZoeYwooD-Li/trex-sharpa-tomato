@@ -1,0 +1,32 @@
+geometry:
+  diameter_mm: 30
+  height_mm: 30
+  shape: ideal sphere
+  initial_center_m:
+  - 0
+  - 0
+  - 0.015
+discretization:
+  method: surface icosphere plus interior points; Delaunay tetrahedralization
+  surface_subdivisions: 3
+  nodes: 698
+  tetrahedra: 1958
+  surface_triangles: 1280
+  collision_surface: closed triangulated convex-hull boundary of the FEM surface nodes
+  visualization: USD contains orange collision-surface edge overlay and blue tetrahedral
+    edge overlay; overlays hidden by default
+solver:
+  engine: custom SciPy sparse direct linear FEM
+  contact: unilateral nodal penalty contact
+  contact_penalty_N_per_m: 10000000.0
+  gravity_m_s2: 9.81
+  length_internal: m
+  force: N
+  modulus_internal: Pa
+  contact_force_source: external FEM penalty reaction, not PhysX soft-body force
+known_limits:
+- Single mesh resolution only in this run; convergence sweep pending.
+- Contact area is estimated from surface triangles near the platen, not an exact integrated
+  contact patch.
+- Contact geometry tested only for top compression against floor; side and opposing
+  contact tests pending.

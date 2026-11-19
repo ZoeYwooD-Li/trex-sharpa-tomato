@@ -1,0 +1,37 @@
+{
+  "scene": "outputs/isaac_tomato_gpu_deliverable/small_tomato_compression.usda",
+  "steps": 200,
+  "dt_s": 0.001,
+  "engine": "Isaac Sim 5.1 PhysX volume deformable with GPU Dynamics",
+  "material_model": "homogeneous isotropic linear elasticity (PhysX E, nu material)",
+  "parameters": {
+    "youngs_modulus_Pa": 5000000.0,
+    "poissons_ratio": 0.42,
+    "elasticity_damping": 0.005,
+    "solver_position_iterations": 128,
+    "dt_s": 0.001,
+    "contact_offset_m": 0.0002,
+    "rest_offset_m": 0.0,
+    "gravity_load_method": "set gravity magnitude to commanded_force_N / mass_kg",
+    "commanded_force_is_contact_force": false
+  },
+  "peak_commanded_force_N": 0.2,
+  "peak_compression_m": 0.0010009370744228363,
+  "peak_compression_strain": 0.029097006989250804,
+  "end_of_run_compression_m": 1.3783574104309082e-06,
+  "damage_threshold_exceeded": false,
+  "damage_measure": "bounding-height compression strain screening proxy; no PhysX fracture law",
+  "measured_contact_force_N": null,
+  "contact_force_limit": "Isaac Sim 5.1 public deformable view does not expose rigid-deformable contact manifold; equivalent weight load is recorded separately",
+  "rest_node_count": 163,
+  "derived_density_kg_m3": 938.3309592152383,
+  "parameter_status": {
+    "radius_m": "existing project configuration; calibration unverified",
+    "mass_kg": "existing project configuration; calibration unverified",
+    "youngs_modulus_pa": "assumed trial value",
+    "poissons_ratio": "assumed trial value",
+    "elasticity_damping": "assumed trial value",
+    "friction": "assumed trial value",
+    "damage_strain_threshold": "assumed screening threshold"
+  }
+}

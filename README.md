@@ -1,5 +1,9 @@
 # T-Rex × 双 FR3 / Sharpa 番茄采摘：后训练接入包
 
+## 番茄采摘仿真
+
+双 FR3 / Sharpa 仿真、材料实验和录像见 [中文仿真交接](simulation/README.md)。仿真从 `simulation/` 进入。下方是 T-Rex 后训练和真机接口资料。
+
 本仓库保存适配器源码和已经生成的数值缓存。原始四个 LeRobot v2.1 数据集（Parquet、RGB 视频、meta，约 44 GiB）需单独传到训练服务器；缓存不能代替原始数据。仓库不包含 T-Rex 官方代码或模型权重。
 
 ## 内容
@@ -18,7 +22,7 @@ c2cb7894a5926152dcd674d4da28eba8f293cc840535f2e3eb6c806ec4e28330  prepared_sharp
 
 ## 在训练服务器准备
 
-先在训练服务器配置对这个**私有仓库**的读取权限并安装 Git LFS，然后：
+先在训练服务器配置对仓库读取权限并安装 Git LFS，然后：
 
 ```bash
 git clone https://github.com/ZoeYwooD-Li/trex-sharpa-tomato.git

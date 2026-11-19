@@ -1,0 +1,7 @@
+{
+  "folders": [{"path": "."}],
+  "settings": {
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "search.exclude": {"**/.venv": true, "**/outputs": true, "**/__pycache__": true}
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "controller": "openpi_delta_joint_58d",
+  "checkpoint_label": "mengxiang_sharpa_no_block_one_delta_paper_t3/7999",
+  "action_representation": "absolute_joint_position",
+  "grasp_lift_gate": {
+    "enabled": false,
+    "phase": "disabled",
+    "timeout_s": 8.0,
+    "trigger_closure": 0.72,
+    "started_at_s": null,
+    "confirmed_at_s": null,
+    "released_at_s": null,
+    "height_ceiling_m": null,
+    "limited_targets": 0,
+    "events": []
+  },
+  "prompt": "Pick a tomato from the bunch and place it in the target box.",
+  "action_hz": 30,
+  "action_horizon": 50,
+  "execute_steps": 4,
+  "action_steps": 77,
+  "inference_calls": 20,
+  "inference_latency_s": [
+    0.07726202000003468,
+    0.07756400800008123,
+    0.07165027199994256,
+    0.07567867400007344,
+    0.0666548500000772,
+    0.0666193359998033,
+    0.07611083200004032,
+    0.06689069100002598,
+    0.07506225700012692,
+    0.07476751699982742,
+    0.07444142099984674,
+    0.0746818830000393,
+    0.06930200700003297,
+    0.06616998699996657,
+    0.07023950600000717,
+    0.06659250200004863,
+    0.06552542400004313,
+    0.06890557400015496,
+    0.0624269939999067,
+    0.06283119500017165
+  ],
+  "server_metadata": {
+    "config_name": "pi05_mengxiang_sharpa_no_block_one_delta_paper_t3_fullft_v1",
+    "action_dim": 58,
+    "action_horizon": 50,
+    "action_hz": 30,
+    "action_representation": "absolute_joint_position",
+    "action_order": [
+      "left_arm_7",
+      "left_hand_22",
+      "right_arm_7",
+      "right_hand_22"
+    ],
+    "camera_mapping": {
+      "base": "cam0",
+      "left_wrist": "cam2",
+      "right_wrist": "cam1"
+    }
+  },
+  "endpoint": "ws://127.0.0.1:8000",
+  "contact_stop_force_N": 2000.0,
+  "quality_contact_force_N": 35.0,
+  "sim_time_s": 2.545,
+  "verified_success": false,
+  "error": null,
+  "episode": "/path/to/local/ZoeyLi/projects/tomato_pick_sim_sharpa/outputs/openpi_delta_eval/episode_20261104_191745.h5",
+  "seed": 42,
+  "recording_saved": true,
+  "quality": {
+    "schema": "lycheesim.cherry_tomato_pick.quality/v1",
+    "accepted": false,
+    "status": "rejected",
+    "reasons": [
+      "incomplete_episode",
+      "not_detached_and_placed",
+      "right_support_not_ready_at_end"
+    ],
+    "robot_frames": 77,
+    "camera_frames": {
+      "gemini_435le": 26,
+      "gemini_305_left": 77,
+      "gemini_305_right": 77
+    },
+    "target_box_id": 0,
+    "scope": "initial_geometry_and_recorded_task_sensor_guards_not_full_robot_collision_certification"
+  },
+  "accepted": false
+}

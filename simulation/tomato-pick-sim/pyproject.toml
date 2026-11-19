@@ -1,0 +1,57 @@
+[project]
+name = "tomato-pick-sim"
+version = "0.1.0"
+description = "Standalone dual-Franka / Sharpa Wave tomato harvesting and RGB-D data collection"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "loguru==0.7.3", "numpy==2.4.4", "pyyaml==6.0.3", "tqdm==4.67.3",
+  "trimesh==4.11.5", "pycollada==0.9.3", "fast-simplification==0.1.13",
+  "warp-lang==1.16.0", "newton==1.5.0", "mujoco==3.11.0",
+  "mujoco-warp==3.11.0", "torch==2.11.0", "usd-core==26.5",
+  "h5py==3.16.0", "scipy==1.17.1", "pillow==11.3.0",
+  "rerun-sdk==0.31.3",
+]
+
+[project.optional-dependencies]
+openpi = ["websockets==15.0.1", "msgpack==1.1.1"]
+rl = ["rsl-rl-lib>=5.2.0,<6", "tensordict>=0.8.0"]
+
+[dependency-groups]
+dev = ["pytest==9.0.3"]
+
+[project.scripts]
+tomato-sim = "lycheesim.cli:main"
+lycheesim = "lycheesim.cli:main"
+
+[build-system]
+requires = ["uv_build>=0.9.7,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "lycheesim"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
+
+[[tool.uv.index]]
+name = "nvidia"
+url = "https://pypi.nvidia.com"
+explicit = true
+
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+[tool.uv.sources]
+warp-lang = { index = "nvidia" }
+torch = { index = "pytorch-cu130" }
+torchvision = { index = "pytorch-cu130" }

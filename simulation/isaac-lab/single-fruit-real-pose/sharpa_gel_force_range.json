@@ -1,0 +1,71 @@
+{
+  "method": "existing 4F local synthetic-sample/gel model",
+  "assumed_gel_E_Pa": 120000.0,
+  "profile_fit_rmse_um": 4.470469245291805,
+  "rows": [
+    {
+      "backing_travel_mm": 0.0,
+      "local_model_force_N": 4.744858197704398e-18,
+      "peak_gel_depth_um": 4.02010563719204e-14,
+      "min_gel_volume_ratio": 0.9999999999999963,
+      "min_sample_volume_ratio": 0.9999999999999963,
+      "max_complementarity_residual_Nm": 7.523163845262642e-37
+    },
+    {
+      "backing_travel_mm": 0.06,
+      "local_model_force_N": 0.0026786150069072886,
+      "peak_gel_depth_um": 15.094017470135176,
+      "min_gel_volume_ratio": 0.9945797309087991,
+      "min_sample_volume_ratio": 0.9796255137826925,
+      "max_complementarity_residual_Nm": 1.122407460794024e-22
+    },
+    {
+      "backing_travel_mm": 0.12,
+      "local_model_force_N": 0.007964115690226583,
+      "peak_gel_depth_um": 29.82227848574763,
+      "min_gel_volume_ratio": 0.993628732215155,
+      "min_sample_volume_ratio": 0.9622668169372597,
+      "max_complementarity_residual_Nm": 2.650166454542401e-22
+    },
+    {
+      "backing_travel_mm": 0.18,
+      "local_model_force_N": 0.014139587530716643,
+      "peak_gel_depth_um": 44.41665429139419,
+      "min_gel_volume_ratio": 0.9914315294917581,
+      "min_sample_volume_ratio": 0.9438412951860338,
+      "max_complementarity_residual_Nm": 2.3251155498329116e-22
+    },
+    {
+      "backing_travel_mm": 0.3,
+      "local_model_force_N": 0.03117942612038893,
+      "peak_gel_depth_um": 73.01970531139538,
+      "min_gel_volume_ratio": 0.9887001596335233,
+      "min_sample_volume_ratio": 0.9144336767919587,
+      "max_complementarity_residual_Nm": 3.380628916933262e-22
+    },
+    {
+      "backing_travel_mm": 0.5,
+      "local_model_force_N": 0.06583704237941862,
+      "peak_gel_depth_um": 119.95859736788218,
+      "min_gel_volume_ratio": 0.981550065683258,
+      "min_sample_volume_ratio": 0.8730539477410394,
+      "max_complementarity_residual_Nm": 1.3510747690553425e-21
+    },
+    {
+      "backing_travel_mm": 0.8,
+      "local_model_force_N": 0.1309935126308558,
+      "peak_gel_depth_um": 190.71067207024177,
+      "min_gel_volume_ratio": 0.9687532088163995,
+      "min_sample_volume_ratio": 0.823589358815433,
+      "max_complementarity_residual_Nm": 1.9378441889608715e-21
+    },
+    {
+      "backing_travel_mm": 1.0,
+      "local_model_force_N": 0.17704083510809596,
+      "peak_gel_depth_um": 237.7691999742017,
+      "min_gel_volume_ratio": 0.9583140353559538,
+      "min_sample_volume_ratio": 0.7927785458241148,
+      "max_complementarity_residual_Nm": 2.578772874165201e-21
+    }
+  ]
+}

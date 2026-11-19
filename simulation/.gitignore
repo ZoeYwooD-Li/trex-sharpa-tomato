@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.cache/
+**/outputs/
+**/reruns/
+**/material_runs/
+*.h5
+*.hdf5
+*.rrd
+.env
+.env.*

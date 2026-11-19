@@ -1,0 +1,217 @@
+{
+  "method": "one-way force transfer to existing 4F local gel FEM, central Gaussian load; official TacMap quantization",
+  "full_vendor_tacmap_runtime": false,
+  "two_way_tomato_gel_coupling": false,
+  "gel_E_Pa_assumed": 120000.0,
+  "force_patch_sigma_m_assumed": 0.001,
+  "sensor_geometry_profile_fit_rmse_um": 4.470469245291805,
+  "rows": [
+    {
+      "frame": 0,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 1,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 2,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 3,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 4,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 5,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 6,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 7,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 8,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 9,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 10,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 11,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 12,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 13,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 14,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 15,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 16,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 17,
+      "tomato_FEM_index_reaction_N": 0.0,
+      "gel_peak_depth_um": 0.0,
+      "gel_min_tetra_volume_ratio": 0.9999999999999963,
+      "tacmap_proxy_peak_uint8": 0,
+      "tacmap_proxy_nonzero_pixels": 0,
+      "within_previously_validated_0p18mm_force_range": true
+    },
+    {
+      "frame": 18,
+      "tomato_FEM_index_reaction_N": 0.9072411647500352,
+      "gel_peak_depth_um": 1786.9643943245483,
+      "gel_min_tetra_volume_ratio": 0.3271799701430645,
+      "tacmap_proxy_peak_uint8": 142,
+      "tacmap_proxy_nonzero_pixels": 726,
+      "within_previously_validated_0p18mm_force_range": false
+    },
+    {
+      "frame": 19,
+      "tomato_FEM_index_reaction_N": 0.8869319011037161,
+      "gel_peak_depth_um": 1746.9618763381395,
+      "gel_min_tetra_volume_ratio": 0.354536367104643,
+      "tacmap_proxy_peak_uint8": 141,
+      "tacmap_proxy_nonzero_pixels": 726,
+      "within_previously_validated_0p18mm_force_range": false
+    },
+    {
+      "frame": 20,
+      "tomato_FEM_index_reaction_N": 0.8403810454313442,
+      "gel_peak_depth_um": 1655.2721196957716,
+      "gel_min_tetra_volume_ratio": 0.41484123682868346,
+      "tacmap_proxy_peak_uint8": 138,
+      "tacmap_proxy_nonzero_pixels": 726,
+      "within_previously_validated_0p18mm_force_range": false
+    },
+    {
+      "frame": 21,
+      "tomato_FEM_index_reaction_N": 0.7745078631421373,
+      "gel_peak_depth_um": 1525.5237839000793,
+      "gel_min_tetra_volume_ratio": 0.49457296688293106,
+      "tacmap_proxy_peak_uint8": 134,
+      "tacmap_proxy_nonzero_pixels": 726,
+      "within_previously_validated_0p18mm_force_range": false
+    },
+    {
+      "frame": 22,
+      "tomato_FEM_index_reaction_N": 0.7008712465377439,
+      "gel_peak_depth_um": 1380.4840556522613,
+      "gel_min_tetra_volume_ratio": 0.5761275093936572,
+      "tacmap_proxy_peak_uint8": 129,
+      "tacmap_proxy_nonzero_pixels": 726,
+      "within_previously_validated_0p18mm_force_range": false
+    }
+  ]
+}

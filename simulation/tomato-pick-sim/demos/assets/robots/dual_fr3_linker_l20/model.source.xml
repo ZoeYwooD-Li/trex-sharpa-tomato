@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<mujoco model="my_dual_arm">
+  <!--Generated from my_dual_arm.urdf + BASE.SLDASM.urdf.-->
+  <!--Using STL collision meshes where available because the URDF visual meshes are DAE.-->
+  <!--Finger meshes were DAE-only in the source URDF, so placeholder box geoms are used for the fingers.-->
+  <!--Most arm-link inertias were missing from the source URDF. MuJoCo will infer them from the geoms unless you replace them.-->
+  <compiler angle="radian" coordinate="local" autolimits="true"/>
+  <option gravity="0 0 -9.81" integrator="implicitfast"/>
+  <default>
+    <joint damping="1"/>
+    <geom density="1000" friction="0.8 0.1 0.01" condim="4"/>
+    <default class="arm_hinge">
+      <joint type="hinge" damping="1"/>
+    </default>
+    <default class="gripper_slide">
+      <joint type="slide" damping="0.2"/>
+    </default>
+    <default class="mesh_geom">
+      <geom type="mesh" group="1" contype="1" conaffinity="1"/>
+    </default>
+    <default class="finger_geom">
+      <geom type="box" size="0.009 0.0045 0.03" pos="0 0 0.03" group="1" contype="1" conaffinity="1"/>
+    </default>
+  </default>
+  <asset>
+    <mesh name="meshes_base_link_mesh" file="meshes/base_link.STL"/>
+    <mesh name="fr3v2_collision_link0_mesh" file="meshes/fr3v2/collision/link0.stl"/>
+    <mesh name="fr3v2_collision_link1_mesh" file="meshes/fr3v2/collision/link1.stl"/>
+    <mesh name="fr3v2_collision_link2_mesh" file="meshes/fr3v2/collision/link2.stl"/>
+    <mesh name="fr3v2_collision_link3_mesh" file="meshes/fr3v2/collision/link3.stl"/>
+    <mesh name="fr3v2_collision_link4_mesh" file="meshes/fr3v2/collision/link4.stl"/>
+    <mesh name="fr3v2_collision_link5_mesh" file="meshes/fr3v2/collision/link5.stl"/>
+    <mesh name="fr3v2_collision_link6_mesh" file="meshes/fr3v2/collision/link6.stl"/>
+    <mesh name="fr3v2_collision_link7_mesh" file="meshes/fr3v2/collision/link7.stl"/>
+    <mesh name="R_meshes_base_link_STL" file="meshes/right_hand/base_link.STL"/>
+    <mesh name="R_meshes_thumb_metacarpals_base1_STL" file="meshes/right_hand/thumb_metacarpals_base1.STL"/>
+    <mesh name="R_meshes_thumb_metacarpals_base2_STL" file="meshes/right_hand/thumb_metacarpals_base2.STL"/>
+    <mesh name="R_meshes_thumb_metacarpals_STL" file="meshes/right_hand/thumb_metacarpals.STL"/>
+    <mesh name="R_meshes_thumb_proximal_STL" file="meshes/right_hand/thumb_proximal.STL"/>
+    <mesh name="R_meshes_thumb_distal_STL" file="meshes/right_hand/thumb_distal.STL"/>
+    <mesh name="R_meshes_index_metacarpals_STL" file="meshes/right_hand/index_metacarpals.STL"/>
+    <mesh name="R_meshes_index_proximal_STL" file="meshes/right_hand/index_proximal.STL"/>
+    <mesh name="R_meshes_index_middle_STL" file="meshes/right_hand/index_middle.STL"/>
+    <mesh name="R_meshes_index_distal_STL" file="meshes/right_hand/index_distal.STL"/>
+    <mesh name="R_meshes_middle_metacarpals_STL" file="meshes/right_hand/middle_metacarpals.STL"/>
+    <mesh name="R_meshes_middle_proximal_STL" file="meshes/right_hand/middle_proximal.STL"/>
+    <mesh name="R_meshes_middle_middle_STL" file="meshes/right_hand/middle_middle.STL"/>
+    <mesh name="R_meshes_middle_distal_STL" file="meshes/right_hand/middle_distal.STL"/>
+    <mesh name="R_meshes_ring_metacarpals_STL" file="meshes/right_hand/ring_metacarpals.STL"/>
+    <mesh name="R_meshes_ring_proximal_STL" file="meshes/right_hand/ring_proximal.STL"/>
+    <mesh name="R_meshes_ring_middle_STL" file="meshes/right_hand/ring_middle.STL"/>
+    <mesh name="R_meshes_ring_distal_STL" file="meshes/right_hand/ring_distal.STL"/>
+    <mesh name="R_meshes_pinky_metacarpals_STL" file="meshes/right_hand/pinky_metacarpals.STL"/>
+    <mesh name="R_meshes_pinky_proximal_STL" file="meshes/right_hand/pinky_proximal.STL"/>
+    <mesh name="R_meshes_pinky_middle_STL" file="meshes/right_hand/pinky_middle.STL"/>
+    <mesh name="R_meshes_pinky_distal_STL" file="meshes/right_hand/pinky_distal.STL"/>
+    <mesh name="L_meshes_hand_base_link_STL" file="meshes/left_hand/wrist_base_link.STL"/>
+    <mesh name="L_meshes_thumb_metacarpals_base1_STL" file="meshes/left_hand/thumb_metacarpals_base1.STL"/>
+    <mesh name="L_meshes_thumb_metacarpals_base2_STL" file="meshes/left_hand/thumb_metacarpals_base2.STL"/>
+    <mesh name="L_meshes_thumb_metacarpals_STL" file="meshes/left_hand/thumb_metacarpals.STL"/>
+    <mesh name="L_meshes_thumb_proximal_STL" file="meshes/left_hand/thumb_proximal.STL"/>
+    <mesh name="L_meshes_thumb_distal_STL" file="meshes/left_hand/thumb_distal.STL"/>
+    <mesh name="L_meshes_index_metacarpals_STL" file="meshes/left_hand/index_metacarpals.STL"/>
+    <mesh name="L_meshes_index_proximal_STL" file="meshes/left_hand/index_proximal.STL"/>
+    <mesh name="L_meshes_index_middle_STL" file="meshes/left_hand/index_middle.STL"/>
+    <mesh name="L_meshes_index_distal_STL" file="meshes/left_hand/index_distal.STL"/>
+    <mesh name="L_meshes_middle_metacarpals_STL" file="meshes/left_hand/middle_metacarpals.STL"/>
+    <mesh name="L_meshes_middle_proximal_STL" file="meshes/left_hand/middle_proximal.STL"/>
+    <mesh name="L_meshes_middle_middle_STL" file="meshes/left_hand/middle_middle.STL"/>
+    <mesh name="L_meshes_middle_distal_STL" file="meshes/left_hand/middle_distal.STL"/>
+    <mesh name="L_meshes_ring_metacarpals_STL" file="meshes/left_hand/ring_metacarpals.STL"/>
+    <mesh name="L_meshes_ring_proximal_STL" file="meshes/left_hand/ring_proximal.STL"/>
+    <mesh name="L_meshes_ring_middle_STL" file="meshes/left_hand/ring_middle.STL"/>
+    <mesh name="L_meshes_ring_distal_STL" file="meshes/left_hand/ring_distal.STL"/>
+    <mesh name="L_meshes_pinky_metacarpals_STL" file="meshes/left_hand/pinky_metacarpals.STL"/>
+    <mesh name="L_meshes_pinky_proximal_STL" file="meshes/left_hand/pinky_proximal.STL"/>
+    <mesh name="L_meshes_pinky_middle_STL" file="meshes/left_hand/pinky_middle.STL"/>
+    <mesh name="L_meshes_pinky_distal_STL" file="meshes/left_hand/pinky_distal.STL"/>
+  </asset>
+  <worldbody>
+    <body name="support_box">
+      <geom name="support_box_geom" type="box" size="0.4265 0.6265 0.3825" pos="0 0 0.3825" rgba="0.45 0.45 0.45 1"/>
+    </body>
+    <body name="base_link" pos="0.3 0 0.765">
+      <inertial pos="-0.0198650146477697 1.2755017047279E-05 0.222334575056727" mass="6.60648599522062" fullinertia="0.0936597875943432 0.0511056842352335 0.0741382717847405 1.09875644923452E-05 0.000154650545694182 -1.54662487107246E-05"/>
+      <geom class="mesh_geom" mesh="meshes_base_link_mesh" name="base_link_geom" pos="0 0 0" quat="-0.0000025973 0.0000025974 -0.7071080799 0.7071054825" rgba="0.75294 0.75294 0.75294 1"/>
+      <!-- Franka left_base absolute arm-mounting angle from image: pitch=0.5155, roll=0.5936, yaw=0.6155; encoded below as MuJoCo quat. -->
+      <body name="left_base" pos="-0.038 -0.18 0.298" quat="0.380021247 0.166635678 0.338560828 -0.84450753">
+        <body name="left_fr3v2_link0">
+          <geom class="mesh_geom" mesh="fr3v2_collision_link0_mesh" name="left_fr3v2_link0_geom"/>
+          <body name="left_fr3v2_link1" pos="0 0 0.333">
+            <joint name="left_fr3v2_joint1" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-2.90074 2.90074"/>
+            <geom class="mesh_geom" mesh="fr3v2_collision_link1_mesh" name="left_fr3v2_link1_geom"/>
+            <body name="left_fr3v2_link2" quat="0.7071054825 -0.7071080799 0 0">
+              <joint name="left_fr3v2_joint2" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-1.83609 1.83609"/>
+              <geom class="mesh_geom" mesh="fr3v2_collision_link2_mesh" name="left_fr3v2_link2_geom"/>
+              <body name="left_fr3v2_link3" pos="0 -0.316 0" quat="0.7071054825 0.7071080799 0 0">
+                <joint name="left_fr3v2_joint3" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-2.90074 2.90074"/>
+                <geom class="mesh_geom" mesh="fr3v2_collision_link3_mesh" name="left_fr3v2_link3_geom"/>
+                <body name="left_fr3v2_link4" pos="0.0825 0 0" quat="0.7071054825 0.7071080799 0 0">
+                  <joint name="left_fr3v2_joint4" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-3.07702 -0.116937"/>
+                  <geom class="mesh_geom" mesh="fr3v2_collision_link4_mesh" name="left_fr3v2_link4_geom"/>
+                  <body name="left_fr3v2_link5" pos="-0.0825 0.384 0" quat="0.7071054825 -0.7071080799 0 0">
+                    <joint name="left_fr3v2_joint5" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-2.8763 2.8763"/>
+                    <geom class="mesh_geom" mesh="fr3v2_collision_link5_mesh" name="left_fr3v2_link5_geom"/>
+                    <body name="left_fr3v2_link6" quat="0.7071054825 0.7071080799 0 0">
+                      <joint name="left_fr3v2_joint6" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="0.439823 4.62163"/>
+                      <geom class="mesh_geom" mesh="fr3v2_collision_link6_mesh" name="left_fr3v2_link6_geom"/>
+                      <body name="left_fr3v2_link7" pos="0.088 0 0" quat="0.7071054825 0.7071080799 0 0">
+                        <joint name="left_fr3v2_joint7" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-3.05083 3.05083"/>
+                        <geom class="mesh_geom" mesh="fr3v2_collision_link7_mesh" name="left_fr3v2_link7_geom"/>
+                        <body name="left_fr3v2_link8" pos="0 0 0.107">
+                          <body name="left_fr3v2_hand" quat="0.9238791811 0 0 -0.3826842808">
+                            <!--Linker hand imported from scene.xml. Mount is approximated by reusing the original FR3 hand frame and attaching the imported hand base at the 0.06 m wrist offset defined in scene.xml.-->
+                            <body name="left_fr3v2_hand_tcp" pos="0 0 0.1034">
+                              <site name="left_fr3v2_hand_tcp_site" type="sphere" size="0.006"/>
+                            </body>
+                            <body name="L_hand_base_link" pos="0 0 0.06" euler="0 0 0.785">
+                              <inertial mass="0.101492069055989" pos="-0.0119148743534565 0.00244694305387424 0.0878263905588916" fullinertia="0.00029225127950738 0.000213731207869946 0.000114547719899272 1.02375483704463e-06 2.93624183672648e-05 1.09167929629602e-06"/>
+                              <geom name="L_hand_base_link_visual_0" type="mesh" mesh="L_meshes_hand_base_link_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                              <body name="L_thumb_metacarpals_base1" pos="-0.000566250268316748 -0.00508587816314111 0.0573919459698274">
+                                <inertial mass="0.00274839797669793" pos="0.0127895410312684 -0.00250882072989859 0.00163056589077397" fullinertia="2.95789756987501e-07 9.81481693443978e-08 2.81862454163459e-07 1.62801523068308e-08 -1.23978459819709e-08 1.15835532157497e-08"/>
+                                <joint name="L_thumb_cmc_roll" type="hinge" axis="-1 0 0" range="-0.5 0.8" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="L_thumb_metacarpals_base1_visual_0" type="mesh" mesh="L_meshes_thumb_metacarpals_base1_STL" group="2" rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="L_thumb_metacarpals_base2" pos="0.0245077602402008 -0.000833339999216351 0">
+                                  <inertial mass="0.00427940802750865" pos="0.00091436913489587 -0.00935976528217774 -0.00155053524866945" fullinertia="6.79830652557537e-07 3.39547771057385e-07 5.02232646466429e-07 7.5700697333604e-08 -4.48172509472316e-08 1.13949380135091e-07"/>
+                                  <joint name="L_thumb_cmc_yaw" type="hinge" axis="0 0 1" range="0.15 2.2" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="L_thumb_metacarpals_base2_visual_0" type="mesh" mesh="L_meshes_thumb_metacarpals_base2_STL" group="2" rgba="0.823529411764706 0.823529411764706 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="L_thumb_metacarpals" pos="0 -0.0307945049899851 0.00396440225285005" quat="0.655730341765415 0.264608715316446 -0.26460875452152 0.655730244610817">
+                                    <inertial mass="0.0120240677638171" pos="0.00367448933834852 -0.00796936221759142 0.026216498568542" fullinertia="4.13899334404591e-06 4.84285467870166e-06 1.22734475239126e-06 1.60230655057446e-08 1.8332253169551e-07 5.77348282958799e-08"/>
+                                    <joint name="L_thumb_cmc_pitch" type="hinge" axis="-1 0 0" range="0 0.6" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="L_thumb_metacarpals_visual_0" type="mesh" mesh="L_meshes_thumb_metacarpals_STL" group="2" rgba="0.823529411764706 0.823529411764706 1 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="L_thumb_proximal" pos="0.00467511679938065 0.00010004081575718 0.0560361883792787" quat="0.636242588332673 0.308537467404115 -0.308537467404518 0.636242588331842">
+                                      <inertial mass="0.00531602156580031" pos="-0.00196476724732959 -0.000244186706447158 0.0123612439174935" fullinertia="6.23935550125038e-07 6.66979410162513e-07 3.98958182850857e-07 -2.49370597520143e-09 -8.89136577147006e-08 -1.18822298507521e-08"/>
+                                      <joint name="L_thumb_mcp" type="hinge" axis="0 1 0" range="0 1.2" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="L_thumb_proximal_visual_0" type="mesh" mesh="L_meshes_thumb_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                      <body name="L_thumb_distal" pos="-0.00294430789962509 0 0.0344361391557164">
+                                        <inertial mass="0.00432493724895246" pos="-0.000156787107686532 3.97911537203255e-06 0.00939729735725905" fullinertia="4.13650356383133e-07 3.90069876973653e-07 2.29900115532846e-07 -4.83478229403318e-12 8.26300981092417e-08 1.62728045295109e-10"/>
+                                        <joint name="L_thumb_ip" type="hinge" axis="0 1 0" range="0 1.2" limited="true" damping="0.05" armature="0.0001"/>
+                                        <geom name="L_thumb_distal_visual_0" type="mesh" mesh="L_meshes_thumb_distal_STL" group="2" rgba="0.823529411764706 0.823529411764706 1 1" contype="0" conaffinity="0" density="0"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="L_index_metacarpals" pos="-0.0236662629253359 -0.0267021153669649 0.159311473821529">
+                                <inertial mass="0.000826416925828409" pos="0.0059116226670245 1.24381489410505e-06 0.002336663088224" fullinertia="3.46900788673765e-08 2.23815226099384e-08 3.81307901736939e-08 -4.94570060292605e-12 -4.21639567754915e-09 -3.42869175805495e-12"/>
+                                <joint name="L_index_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="L_index_metacarpals_visual_0" type="mesh" mesh="L_meshes_index_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="L_index_proximal" pos="0.01087006638288 -1.2630433198893e-05 0">
+                                  <inertial mass="0.00454034378439372" pos="-0.00106078131266901 2.55750531230475e-05 0.0228291737829857" fullinertia="8.03482369839182e-07 7.93210005255178e-07 2.60969045351008e-07 1.48649914455092e-11 2.21021834598009e-08 -7.04429905546383e-10"/>
+                                  <joint name="L_index_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="L_index_proximal_visual_0" type="mesh" mesh="L_meshes_index_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="L_index_middle" pos="-0.00419480624913221 0 0.0448194128870992">
+                                    <inertial mass="0.0018096470933759" pos="-0.00201300292449436 1.2092957977234e-05 0.0157265974036625" fullinertia="2.06072982960832e-07 1.73233620341224e-07 7.97841922375294e-08 -2.88656520872837e-13 8.92137536120426e-09 1.60841307210769e-12"/>
+                                    <joint name="L_index_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="L_index_middle_visual_0" type="mesh" mesh="L_meshes_index_middle_STL" group="2" rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="L_index_distal" pos="0.00275581955818074 0 0.0317033719231916">
+                                      <inertial mass="0.00386200107962104" pos="-0.00765528957648076 1.71858539162253e-05 0.00664110531798134" fullinertia="2.03076988239249e-07 2.26886615426341e-07 1.46090205055279e-07 -1.68898885683265e-10 7.21653597112048e-08 4.65270572010848e-11"/>
+                                      <joint name="L_index_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="L_index_distal_visual_0" type="mesh" mesh="L_meshes_index_distal_STL" group="2" rgba="0.823529411764706 0.823529411764706 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="L_middle_metacarpals" pos="-0.028550041829013 -0.00510211872877702 0.163804366151529">
+                                <inertial mass="0.000826416925828398" pos="0.00591162266983494 1.23038485751181e-06 0.00233666308822397" fullinertia="3.46900788448415e-08 2.23815226324729e-08 3.81307901736936e-08 -4.97366320665279e-12 -4.21639568532751e-09 -3.41911294154389e-12"/>
+                                <joint name="L_middle_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="L_middle_metacarpals_visual_0" type="mesh" mesh="L_meshes_middle_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="L_middle_proximal" pos="0.0108700663541581 -1.26551278382542e-05 0">
+                                  <inertial mass="0.00454034378346624" pos="-0.00106078125509512 2.55774616831905e-05 0.0228291737811873" fullinertia="8.03482369774356e-07 7.93210005078348e-07 2.60969045312818e-07 1.48416643338212e-11 2.21021818913762e-08 -7.04480074835338e-10"/>
+                                  <joint name="L_middle_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="L_middle_proximal_visual_0" type="mesh" mesh="L_meshes_middle_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="L_middle_middle" pos="-0.00419480624913501 0 0.0448194128870992">
+                                    <inertial mass="0.00180964709329765" pos="-0.0020130028969762 1.20975311216631e-05 0.0157265974033742" fullinertia="2.06072982964894e-07 1.73233620341022e-07 7.97841922399522e-08 -3.63263662837678e-13 8.92137536948434e-09 1.58814752956499e-12"/>
+                                    <joint name="L_middle_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="L_middle_middle_visual_0" type="mesh" mesh="L_meshes_middle_middle_STL" group="2" rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="L_middle_distal" pos="0.00275581955816206 0 0.0317033719231916">
+                                      <inertial mass="0.00386200248743799" pos="-0.00765529200491016 1.72040491666012e-05 0.00664110864544543" fullinertia="2.03076993643721e-07 2.26886711161332e-07 1.46090301204891e-07 -1.6881768758217e-10 7.21653773421357e-08 4.63563384580481e-11"/>
+                                      <joint name="L_middle_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="L_middle_distal_visual_0" type="mesh" mesh="L_meshes_middle_distal_STL" group="2" rgba="0.823529411764706 0.823529411764706 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="L_ring_metacarpals" pos="-0.026245256656013 0.016497885055223 0.159311479072529">
+                                <inertial mass="0.000826416925828383" pos="0.00591162266983489 1.23038485749793e-06 0.00233666308822397" fullinertia="3.46900788448411e-08 2.23815226324725e-08 3.81307901736931e-08 -4.97366320674972e-12 -4.21639568532752e-09 -3.41911294155036e-12"/>
+                                <joint name="L_ring_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="L_ring_metacarpals_visual_0" type="mesh" mesh="L_meshes_ring_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="L_ring_proximal" pos="0.0108700663541581 -1.26551278382542e-05 0">
+                                  <inertial mass="0.00454034378337052" pos="-0.00106078125525755 2.55774617305138e-05 0.0228291737812394" fullinertia="8.03482369771966e-07 7.93210005070933e-07 2.60969045305925e-07 1.48416625289382e-11 2.21021818894142e-08 -7.04480073721233e-10"/>
+                                  <joint name="L_ring_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="L_ring_proximal_visual_0" type="mesh" mesh="L_meshes_ring_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="L_ring_middle" pos="-0.00419480624913501 0 0.0448194128870992">
+                                    <inertial mass="0.00180964709329766" pos="-0.0020130028969762 1.20975311216631e-05 0.0157265974033746" fullinertia="2.06072982964899e-07 1.73233620341029e-07 7.97841922399553e-08 -3.63263663294924e-13 8.92137536948339e-09 1.58814753063583e-12"/>
+                                    <joint name="L_ring_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="L_ring_middle_visual_0" type="mesh" mesh="L_meshes_ring_middle_STL" group="2" rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="L_ring_distal" pos="0.00275581955816206 0 0.0317033719231916">
+                                      <inertial mass="0.00386200102769892" pos="-0.00765528943882435 1.72032067655425e-05 0.00664110513859351" fullinertia="2.0307698528787e-07 2.26886610649043e-07 1.46090200844523e-07 -1.68846414676067e-10 7.21653571631685e-08 4.6364052610047e-11"/>
+                                      <joint name="L_ring_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="L_ring_distal_visual_0" type="mesh" mesh="L_meshes_ring_distal_STL" group="2" rgba="0.823529411764706 0.823529411764706 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="L_pinky_metacarpals" pos="-0.0226215026189916 0.0380979799565023 0.150312739475098">
+                                <inertial mass="0.000826416925828368" pos="0.00591162266749565 1.24689599034777e-06 0.00233666308538993" fullinertia="3.46900788636364e-08 2.2381522598176e-08 3.81307901891933e-08 -4.95991695118001e-12 -4.21639566757935e-09 -3.3913239149834e-12"/>
+                                <joint name="L_pinky_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="L_pinky_metacarpals_visual_0" type="mesh" mesh="L_meshes_pinky_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="L_pinky_proximal" pos="0.0108700663781205 -1.26345288001539e-05 0">
+                                  <inertial mass="0.00454034378334877" pos="-0.00106078130345072 2.56273151262865e-05 0.0228291737240488" fullinertia="8.03482369684614e-07 7.93210001911528e-07 2.6096904852503e-07 1.49113177657717e-11 2.21021831948491e-08 -7.05647348579671e-10"/>
+                                  <joint name="L_pinky_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="L_pinky_proximal_visual_0" type="mesh" mesh="L_meshes_pinky_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="L_pinky_middle" pos="-0.00419480624907856 0 0.0448194128869988">
+                                    <inertial mass="0.00180964709325975" pos="-0.00201300292033277 1.21294435264513e-05 0.0157265973767615" fullinertia="2.06072982944143e-07 1.73233620335545e-07 7.97841922238384e-08 -2.807472279961e-13 8.92137535609903e-09 1.39275282570275e-12"/>
+                                    <joint name="L_pinky_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="L_pinky_middle_visual_0" type="mesh" mesh="L_meshes_pinky_middle_STL" group="2" rgba="0.952941176470588 0.996078431372549 0.694117647058824 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="L_pinky_distal" pos="0.00275581955821799 0 0.0317033719231203">
+                                      <inertial mass="0.00386200247559812" pos="-0.00765529202698167 1.72046074725651e-05 0.00664110856023714" fullinertia="2.03076993365142e-07 2.26886710167335e-07 1.4609030074237e-07 -1.68699687819137e-10 7.21653770979734e-08 4.63101041885608e-11"/>
+                                      <joint name="L_pinky_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="L_pinky_distal_visual_0" type="mesh" mesh="L_meshes_pinky_distal_STL" group="2" rgba="0.823529411764706 0.823529411764706 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <!-- Franka right_base absolute arm-mounting angle from image: pitch=0.5155, roll=-0.5936, yaw=-0.6155; encoded below as MuJoCo quat. -->
+      <body name="right_base" pos="-0.038 0.18 0.298" quat="0.380021247 -0.166635678 0.338560828 0.84450753">
+        <body name="right_fr3v2_link0">
+          <geom class="mesh_geom" mesh="fr3v2_collision_link0_mesh" name="right_fr3v2_link0_geom"/>
+          <body name="right_fr3v2_link1" pos="0 0 0.333">
+            <joint name="right_fr3v2_joint1" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-2.90074 2.90074"/>
+            <geom class="mesh_geom" mesh="fr3v2_collision_link1_mesh" name="right_fr3v2_link1_geom"/>
+            <body name="right_fr3v2_link2" quat="0.7071054825 -0.7071080799 0 0">
+              <joint name="right_fr3v2_joint2" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-1.83609 1.83609"/>
+              <geom class="mesh_geom" mesh="fr3v2_collision_link2_mesh" name="right_fr3v2_link2_geom"/>
+              <body name="right_fr3v2_link3" pos="0 -0.316 0" quat="0.7071054825 0.7071080799 0 0">
+                <joint name="right_fr3v2_joint3" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-2.90074 2.90074"/>
+                <geom class="mesh_geom" mesh="fr3v2_collision_link3_mesh" name="right_fr3v2_link3_geom"/>
+                <body name="right_fr3v2_link4" pos="0.0825 0 0" quat="0.7071054825 0.7071080799 0 0">
+                  <joint name="right_fr3v2_joint4" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-3.07702 -0.116937"/>
+                  <geom class="mesh_geom" mesh="fr3v2_collision_link4_mesh" name="right_fr3v2_link4_geom"/>
+                  <body name="right_fr3v2_link5" pos="-0.0825 0.384 0" quat="0.7071054825 -0.7071080799 0 0">
+                    <joint name="right_fr3v2_joint5" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-2.8763 2.8763"/>
+                    <geom class="mesh_geom" mesh="fr3v2_collision_link5_mesh" name="right_fr3v2_link5_geom"/>
+                    <body name="right_fr3v2_link6" quat="0.7071054825 0.7071080799 0 0">
+                      <joint name="right_fr3v2_joint6" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="0.439823 4.62163"/>
+                      <geom class="mesh_geom" mesh="fr3v2_collision_link6_mesh" name="right_fr3v2_link6_geom"/>
+                      <body name="right_fr3v2_link7" pos="0.088 0 0" quat="0.7071054825 0.7071080799 0 0">
+                        <joint name="right_fr3v2_joint7" type="hinge" axis="0 0 1" limited="true" class="arm_hinge" range="-3.05083 3.05083"/>
+                        <geom class="mesh_geom" mesh="fr3v2_collision_link7_mesh" name="right_fr3v2_link7_geom"/>
+                        <body name="right_fr3v2_link8" pos="0 0 0.107">
+                          <body name="right_fr3v2_hand" quat="0.38268343 0 0 -0.92387953">
+                            <!--Linker hand imported from scene.xml. Mount is approximated by reusing the original FR3 hand frame and attaching the imported hand base at the 0.06 m wrist offset defined in scene.xml.-->
+                            <body name="right_fr3v2_hand_tcp" pos="0 0 0.1034">
+                              <site name="right_fr3v2_hand_tcp_site" type="sphere" size="0.006"/>
+                            </body>
+                            <body name="R_hand_base_link" pos="0 0 0.06" euler="0 0 0.785">
+                              <inertial mass="2.91817267018669e-05" pos="0.000441885047026747 0.00500849972399617 0.0573919533012254" fullinertia="1.51306260584639e-11 2.22812296859512e-10 2.22792879892319e-10 0 0 -4.56163949104085e-15"/>
+                              <geom name="R_base_link_visual_0" type="mesh" mesh="R_meshes_base_link_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                              <body name="R_thumb_metacarpals_base1" pos="0.0148 0.013 0.0415000000000001">
+                                <inertial mass="0.000117519863807651" pos="0.0229535763476013 0.000832788697536835 -0.0013198199434825" fullinertia="2.36022486140104e-09 2.35568711016501e-09 1.48861157996815e-10 3.03248382970144e-13 -6.18340736069727e-12 4.61881186600495e-13"/>
+                                <joint name="R_thumb_cmc_roll" type="hinge" axis="1 0 0" range="-0.5 0.8" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="R_thumb_metacarpals_base1_visual_0" type="mesh" mesh="R_meshes_thumb_metacarpals_base1_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="R_thumb_metacarpals_base2" pos="0.02 0 0">
+                                  <inertial mass="0.00583469729849543" pos="0.000231570160724059 0.0745658286975114 0.0553790725054494" fullinertia="2.46142363141672e-06 1.34551273815639e-06 1.54771605564477e-06 1.13403105282533e-07 -2.91010442811516e-08 5.67369748967897e-07"/>
+                                  <joint name="R_thumb_cmc_yaw" type="hinge" axis="0 0 -1" range="0.15 2.2" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="R_thumb_metacarpals_base2_visual_0" type="mesh" mesh="R_meshes_thumb_metacarpals_base2_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="R_thumb_metacarpals" pos="0.00646053351359761 0.0176550702836233 0.000499999999999952" quat="0.984657169570063 0 0 -0.17450002410966">
+                                    <inertial mass="0.00583469729849543" pos="0.0034281344806788 0.000316261040417279 0.0674362259842037" fullinertia="2.00707953925106e-06 2.4614236313789e-06 8.86149254587927e-07 -1.02470756673672e-07 -1.34196876876637e-07 5.66293125829818e-08"/>
+                                    <joint name="R_thumb_cmc_pitch" type="hinge" axis="1 0 0" range="0 0.6" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="R_thumb_metacarpals_visual_0" type="mesh" mesh="R_meshes_thumb_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="R_thumb_proximal" pos="0 0.0600532698441728 0.0531610268874242" quat="0.636242588332673 -0.308537467404115 -0.308537467404518 -0.636242588331842">
+                                      <inertial mass="0.00583469729849543" pos="-0.000627827255459873 0.000316261037763749 0.0113528676590863" fullinertia="2.00707953925106e-06 2.4614236313789e-06 8.86149254587927e-07 -1.02470756673672e-07 -1.34196876876637e-07 5.66293125829818e-08"/>
+                                      <joint name="R_thumb_mcp" type="hinge" axis="0 1 0" range="0 1.2" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="R_thumb_proximal_visual_0" type="mesh" mesh="R_meshes_thumb_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                      <body name="R_thumb_distal" pos="-0.0021470986727075 0 0.0345295231296363">
+                                        <inertial mass="0.00583469729849543" pos="-0.00723058765258039 0.000316261034811652 -0.0230184194160739" fullinertia="2.00707953925106e-06 2.4614236313789e-06 8.86149254587927e-07 -1.02470756673672e-07 -1.34196876876637e-07 5.66293125829817e-08"/>
+                                        <joint name="R_thumb_ip" type="hinge" axis="0 1 0" range="0 1.2" limited="true" damping="0.05" armature="0.0001"/>
+                                        <geom name="R_thumb_distal_visual_0" type="mesh" mesh="R_meshes_thumb_distal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                      </body>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="R_index_metacarpals" pos="-0.00250019735262905 0.0352500000300422 0.147499987934267">
+                                <inertial mass="0.00583469729849543" pos="0.0369695317509838 0.0537829394916592 -0.0465404514522212" fullinertia="2.46142363142307e-06 1.34551273818186e-06 1.54771605561295e-06 1.13403105251931e-07 -2.91010442940731e-08 5.67369748972777e-07"/>
+                                <joint name="R_index_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="R_index_metacarpals_visual_0" type="mesh" mesh="R_meshes_index_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="R_index_proximal" pos="0 0 0">
+                                  <inertial mass="0.0058347" pos="0.03697 0.053783 -0.04654" fullinertia="2.4614e-06 1.3455e-06 1.5477e-06 1.134e-07 -2.9101e-08 5.6737e-07"/>
+                                  <joint name="R_index_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="R_index_proximal_visual_0" type="mesh" mesh="R_meshes_index_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="R_index_middle" pos="-0.00419457745591119 0 0.0448194332294146">
+                                    <inertial mass="0.00583469729849543" pos="0.041164173730248 0.0538329394860146 -0.0913598786448275" fullinertia="2.46142363142312e-06 1.34551273814998e-06 1.54771605564478e-06 1.13403105250885e-07 -2.9101044297371e-08 5.67369748967099e-07"/>
+                                    <joint name="R_index_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="R_index_middle_visual_0" type="mesh" mesh="R_meshes_index_middle_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="R_index_distal" pos="0.00320206348796069 0 0.0316604484170347">
+                                      <inertial mass="0.00583469729849543" pos="0.0109846494992161 0.0538329394780222 -0.128447741754705" fullinertia="2.43123631172989e-06 1.34551273803883e-06 1.57790337544917e-06 2.33010515596331e-07 1.65885440042901e-07 5.2959871214542e-07"/>
+                                      <joint name="R_index_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="R_index_distal_visual_0" type="mesh" mesh="R_meshes_index_distal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="R_middle_metacarpals" pos="-0.0050002 0.01175 0.152">
+                                <inertial mass="0.00583469729849543" pos="0.0417033715062215 0.0753829394928262 -0.0510333406112854" fullinertia="2.461423631436e-06 1.34551273813711e-06 1.54771605564478e-06 1.13403105187538e-07 -2.91010443295791e-08 5.67369748965446e-07"/>
+                                <joint name="R_middle_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="R_middle_metacarpals_visual_0" type="mesh" mesh="R_meshes_middle_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="R_middle_proximal" pos="0 0 0">
+                                  <inertial mass="0.00583469729849543" pos="0.0417033715062215 0.0753829394928262 -0.0510333406112854" fullinertia="2.461423631436e-06 1.34551273813711e-06 1.54771605564478e-06 1.13403105187538e-07 -2.91010443295791e-08 5.67369748965447e-07"/>
+                                  <joint name="R_middle_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="R_middle_proximal_visual_0" type="mesh" mesh="R_meshes_middle_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="R_middle_middle" pos="-0.00419457745591117 0 0.0448194332294145">
+                                    <inertial mass="0.00583469729849543" pos="0.0458980134878245 0.0753832822205319 -0.0958527677923309" fullinertia="2.46142363142333e-06 1.34551273815471e-06 1.54771605563984e-06 1.13403105249966e-07 -2.91010442974085e-08 5.67369748967952e-07"/>
+                                    <joint name="R_middle_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="R_middle_middle_visual_0" type="mesh" mesh="R_meshes_middle_middle_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="R_middle_distal" pos="0.0032021 0 0.03166">
+                                      <inertial mass="0.00583469729849543" pos="0.0431417565588561 0.0753832822259055 -0.127555137608497" fullinertia="2.46142363142792e-06 1.34551273818913e-06 1.54771605560084e-06 1.13403105228423e-07 -2.91010443049728e-08 5.67369748974314e-07"/>
+                                      <joint name="R_middle_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="R_middle_distal_visual_0" type="mesh" mesh="R_meshes_middle_distal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="R_ring_metacarpals" pos="-0.00250019736316104 -0.0117499999954557 0.147499987942847">
+                                <inertial mass="0.00583469729849543" pos="0.0393985433026026 0.096982939491904 -0.0465404503544546" fullinertia="2.46142363142328e-06 1.34551273818659e-06 1.54771605560801e-06 1.13403105251025e-07 -2.9101044294104e-08 5.67369748973631e-07"/>
+                                <joint name="R_ring_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="R_ring_metacarpals_visual_0" type="mesh" mesh="R_meshes_ring_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="R_ring_proximal" pos="0 0 0">
+                                  <inertial mass="0.00583469729849543" pos="0.0393985433026026 0.096982939491904 -0.0465404503544546" fullinertia="2.46142363142328e-06 1.34551273818659e-06 1.54771605560801e-06 1.13403105251025e-07 -2.9101044294104e-08 5.67369748973631e-07"/>
+                                  <joint name="R_ring_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="R_ring_proximal_visual_0" type="mesh" mesh="R_meshes_ring_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="R_ring_middle" pos="-0.00419457745591118 0 0.0448194332294145">
+                                    <inertial mass="0.00583469729849543" pos="0.0435931852745398 0.0969832822226263 -0.0913598775387995" fullinertia="2.46142363143605e-06 1.34551273813907e-06 1.54771605564277e-06 1.13403105187344e-07 -2.91010443295023e-08 5.67369748965799e-07"/>
+                                    <joint name="R_ring_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="R_ring_middle_visual_0" type="mesh" mesh="R_meshes_ring_middle_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="R_ring_distal" pos="0.00320206348796068 0 0.0316604484170347">
+                                      <inertial mass="0.00583469729849543" pos="0.0408369283505707 0.0969832822255912 -0.123062247353973" fullinertia="2.46142363142792e-06 1.34551273818913e-06 1.54771605560084e-06 1.13403105228423e-07 -2.91010443049728e-08 5.67369748974314e-07"/>
+                                      <joint name="R_ring_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="R_ring_distal_visual_0" type="mesh" mesh="R_meshes_ring_distal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                              <body name="R_pinky_metacarpals" pos="0.0009998 -0.03525 0.143">
+                                <inertial mass="0.00583469729849543" pos="0.0357747782390721 0.1185829394934 -0.0375417245830277" fullinertia="2.461423631436e-06 1.34551273817096e-06 1.54771605561093e-06 1.13403105188406e-07 -2.91010443261962e-08 5.67369748971479e-07"/>
+                                <joint name="R_pinky_mcp_roll" type="hinge" axis="1 0 0" range="-0.18 0.18" limited="true" damping="0.05" armature="0.0001"/>
+                                <geom name="R_pinky_metacarpals_visual_0" type="mesh" mesh="R_meshes_pinky_metacarpals_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                <body name="R_pinky_proximal" pos="0 0 0">
+                                  <inertial mass="0.00583469729849543" pos="0.0357747782390721 0.1185829394934 -0.0375417245830277" fullinertia="2.461423631436e-06 1.34551273817096e-06 1.54771605561093e-06 1.13403105188406e-07 -2.91010443261962e-08 5.67369748971479e-07"/>
+                                  <joint name="R_pinky_mcp_pitch" type="hinge" axis="0 1 0" range="0 1.33" limited="true" damping="0.05" armature="0.0001"/>
+                                  <geom name="R_pinky_proximal_visual_0" type="mesh" mesh="R_meshes_pinky_proximal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                  <body name="R_pinky_middle" pos="-0.0076946 0.0235 0.049319">
+                                    <inertial mass="0.00583469729849543" pos="0.0399694202164405 0.118583282222286 -0.0823611517776266" fullinertia="2.46142363143605e-06 1.34551273813907e-06 1.54771605564277e-06 1.13403105187344e-07 -2.91010443295023e-08 5.67369748965799e-07"/>
+                                    <joint name="R_pinky_pip" type="hinge" axis="0 1 0" range="0 1.77" limited="true" damping="0.05" armature="0.0001"/>
+                                    <geom name="R_pinky_middle_visual_0" type="mesh" mesh="R_meshes_pinky_middle_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    <body name="R_pinky_distal" pos="0.00670206996232169 -0.0235000000005 0.0271604534533937">
+                                      <inertial mass="0.00583469729849543" pos="0.0117572575484302 0.118583282224451 -0.119402987296551" fullinertia="2.43123630861852e-06 1.34551273818384e-06 1.57790337841553e-06 2.33010520569583e-07 1.65885448022839e-07 5.29598709996232e-07"/>
+                                      <joint name="R_pinky_dip" type="hinge" axis="0 1 0" range="0 1.43" limited="true" damping="0.05" armature="0.0001"/>
+                                      <geom name="R_pinky_distal_visual_0" type="mesh" mesh="R_meshes_pinky_distal_STL" group="2" rgba="1 1 1 1" contype="0" conaffinity="0" density="0"/>
+                                    </body>
+                                  </body>
+                                </body>
+                              </body>
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="left_fr3v2_link0" body2="left_fr3v2_link1"/>
+    <exclude body1="left_fr3v2_link1" body2="left_fr3v2_link2"/>
+    <exclude body1="left_fr3v2_link2" body2="left_fr3v2_link3"/>
+    <exclude body1="left_fr3v2_link3" body2="left_fr3v2_link4"/>
+    <exclude body1="left_fr3v2_link4" body2="left_fr3v2_link5"/>
+    <exclude body1="left_fr3v2_link5" body2="left_fr3v2_link6"/>
+    <exclude body1="left_fr3v2_link6" body2="left_fr3v2_link7"/>
+    <exclude body1="right_fr3v2_link0" body2="right_fr3v2_link1"/>
+    <exclude body1="right_fr3v2_link1" body2="right_fr3v2_link2"/>
+    <exclude body1="right_fr3v2_link2" body2="right_fr3v2_link3"/>
+    <exclude body1="right_fr3v2_link3" body2="right_fr3v2_link4"/>
+    <exclude body1="right_fr3v2_link4" body2="right_fr3v2_link5"/>
+    <exclude body1="right_fr3v2_link5" body2="right_fr3v2_link6"/>
+    <exclude body1="right_fr3v2_link6" body2="right_fr3v2_link7"/>
+  </contact>
+  <equality>
+    <joint name="R_thumb_ip_mimic" joint1="R_thumb_ip" joint2="R_thumb_mcp" polycoef="0 1 0 0 0"/>
+    <joint name="R_index_dip_mimic" joint1="R_index_dip" joint2="R_index_pip" polycoef="0 0.807909 0 0 0"/>
+    <joint name="R_middle_dip_mimic" joint1="R_middle_dip" joint2="R_middle_pip" polycoef="0 0.807909 0 0 0"/>
+    <joint name="R_ring_dip_mimic" joint1="R_ring_dip" joint2="R_ring_pip" polycoef="0 0.807909 0 0 0"/>
+    <joint name="R_pinky_dip_mimic" joint1="R_pinky_dip" joint2="R_pinky_pip" polycoef="0 0.807909 0 0 0"/>
+    <joint name="L_thumb_ip_mimic" joint1="L_thumb_ip" joint2="L_thumb_mcp" polycoef="0 1 0 0 0"/>
+    <joint name="L_index_dip_mimic" joint1="L_index_dip" joint2="L_index_pip" polycoef="0 0.807909 0 0 0"/>
+    <joint name="L_middle_dip_mimic" joint1="L_middle_dip" joint2="L_middle_pip" polycoef="0 0.807909 0 0 0"/>
+    <joint name="L_ring_dip_mimic" joint1="L_ring_dip" joint2="L_ring_pip" polycoef="0 0.807909 0 0 0"/>
+    <joint name="L_pinky_dip_mimic" joint1="L_pinky_dip" joint2="L_pinky_pip" polycoef="0 0.807909 0 0 0"/>
+  </equality>
+  <actuator>
+    <motor name="left_fr3v2_joint1_motor" joint="left_fr3v2_joint1" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="left_fr3v2_joint2_motor" joint="left_fr3v2_joint2" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="left_fr3v2_joint3_motor" joint="left_fr3v2_joint3" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="left_fr3v2_joint4_motor" joint="left_fr3v2_joint4" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="left_fr3v2_joint5_motor" joint="left_fr3v2_joint5" ctrllimited="true" ctrlrange="-12 12"/>
+    <motor name="left_fr3v2_joint6_motor" joint="left_fr3v2_joint6" ctrllimited="true" ctrlrange="-12 12"/>
+    <motor name="left_fr3v2_joint7_motor" joint="left_fr3v2_joint7" ctrllimited="true" ctrlrange="-12 12"/>
+    <motor name="right_fr3v2_joint1_motor" joint="right_fr3v2_joint1" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="right_fr3v2_joint2_motor" joint="right_fr3v2_joint2" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="right_fr3v2_joint3_motor" joint="right_fr3v2_joint3" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="right_fr3v2_joint4_motor" joint="right_fr3v2_joint4" ctrllimited="true" ctrlrange="-87 87"/>
+    <motor name="right_fr3v2_joint5_motor" joint="right_fr3v2_joint5" ctrllimited="true" ctrlrange="-12 12"/>
+    <motor name="right_fr3v2_joint6_motor" joint="right_fr3v2_joint6" ctrllimited="true" ctrlrange="-12 12"/>
+    <motor name="right_fr3v2_joint7_motor" joint="right_fr3v2_joint7" ctrllimited="true" ctrlrange="-12 12"/>
+    <position name="R_act_thumb_cmc_roll" joint="R_thumb_cmc_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.5 0.8" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_thumb_cmc_yaw" joint="R_thumb_cmc_yaw" kp="0.4" ctrllimited="true" ctrlrange="0.15 2.2" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_thumb_cmc_pitch" joint="R_thumb_cmc_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 0.6" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_thumb_mcp" joint="R_thumb_mcp" kp="0.4" ctrllimited="true" ctrlrange="0 1.2" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_index_mcp_roll" joint="R_index_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_index_mcp_pitch" joint="R_index_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_index_pip" joint="R_index_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_middle_mcp_roll" joint="R_middle_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_middle_mcp_pitch" joint="R_middle_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_middle_pip" joint="R_middle_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_ring_mcp_roll" joint="R_ring_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_ring_mcp_pitch" joint="R_ring_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_ring_pip" joint="R_ring_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_pinky_mcp_roll" joint="R_pinky_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_pinky_mcp_pitch" joint="R_pinky_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="R_act_pinky_pip" joint="R_pinky_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_thumb_cmc_roll" joint="L_thumb_cmc_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.5 0.8" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_thumb_cmc_yaw" joint="L_thumb_cmc_yaw" kp="0.4" ctrllimited="true" ctrlrange="0.15 2.2" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_thumb_cmc_pitch" joint="L_thumb_cmc_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 0.6" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_thumb_mcp" joint="L_thumb_mcp" kp="0.4" ctrllimited="true" ctrlrange="0 1.2" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_index_mcp_roll" joint="L_index_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_index_mcp_pitch" joint="L_index_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_index_pip" joint="L_index_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_middle_mcp_roll" joint="L_middle_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_middle_mcp_pitch" joint="L_middle_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_middle_pip" joint="L_middle_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_ring_mcp_roll" joint="L_ring_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_ring_mcp_pitch" joint="L_ring_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_ring_pip" joint="L_ring_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_pinky_mcp_roll" joint="L_pinky_mcp_roll" kp="0.4" ctrllimited="true" ctrlrange="-0.18 0.18" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_pinky_mcp_pitch" joint="L_pinky_mcp_pitch" kp="0.4" ctrllimited="true" ctrlrange="0 1.33" forcelimited="true" forcerange="-0.05 0.05"/>
+    <position name="L_act_pinky_pip" joint="L_pinky_pip" kp="0.4" ctrllimited="true" ctrlrange="0 1.77" forcelimited="true" forcerange="-0.05 0.05"/>
+  </actuator>
+  <keyframe>
+    <key name="home" qpos="0 -0.785398 0 -2.35619 0 1.57079 0.785398 0 0.15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -0.785398 0 -2.35619 0 1.57079 0.785398 0 0.15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0"/>
+  </keyframe>
+</mujoco>

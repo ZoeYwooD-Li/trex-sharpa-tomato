@@ -1,0 +1,37 @@
+project: 30 mm cherry tomato; first-stage homogeneous linear elastic FEM
+material_model: small-strain isotropic linear elasticity
+parameters:
+  youngs_modulus_MPa:
+    baseline: 0.281
+    sweep:
+    - 0.1
+    - 0.2
+    - 0.281
+    - 0.5
+    - 1.0
+    status: literature reference and sensitivity values; not calibrated to this fruit
+    source: Kabas et al. (2008) value supplied in user brief
+  poissons_ratio:
+    value: 0.335
+    status: literature reference; not calibrated
+    source: Kabas et al. (2008) value supplied in user brief
+  density_kg_m3:
+    value: 470
+    status: literature reference from linked discussion; provisional for this geometry
+    source: secondary reference described by user; the reported mass/volume/diameter
+      are not internally consistent across samples
+  mass_kg:
+    value: 0.006644
+    status: derived, not measured
+    method: 470 kg/m3 × volume of ideal 30 mm sphere
+  failure_force_N:
+    value: 23.81
+    status: paper-specific reported failure force; not used as a failure threshold
+  failure_deformation_mm:
+    value: 4.385
+    status: paper-specific; not used as current fruit failure threshold
+assumptions:
+- Ideal sphere, uniform material, no skin/pulp layering.
+- Quasi-static deformation; no viscoelasticity, yield, damage, rupture, or fluid.
+- All E values are uncalibrated; 0.281 MPa is a baseline reference, not validated
+  for this fruit.

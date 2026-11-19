@@ -1,0 +1,73 @@
+{
+  "controller": "openpi_delta_joint_58d",
+  "checkpoint_label": "mengxiang_sharpa_no_block_one_delta_paper_t3/7999",
+  "action_representation": "absolute_joint_position",
+  "grasp_lift_gate": {
+    "enabled": false,
+    "phase": "disabled",
+    "timeout_s": 8.0,
+    "trigger_closure": 0.72,
+    "started_at_s": null,
+    "confirmed_at_s": null,
+    "released_at_s": null,
+    "height_ceiling_m": null,
+    "limited_targets": 0,
+    "events": []
+  },
+  "prompt": "Pick a tomato from the bunch and place it in the target box.",
+  "action_hz": 30,
+  "action_horizon": 50,
+  "execute_steps": 4,
+  "action_steps": 6,
+  "inference_calls": 2,
+  "inference_latency_s": [
+    7.966086022000127,
+    0.0641914910002015
+  ],
+  "server_metadata": {
+    "config_name": "pi05_mengxiang_sharpa_no_block_one_delta_paper_t3_fullft_v1",
+    "action_dim": 58,
+    "action_horizon": 50,
+    "action_hz": 30,
+    "action_representation": "absolute_joint_position",
+    "action_order": [
+      "left_arm_7",
+      "left_hand_22",
+      "right_arm_7",
+      "right_hand_22"
+    ],
+    "camera_mapping": {
+      "base": "cam0",
+      "left_wrist": "cam2",
+      "right_wrist": "cam1"
+    }
+  },
+  "endpoint": "ws://127.0.0.1:8000",
+  "contact_stop_force_N": 2000.0,
+  "quality_contact_force_N": 35.0,
+  "sim_time_s": 0.195,
+  "verified_success": false,
+  "error": "cherry_tomato_pick verify failed: {'hand_collision_blocked': False, 'minimum_interhand_distance_m': 0.05, 'peak_contact_force_N': 0.0, 'cluster_clearance_m': 0.006529994308948517, 'detached': False, 'support_ready': False, 'grasped': False, 'success': False, 'support_lost': False, 'ik_failed': False, 'harvest_distance_m': 0.0, 'max_attachment_load': 0.04181060546039884, 'left_harvest_contact_force_N': [0.0, 0.0, 0.0, 0.0, 0.0], 'right_support_contact_force_N': [0.0, 0.0, 0.0, 0.0, 0.0], 'safe_contact': True, 'camera_samples': 2, 'camera_valid_depth_pixels': 64000, 'wrist_camera_samples': 6, 'wrist_camera_valid_depth_pixels': {'left': 63782, 'right': 63870}, 'recording_robot_samples': 6, 'recording_camera_frames': {'gemini_435le': 2, 'gemini_305_left': 6, 'gemini_305_right': 6}, 'placed_in_box': False, 'deposit_failed': False}",
+  "episode": "/path/to/local/ZoeyLi/projects/tomato_pick_sim_sharpa/outputs/openpi_delta_eval/policy_smoke/episode_000001.h5",
+  "seed": 42,
+  "recording_saved": true,
+  "quality": {
+    "schema": "lycheesim.cherry_tomato_pick.quality/v1",
+    "accepted": false,
+    "status": "rejected",
+    "reasons": [
+      "incomplete_episode",
+      "not_detached_and_placed",
+      "right_support_not_ready_at_end"
+    ],
+    "robot_frames": 6,
+    "camera_frames": {
+      "gemini_435le": 2,
+      "gemini_305_left": 6,
+      "gemini_305_right": 6
+    },
+    "target_box_id": 0,
+    "scope": "initial_geometry_and_recorded_task_sensor_guards_not_full_robot_collision_certification"
+  },
+  "accepted": false
+}

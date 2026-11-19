@@ -1,0 +1,76 @@
+{
+  "run_dir": "/path/to/local/Documents/ChatGPT/仿真/outputs/episode54_real_isaac_replay/material_runs/20261109_004225",
+  "sample_rate_deformation_hz": 30,
+  "sample_rate_force_hz": 120,
+  "material": {
+    "youngs_modulus_pa": 281000,
+    "poissons_ratio": 0.335,
+    "density_kg_m3": 470,
+    "total_mass_kg": 0.006644,
+    "deformable_body_mass_kg": 0.006218754018410085,
+    "rigid_core_mass_kg": 0.0004252459815899144
+  },
+  "soft_body": "tomato_10",
+  "frames": 951,
+  "duration_s": 31.66666603088379,
+  "peak_max_node_displacement_m": 0.08550401031970978,
+  "peak_mean_node_displacement_m": 0.0648481547832489,
+  "peak_shape_rms_m": 0.01713939569890499,
+  "peak_centroid_travel_m": 0.06396761536598206,
+  "peak_attachment_slip_m": 0.0017067224252969027,
+  "invalid_node_samples": 0,
+  "initial_extent_xyz_m": [
+    0.034419476985931396,
+    0.034324854612350464,
+    0.02994351089000702
+  ],
+  "final_extent_xyz_m": [
+    0.016715705394744873,
+    0.01583048701286316,
+    0.028024107217788696
+  ],
+  "force_channels": {
+    "left_thumb": {
+      "peak_n": 58.06827163696289,
+      "peak_time_s": 31.266666412353516
+    },
+    "left_index": {
+      "peak_n": 0.0,
+      "peak_time_s": 0.0
+    },
+    "left_middle": {
+      "peak_n": 0.0,
+      "peak_time_s": 0.0
+    },
+    "left_ring": {
+      "peak_n": 0.0,
+      "peak_time_s": 0.0
+    },
+    "left_pinky": {
+      "peak_n": 0.0,
+      "peak_time_s": 0.0
+    },
+    "right_thumb": {
+      "peak_n": 167.2536163330078,
+      "peak_time_s": 3.75
+    },
+    "right_index": {
+      "peak_n": 210.1885528564453,
+      "peak_time_s": 4.25
+    },
+    "right_middle": {
+      "peak_n": 302.268310546875,
+      "peak_time_s": 1.0
+    },
+    "right_ring": {
+      "peak_n": 269.46844482421875,
+      "peak_time_s": 0.7583333253860474
+    },
+    "right_pinky": {
+      "peak_n": 0.0,
+      "peak_time_s": 0.0
+    }
+  },
+  "peak_sensor_force_norm_n": 302.268310546875,
+  "interpretation": "Material parameters were loaded by Isaac native PhysX volume deformable and nodal positions were recorded. This run is numerically/physically implausible: peak node travel exceeds fruit diameter and contact force norms reach hundreds of newtons. Treat traces as solver diagnostics, not validated tomato force/deformation. The standalone external FEM and Sharpa TacMap were not coupled in this run."
+}

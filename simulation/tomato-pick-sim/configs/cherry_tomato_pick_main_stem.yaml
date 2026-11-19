@@ -1,0 +1,371 @@
+# Experimental contact-driven stem-and-neighboring-fruit grasp.
+# The default cherry_tomato_pick.yaml remains the previous carrier version.
+# This configuration is not yet validated for successful data collection.
+# Behavior and split assets ported from cherry_tomato_sim revision
+# 43610761c4f667dc24ac6b5f7d66b71ebf72c1a1. The source repository has no
+# repository-level license. The project owner supplied the separately purchased
+# visual asset under this demo; compact Newton collision geometry remains local.
+
+sim:
+  dt: 0.005
+  substeps: 2
+  # Wall-clock simulation budget includes contact/lift gate waits.
+  duration: 26.00
+  gravity: [0.0, 0.0, -9.81]
+  device: cuda:0
+
+assets:
+  cache_dir: .cache/lycheesim/cherry_tomato_pick
+  # Purchased source and prepared runtime visuals live with the demo.
+  target_visual_npz: demos/cherry_tomato_pick/assets/runtime/target_tomato_visual.npz
+  support_visual_npz: demos/cherry_tomato_pick/assets/runtime/support_tomato_visual.npz
+  cluster_visual_npz: demos/cherry_tomato_pick/assets/runtime/tomato_cluster_visual.npz
+  # Render stem and fruit separately so every tomato can use the fruit-only
+  # atlas without tinting the stem red.
+  fruit_visual_dir: demos/cherry_tomato_pick/assets/runtime
+  stem_visual_npz: demos/cherry_tomato_pick/assets/runtime/stem_visual.npz
+  fruit_albedo_texture: demos/cherry_tomato_pick/assets/runtime/tomato_fruit_basecolor.png
+  visual_metadata: demos/cherry_tomato_pick/assets/runtime/metadata.json
+  albedo_texture: demos/cherry_tomato_pick/assets/runtime/tomato_basecolor.png
+
+scene:
+  support_mode: stem_and_fruit
+  branch_mass_kg: 0.010
+  # Middle of the existing main-stem collider, away from tomato_10 at the end.
+  stem_grasp_offset_m: [0.0259, -0.105, -0.0151]
+  # Latest upstream assembled pose: 32.5 mm nominal bunch on the work surface.
+  # The runtime visual frame is centred on the selected tomato_10 mesh.
+  target_name: tomato_10
+  support_name: tomato_07
+  detachable_targets: [tomato_07, tomato_02, tomato_10, tomato_09]
+  tomato_position: [0.37492, 0.08933, 0.08386]
+  tomato_radius_m: 0.0172
+  tomato_mass_kg: 0.020
+  tomato_friction: [4.0, 0.05, 0.005]
+  tomato_linear_damping: 5.0
+  tomato_angular_damping: 3.0
+  max_linear_velocity_m_s: 0.35
+  max_angular_velocity_rad_s: 8.0
+  stem_anchor: [0.37611, 0.09002, 0.07006]
+  branch_length_m: 0.205
+  branch_radius_m: 0.004
+  branch_collision_axis: [0.0, 1.0, 0.0]
+  branch_collision_center_offset_m: [0.0259, -0.105, -0.0151]
+  # tomato_07 relative to the selected tomato_10 after the upstream -90 deg X
+  # assembly transform. Included in the right-hand stem/fruit bundle grasp.
+  support_tomato_offset_m: [0.04673, -0.18492, 0.00068]
+  hand_friction: [6.0, 0.10, 0.01]
+
+robot:
+  carrier_mjcf: demos/assets/robots/dual_fr3_linker_l20/model.collision.xml
+  # Official Beta2 models include the physical arm-flange mount as their root.
+  wuji_left_mjcf: demos/assets/robots/wuji_hand2_beta2_official/mjcf/left_with_mount.xml
+  wuji_right_mjcf: demos/assets/robots/wuji_hand2_beta2_official/mjcf/right_with_mount.xml
+  fr3_visual_mesh_dir: demos/assets/robots/dual_fr3_linker_l20/meshes/fr3v2/visual
+  default_arm_q: [0.0, -0.48, 0.0, -2.55, 0.0, 2.75, 0.78]
+  source_mounts:
+    base_link:
+      pos: [0.0, 0.0, 0.0]
+      quat_xyzw: [0.0, 0.0, 0.0, 1.0]
+    left_base:
+      pos: [0.038, 0.18, 0.304]
+      quat_xyzw: [-0.3385606822175297, 0.16663917149299404, 0.3800209992006355, 0.8445070107151746]
+    right_base:
+      pos: [0.038, -0.18, 0.304]
+      quat_xyzw: [0.3385606822175297, 0.16663917149299404, -0.3800209992006355, 0.8445070107151746]
+  # Wuji2 mount-root pose relative to FR3 link8. The official with-mount model
+  # grows along its local -Z axis, so the 180-degree X rotation points the hand
+  # along link8 +Z (away from the forearm). The 1 mm offset leaves a visible
+  # flange clearance instead of placing coplanar meshes on top of each other.
+  # External quaternions are xyzw.
+  mount_offset_m: [0.0, 0.0, 0.001]
+  mount_quat_xyzw: [1.0, 0.0, 0.0, 0.0]
+  # Re-solved with the corrected link8 mounting axis while aligning the selected
+  # fingertip contact centres to the fruit and keeping both FR3 poses reachable.
+  left_harvest_quat_xyzw: [-0.1947748304, 0.6765852301, -0.0240832229, 0.7097289555]
+  # Check all authored hand-link hulls before accepting a kinematic target.
+  minimum_interhand_distance_m: 0.005
+  # Place the fruit 2 mm deeper than the fingertip midpoint, then reshape the
+  # three active fingers so their pads remain tangent instead of pre-penetrating.
+  left_harvest_depth_m: 0.002
+  # Approach from the right-arm base side, not across the harvest/left-arm side.
+  right_cluster_grasp_quat_xyzw: [-0.114514745, -0.414701132, 0.749464296, 0.503202358]
+  right_cluster_grasp_center_bias_m: [-0.009234196, -0.000192398, 0.010179779]
+  right_grasp_opposing_fingers: [index, middle, ring, pinky]
+  right_force_fingers: [thumb, index, middle, ring, pinky]
+  # Curl thumb MCP/IP and index PIP/DIP first, then close their base joints.
+  # Both stages remain governed by measured per-finger contact.
+  right_distal_first_fingers: [thumb, index]
+  right_fit_contact_fruits: [tomato_01, tomato_00, tomato_00, tomato_04, tomato_04]
+  right_pregrasp_hand:
+    joint_order: [thumb_cmc_flex, thumb_cmc_abd, thumb_mcp, thumb_ip, index_finger_mcp_flex, index_finger_mcp_abd, index_finger_pip, index_finger_dip, middle_finger_mcp_flex, middle_finger_mcp_abd, middle_finger_pip, middle_finger_dip, ring_finger_mcp_flex, ring_finger_mcp_abd, ring_finger_pip, ring_finger_dip, pinky_mcp_flex, pinky_mcp_abd, pinky_pip, pinky_dip]
+    positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  left_pregrasp_offset_m: [0.0, 0.08, 0.04]
+  # Keep unused fingers tucked throughout the reach; only the three grasping
+  # fingers close around the target, avoiding a pinky sweep through the support hand.
+  left_pregrasp_hand:
+    joint_order: [thumb_cmc_flex, thumb_cmc_abd, thumb_mcp, thumb_ip, index_finger_mcp_flex, index_finger_mcp_abd, index_finger_pip, index_finger_dip, middle_finger_mcp_flex, middle_finger_mcp_abd, middle_finger_pip, middle_finger_dip, ring_finger_mcp_flex, ring_finger_mcp_abd, ring_finger_pip, ring_finger_dip, pinky_mcp_flex, pinky_mcp_abd, pinky_pip, pinky_dip]
+    positions: [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.2, 0.0, 1.5, 1.2, 1.2, 0.0, 1.5, 1.2]
+  # Elevated approach from the base side; actual contact safety is not validated.
+  right_pregrasp_offset_m: [0.0, -0.03, 0.10]
+  left_workspace_min: [0.20, -0.20, 0.06]
+  left_workspace_max: [0.60, 0.60, 0.65]
+  right_workspace_min: [0.20, -0.60, 0.06]
+  right_workspace_max: [0.60, 0.20, 0.65]
+  left_harvest_hand:
+    # Three-finger tomato grasp fitted against the actual Beta2 pad hulls. At
+    # full closure all three contact surfaces are tangent to the nominal fruit
+    # sphere instead of starting inside it.
+    joint_order: [thumb_cmc_flex, thumb_cmc_abd, thumb_mcp, thumb_ip, index_finger_mcp_flex, index_finger_mcp_abd, index_finger_pip, index_finger_dip, middle_finger_mcp_flex, middle_finger_mcp_abd, middle_finger_pip, middle_finger_dip, ring_finger_mcp_flex, ring_finger_mcp_abd, ring_finger_pip, ring_finger_dip, pinky_mcp_flex, pinky_mcp_abd, pinky_pip, pinky_dip]
+    positions: [0.497326096, -0.091648287, 0.512081777, 0.489129223, 0.468071108, 0.005305589, 0.412652401, 0.475593550, 0.464210711, -0.002037262, 0.960711247, 0.849978169, 1.2, 0.0, 1.5, 1.2, 1.2, 0.0, 1.5, 1.2]
+  left_retention_joint_offsets_rad:
+    thumb_cmc_flex: 0.006
+    middle_finger_mcp_flex: 0.020
+  right_cluster_grasp_hand:
+    # Four curled fingers oppose the thumb around the middle of the bunch.
+    # The contact controller can stop each finger before nominal closure.
+    # Deeper thumb MCP/IP (+0.20 rad) and index MCP/PIP/DIP (+0.10/0.30/0.20).
+    joint_order: [thumb_cmc_flex, thumb_cmc_abd, thumb_mcp, thumb_ip, index_finger_mcp_flex, index_finger_mcp_abd, index_finger_pip, index_finger_dip, middle_finger_mcp_flex, middle_finger_mcp_abd, middle_finger_pip, middle_finger_dip, ring_finger_mcp_flex, ring_finger_mcp_abd, ring_finger_pip, ring_finger_dip, pinky_mcp_flex, pinky_mcp_abd, pinky_pip, pinky_dip]
+    positions: [0.245459027, 0.347905244, 0.754070998, 1.105903530, 0.963221268, 0.244494857, 1.072068014, 1.287230645, 0.817199651, 0.006169678, 0.859920566, 1.132781509, 0.811790314, 0.138796091, 0.835085203, 1.135384630, 0.797455801, -0.027802694, 0.731918313, 0.983094089]
+
+attachment:
+  # tomato_10 fixed-joint anchor transformed from the upstream split asset.
+  tomato_local_point: [0.00118861, 0.00068533, -0.01379979]
+  # Points from the stem anchor into the fruit. Only reaction force opposite
+  # this direction (axial tension) contributes to fracture.
+  break_direction_world: [0.0, 0.0, 1.0]
+  rest_quaternion_xyzw: [0.0, 0.0, 0.0, 1.0]
+  # Six-axis short-pedicel compliance. Axial stretch remains firm while lower
+  # lateral and bending stiffness let the fruit deflect under incidental touch.
+  axial_stiffness_N_m: 200.0
+  lateral_stiffness_N_m: 50.0
+  axial_damping_N_s_m: 3.0
+  lateral_damping_N_s_m: 1.0
+  bending_stiffness_Nm_rad: 0.015
+  torsional_stiffness_Nm_rad: 0.10
+  bending_damping_Nm_s_rad: 0.0003
+  torsional_damping_Nm_s_rad: 0.001
+  # Same break thresholds as the source detachment prototype.
+  break_force_N: 2.0
+  break_torque_Nm: 0.20
+  break_ema_time_constant_s: 0.030
+  minimum_break_overload_s: 0.080
+
+# Upstream keeps non-target tomatoes on effectively unbreakable fixed joints.
+# Newton uses this stiff, non-breaking local attachment for the opposite fruit
+# so a kinematic Wuji2 hand can produce real contact against a dynamic fruit.
+support_attachment:
+  linear_stiffness_N_m: 1000.0
+  linear_damping_N_s_m: 3.0
+  torsional_stiffness_Nm_rad: 0.10
+  torsional_damping_Nm_s_rad: 0.001
+
+contact:
+  mu: 4.0
+  # A soft solver-only contact shell replaces hard authored overlap.
+  ke: 4.0e3
+  kd: 6.0e1
+  kh: 1.0e6
+  gap: 0.001
+  # Each surface contributes 1.5 mm of solver-only collision margin. This
+  # replaces authored mesh overlap while retaining contact at visual tangency.
+  margin: 0.0015
+  is_hydroelastic: false
+
+solver:
+  backend: newton_mujoco_hydro
+  ground_z: 0.045
+  ground_friction: [1.0, 0.0, 0.0]
+  xpbd_iterations: 12
+  mujoco_iterations: 15
+  mujoco_ls_iterations: 40
+  rigid_contact_max: 256
+  broad_phase: sap
+  use_capture: false
+
+# Fixed Orbbec Gemini 435Le on the centre pedestal visible in the supplied
+# laboratory photographs. The approximate photo-derived world pose is kept
+# here so a measured hand-eye calibration can replace it without code changes.
+# Housing dimensions, stereo baseline and FoV follow Orbbec's published data.
+camera:
+  model: orbbec_gemini_435le
+  optical_position_m: [0.10, 0.0, 0.48]
+  # Midpoint of tomato_10 and the tomato_07 support target.
+  look_at_target_m: [0.398285, -0.00313, 0.08420]
+  world_up: [0.0, 0.0, 1.0]
+  housing_dimensions_m: [0.1385, 0.0405, 0.0700]
+  stereo_baseline_m: 0.095
+  frustum_length_m: 0.18
+  mount:
+    pedestal_size_m: [0.045, 0.055, 0.43]
+    pedestal_center_m: [0.075, 0.0, 0.215]
+    # Spans the pedestal top (z=0.430 m) to the tilted housing bottom
+    # (approximately z=0.472 m) while remaining behind the optical frustum.
+    bracket_size_m: [0.065, 0.050, 0.042]
+    bracket_center_m: [0.055, 0.0, 0.451]
+  sensor:
+    enabled: true
+    # 16:10 preview preserves the official 1280x800 image aspect ratio.
+    width: 320
+    height: 200
+    sample_hz: 10.0
+    horizontal_fov_deg: 94.0
+    vertical_fov_deg: 68.0
+    clipping_range_m: [0.31, 10.0]
+    channels: [color, forward_depth]
+    load_textures: true
+    textures: true
+    default_light: true
+    ambient_lighting: true
+    shadows: true
+    backface_culling: true
+    light_direction: [-1.0, 1.0, -1.0]
+
+# One Gemini 305 on each FR3/Wuji2 wrist, matching the supplied side-mounted
+# white brackets. These are photo-derived initial extrinsics in the Wuji2 root
+# frames; replace them with measured hand-eye calibrations for real-data use.
+# The optical convention is +X right, +Y up, -Z forward.
+wrist_cameras:
+  model: orbbec_gemini_305
+  housing_dimensions_m: [0.042, 0.042, 0.023]
+  stereo_baseline_m: 0.018
+  frustum_length_m: 0.15
+  mounts:
+    left:
+      # Extended 25 mm farther outboard to clear the FR3 flange/link housing.
+      optical_position_in_wrist_m: [0.0, -0.080, -0.025]
+      optical_quat_in_wrist_xyzw: [0.0, 0.0, 0.0, 1.0]
+      bracket_anchor_in_wrist_m: [0.0, -0.010, 0.0]
+    right:
+      optical_position_in_wrist_m: [0.080, 0.0, -0.025]
+      optical_quat_in_wrist_xyzw: [0.0, 0.0, 0.0, 1.0]
+      bracket_anchor_in_wrist_m: [0.010, 0.0, 0.0]
+  sensor:
+    enabled: true
+    width: 320
+    height: 200
+    sample_hz: 30.0
+    horizontal_fov_deg: 94.0
+    vertical_fov_deg: 68.0
+    clipping_range_m: [0.04, 1.0]
+    channels: [color, forward_depth]
+    load_textures: true
+    textures: true
+    default_light: true
+    ambient_lighting: true
+    shadows: true
+    backface_culling: true
+    light_direction: [-1.0, 1.0, -1.0]
+
+# Optional multi-rate HDF5 collection for the two FR3 arms, both Wuji2 hands,
+# and all three RGB-D cameras. Robot and wrist-camera streams run at 30 Hz; the
+# fixed camera keeps independent 10 Hz timestamps. Relative paths resolve from
+# the repository root. Existing episode numbers advance automatically.
+recording:
+  enabled: false
+  output_path: outputs/cherry_tomato_pick_middle_stem/episode_000001.h5
+  robot_sample_hz: 30.0
+  # Fold the auto-numbered episode index into this base seed. The actual seed
+  # and sampled parameters are stored in each HDF5 file for reproducibility.
+  seed: 42
+  vary_seed_by_episode: true
+  auto_increment: true
+  overwrite: false
+  randomization:
+    enabled: true
+    # The bunch lies on the work surface, so position jitter is initially XY.
+    position_xy_m: 0.015
+    position_z_m: 0.0
+    # Conservative roll/pitch avoid pushing the long bunch through the table.
+    cluster_rotation_xyz_deg: [2.0, 2.0, 12.0]
+    # One sampled directional light is shared by all three camera renderers.
+    light_azimuth_jitter_deg: 30.0
+    light_elevation_jitter_deg: 15.0
+
+task:
+  # Three independent contact-controlled left fingers; pulling waits for grip.
+  harvest_contact_control: true
+  harvest_contact_target_N: 5.0
+  harvest_retention_contact_target_N: 2.0
+  minimum_grip: 0.72
+  minimum_support_grip: 0.72
+  support_contact_target_N: 5.0
+  support_contact_gain_s_N: 0.015
+  support_free_closure_rate_s: 0.2
+  # Thumb plus two opposing fingers must share the bunch before lifting.
+  minimum_support_contact_fingers: 3
+  minimum_support_finger_contact_N: 0.5
+  # Finish curling the supporting fingers before the first upward motion.
+  minimum_support_wrap_closure: 1.10
+  support_maximum_closure: 1.15
+  minimum_support_bilateral_contact_N: 3.0
+  minimum_support_hold_s: 0.250
+  minimum_support_retention_contact_N: 0.2
+  support_loss_timeout_s: 0.080
+  minimum_cluster_lift_m: 0.040
+  maximum_support_distance_m: 0.030
+  maximum_grasp_distance_m: 0.032
+  minimum_support_contact_N: 0.005
+  minimum_bilateral_contact_N: 1.0
+  # Retention must preserve opposing contact after fracture; one fingertip
+  # barely touching the fruit no longer counts as a successful hold.
+  minimum_retention_bilateral_contact_N: 0.10
+  minimum_grasp_hold_s: 0.15
+  minimum_post_detach_hold_s: 0.50
+  minimum_harvest_command_motion_m: 0.005
+  minimum_harvest_command_rotation_rad: 0.08
+  minimum_harvest_distance_m: 0.015
+  maximum_hold_distance_m: 0.015
+  # The latest bunch is laid on the work surface rather than hanging. Only a
+  # genuine fall below the board should terminate an episode as a drop.
+  drop_height_m: 0.025
+  unsafe_contact_force_N: 35.0
+
+script:
+  post_detach_retreat_m: 0.020
+  post_detach_retreat_duration_s: 1.5
+  harvest_pull_along_stem_axis: true
+  support_close_on_early_contact: false
+  support_require_reached_pose: true
+  # A central wrap holds wrist attitude; do not chase the bunch's free swing.
+  support_follow_bunch_pitch: false
+  # Follow fruit drift through the reach/closure until the first 0.2 N contact,
+  # then lock the target so the wrist cannot chase contact-induced motion.
+  harvest_track_target_until_contact: true
+  # Contact-gated main-stem grasp, followed by a measured dynamic lift.
+  support_approach_end_s: 1.00
+  support_reach_end_s: 1.60
+  support_close_end_s: 2.10
+  support_lift_end_s: 4.60
+  # A middle grasp needs less elevation than the previous end-supported swing.
+  support_lift_offset_m: [0.0, 0.0, 0.120]
+  # The left hand then approaches the lifted target and harvests it.
+  harvest_approach_end_s: 5.30
+  harvest_reach_end_s: 5.90
+  harvest_close_end_s: 6.40
+  settle_end_s: 6.65
+  # Slow axial pull gives the fingers time to maintain contact under load.
+  pull_end_s: 9.15
+  carry_end_s: 9.65
+  pull_offset_m: [0.0, 0.0, 0.070]
+  twist_rad: 0.0
+  carry_offset_m: [-0.030, 0.0, 0.030]
+  retention_tighten_duration_s: 0.25
+
+rl:
+  decimation: 4
+  episode_length_s: 6.0
+  start_from_pregrasp: true
+  randomization:
+    position_xy_m: 0.015
+    break_force_fraction: 0.20
+    tomato_mass_fraction: 0.15
+
+render:
+  out_path: outputs/cherry_tomato_pick_middle_stem.rrd
+  fps: 50
+  every: 4
+  view_up: z
+  camera:
+    position: [0.88, -0.92, 0.62]
+    look_target: [0.40, 0.0, 0.18]

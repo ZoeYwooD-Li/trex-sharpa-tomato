@@ -1,0 +1,20 @@
+{
+  "accepted": false,
+  "camera_frames": {
+    "gemini_305_left": 840,
+    "gemini_305_right": 840,
+    "gemini_435le": 280
+  },
+  "episode": "episode_000001.h5",
+  "reasons": [
+    "incomplete_episode",
+    "not_detached_and_placed",
+    "right_support_not_ready_at_end"
+  ],
+  "robot_frames": 840,
+  "schema": "lycheesim.cherry_tomato_pick.quality/v1",
+  "scope": "initial_geometry_and_recorded_task_sensor_guards_not_full_robot_collision_certification",
+  "seed": 42,
+  "status": "rejected",
+  "target_box_id": 0
+}

@@ -1,0 +1,14 @@
+<mujoco>
+  <!-- Replicated tomato task drives; the shared carrier stays unchanged. -->
+  <default>
+    <default class="tomato_arm">
+      <position kp="600" kv="40" inheritrange="1"
+                forcelimited="true" forcerange="-87 87" />
+    </default>
+    <!-- Low-gain finger servos avoid excessive rigid-contact penetration energy. -->
+    <default class="tomato_hand">
+      <position kp="2" kv="0.1" inheritrange="1"
+                forcelimited="true" forcerange="-2 2" />
+    </default>
+  </default>
+</mujoco>

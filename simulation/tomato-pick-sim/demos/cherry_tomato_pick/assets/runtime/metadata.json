@@ -1,0 +1,340 @@
+{
+  "source_repository": "git@github.com:yxsdev/cherry_tomato_sim.git",
+  "source_revision": "43610761c4f667dc24ac6b5f7d66b71ebf72c1a1",
+  "source_layout": "working/split_obj",
+  "target_name": "tomato_10",
+  "support_name": "tomato_07",
+  "fruit_names": [
+    "tomato_00",
+    "tomato_01",
+    "tomato_02",
+    "tomato_03",
+    "tomato_04",
+    "tomato_05",
+    "tomato_06",
+    "tomato_07",
+    "tomato_08",
+    "tomato_09",
+    "tomato_10",
+    "tomato_11"
+  ],
+  "support_local_origin_m": [
+    0.046730006150525,
+    -0.18491995695145,
+    0.0006805198249500016
+  ],
+  "source_detachable_targets": [
+    "tomato_02",
+    "tomato_07",
+    "tomato_09",
+    "tomato_10"
+  ],
+  "detachable_targets": [
+    "tomato_00",
+    "tomato_01",
+    "tomato_02",
+    "tomato_03",
+    "tomato_04",
+    "tomato_05",
+    "tomato_06",
+    "tomato_07",
+    "tomato_08",
+    "tomato_09",
+    "tomato_10",
+    "tomato_11"
+  ],
+  "source_target_center": [
+    -2.8847435,
+    1.8560175,
+    10.275044
+  ],
+  "source_to_metres_scale": 0.00869485,
+  "orientation": "-90_deg_about_x_xyzw_[-0.70710678,0,0,0.70710678]",
+  "attachment_local_point_m": [
+    0.0011886077321249977,
+    0.000685328077000003,
+    -0.013799792069125003
+  ],
+  "attachment_local_points_m": {
+    "tomato_00": [
+      -4.6413109299996494e-05,
+      0.0008702501467999918,
+      -0.012926672621825001
+    ],
+    "tomato_01": [
+      4.3474250033259665e-09,
+      0.004952169207200013,
+      -0.0119747908758
+    ],
+    "tomato_02": [
+      2.9432067249998348e-05,
+      -0.00022770073179997907,
+      -0.01329361702895
+    ],
+    "tomato_03": [
+      -0.0006788025920749993,
+      0.003174341922550006,
+      -0.011794124935075
+    ],
+    "tomato_04": [
+      -0.0006728248827000006,
+      0.006329029136674991,
+      -0.009337512448049999
+    ],
+    "tomato_05": [
+      2.1737125002752045e-08,
+      -1.7389699999426078e-08,
+      -0.013209607388250003
+    ],
+    "tomato_06": [
+      0.0016532692109750002,
+      0.0035082589419499904,
+      -0.011775700547925
+    ],
+    "tomato_07": [
+      -0.00074616594245,
+      -0.00047907754015003023,
+      -0.011996880142225002
+    ],
+    "tomato_08": [
+      4.3474249998565195e-09,
+      -0.0018864433508499964,
+      -0.014022567168400002
+    ],
+    "tomato_09": [
+      -1.3042274996100112e-08,
+      -4.3474250033259665e-09,
+      -0.01449148912375
+    ],
+    "tomato_10": [
+      0.0011886077321249977,
+      0.000685328077000003,
+      -0.013799792069125003
+    ],
+    "tomato_11": [
+      -0.0007601168292749941,
+      -0.001765189320174998,
+      -0.014003790639824999
+    ]
+  },
+  "attachment_point_sources": {
+    "tomato_00": "closest_source_stem_vertex_pair",
+    "tomato_01": "closest_source_stem_vertex_pair",
+    "tomato_02": "source_explicit_anchor",
+    "tomato_03": "closest_source_stem_vertex_pair",
+    "tomato_04": "closest_source_stem_vertex_pair",
+    "tomato_05": "closest_source_stem_vertex_pair",
+    "tomato_06": "closest_source_stem_vertex_pair",
+    "tomato_07": "source_explicit_anchor",
+    "tomato_08": "closest_source_stem_vertex_pair",
+    "tomato_09": "source_explicit_anchor",
+    "tomato_10": "source_explicit_anchor",
+    "tomato_11": "closest_source_stem_vertex_pair"
+  },
+  "part_centers_relative_to_target_m": {
+    "stem": [
+      0.025860083752400002,
+      -0.08873462217155001,
+      -0.0151334907632
+    ],
+    "tomato_00": [
+      0.010528528653624997,
+      -0.10407525904115,
+      0.00158688837865
+    ],
+    "tomato_01": [
+      0.045543311285400005,
+      -0.0814892471408,
+      -0.0010500379076749996
+    ],
+    "tomato_02": [
+      0.010528537348475,
+      -0.17378607979855,
+      0.002170317161075001
+    ],
+    "tomato_03": [
+      0.04554330259055,
+      -0.15181128976865,
+      -0.00040161512149999943
+    ],
+    "tomato_04": [
+      0.010149589700924999,
+      -0.140698128095875,
+      -0.0017162894837749994
+    ],
+    "tomato_05": [
+      0.046729993108250004,
+      -0.1152091101095,
+      0.0016541560856750022
+    ],
+    "tomato_06": [
+      0.0101495853535,
+      -0.0703097046357,
+      -0.0019317174348000002
+    ],
+    "tomato_07": [
+      0.046730006150525,
+      -0.18491995695145,
+      0.0006805198249500016
+    ],
+    "tomato_08": [
+      0.010528767762,
+      -0.0348072409097,
+      0.0009362918799750005
+    ],
+    "tomato_09": [
+      0.0481704254335,
+      -0.010349675589124991,
+      0.0006700468781250012
+    ],
+    "tomato_10": [
+      0.0,
+      0.0,
+      8.673617379884035e-19
+    ],
+    "tomato_11": [
+      0.04629954586415,
+      -0.043609285367924994,
+      0.0011164187399999997
+    ]
+  },
+  "fruit_extents_m": {
+    "tomato_00": [
+      0.0315167618757,
+      0.031517022721199994,
+      0.027672690437050004
+    ],
+    "tomato_01": [
+      0.03426136953185001,
+      0.033800881581,
+      0.03218264826810001
+    ],
+    "tomato_02": [
+      0.0315167618757,
+      0.03151697055210001,
+      0.027642319325999996
+    ],
+    "tomato_03": [
+      0.03205446009455,
+      0.03162369114099997,
+      0.03024019269355
+    ],
+    "tomato_04": [
+      0.0303276715794,
+      0.029539822526050002,
+      0.029365116905000002
+    ],
+    "tomato_05": [
+      0.032235086908450006,
+      0.032235043434200014,
+      0.0282786258387
+    ],
+    "tomato_06": [
+      0.03208817872285,
+      0.031837027980599994,
+      0.029625136394250004
+    ],
+    "tomato_07": [
+      0.029919309254300003,
+      0.02991925708519999,
+      0.02631798063795
+    ],
+    "tomato_08": [
+      0.03426138692155,
+      0.03426132605760001,
+      0.030013248413699997
+    ],
+    "tomato_09": [
+      0.03426135214215001,
+      0.03426136953185001,
+      0.0298993806581
+    ],
+    "tomato_10": [
+      0.03426135214215,
+      0.034261360837,
+      0.029888155606750004
+    ],
+    "tomato_11": [
+      0.034261334752449996,
+      0.034261334752449996,
+      0.030042750039750002
+    ]
+  },
+  "fruit_vertices": {
+    "tomato_00": 1463,
+    "tomato_01": 1463,
+    "tomato_02": 1463,
+    "tomato_03": 1463,
+    "tomato_04": 1463,
+    "tomato_05": 1463,
+    "tomato_06": 1463,
+    "tomato_07": 1463,
+    "tomato_08": 1463,
+    "tomato_09": 1463,
+    "tomato_10": 1463,
+    "tomato_11": 1463
+  },
+  "fruit_triangles": {
+    "tomato_00": 2688,
+    "tomato_01": 2688,
+    "tomato_02": 2688,
+    "tomato_03": 2688,
+    "tomato_04": 2688,
+    "tomato_05": 2688,
+    "tomato_06": 2688,
+    "tomato_07": 2688,
+    "tomato_08": 2688,
+    "tomato_09": 2688,
+    "tomato_10": 2688,
+    "tomato_11": 2688
+  },
+  "target_extents_m": [
+    0.03426135214215,
+    0.034261360837,
+    0.029888155606750004
+  ],
+  "support_extents_m": [
+    0.029919309254300003,
+    0.02991925708519999,
+    0.02631798063795
+  ],
+  "target_vertices": 1463,
+  "support_vertices": 1463,
+  "target_triangles": 2688,
+  "support_triangles": 2688,
+  "texture_coordinate_transform": "OBJ_bottom_left_to_runtime_top_left_v=1-v",
+  "uv_seams_preserved": true,
+  "split_obj_sha256": {
+    "stem.obj": "da42850b7a2ca1676e8c8829d4c8a72495be910282977cfd63d693dc555c7779",
+    "tomato_00.obj": "7da2a854e1e0d5413ed0323afc3da959baef31a6b546eb4a1854eeae89693dee",
+    "tomato_01.obj": "97ce8c7379659345735a600f587fafe1415313fb4d6770d68c8e33b310e30aec",
+    "tomato_02.obj": "2d4afce1c6cd0e950ca223125c9273b7603f682d0ed9d6df04b8144a9d3920dd",
+    "tomato_03.obj": "99aafac8b3bd43f7c072b498aa0f6727cef61d87f604c4f72bf6153966b6027c",
+    "tomato_04.obj": "d167ea266f55e9033e58aa67f644054f0f399e4a9015aa080e34d2c29debaf7f",
+    "tomato_05.obj": "0259c0701cee143dd2c11f89b5d941690cb41b38426489a4c0a353a1026773b8",
+    "tomato_06.obj": "774612584e1506638ca832af93bb442825f10efac9708cd78f10bd4aa76621b9",
+    "tomato_07.obj": "43746bc1e6a25ec57d7b362913b97b8badc396bbe5cda6d78ef8411b4a40cfb0",
+    "tomato_08.obj": "3a2c682e4f715b7cc72a78cdde60cabbab3c7096f041f46c627271e2dcaddc36",
+    "tomato_09.obj": "18ca269816b6ad2a41fb0ce72dc78d4b2e7e65f537255075caa6872396927006",
+    "tomato_10.obj": "2fa9d61e5f263a110c74d36c121d2cb4dc8708e073e181a912134a1a3b848939",
+    "tomato_11.obj": "5a9bbf4a28640d0dbc1bdb64190de5905d92f78a5d33841574df2a3751b6163a"
+  },
+  "cluster_extents_m": [
+    0.08287083272125,
+    0.21986855003760003,
+    0.043568597817349994
+  ],
+  "cluster_vertices": 93543,
+  "cluster_triangles": 176544,
+  "source_basecolor": "tomato_Mat_baseColor.png",
+  "source_basecolor_sha256": "9cb3da64efbe107855626eaa40fb53662d04f2b067b32026ab5f4948922185c2",
+  "asset_status": "purchased asset supplied by the project owner",
+  "license_notice": "redistribution is governed by the purchase license",
+  "texture_size": [
+    2048,
+    2048
+  ],
+  "fruit_texture": "tomato_fruit_basecolor.png",
+  "fruit_texture_derivation": "source red texels unchanged; non-fruit atlas regions remapped to luminance-preserving red for renderer attribute isolation",
+  "source_directory": "upstream_split_obj"
+}
