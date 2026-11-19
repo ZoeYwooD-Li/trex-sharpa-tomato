@@ -1,0 +1,187 @@
+{
+  "task": "dual FR3 + Sharpa cherry tomato detach and place in first basket",
+  "simulator": "Isaac Sim / PhysX",
+  "paired_seeds": [
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179
+  ],
+  "episode_seconds": 30.0,
+  "initial_condition_randomization": "tomato x/y position +/- 12 mm; both arms/hands reset to the same first frame of the real LeRobot dataset; same seed paired across modes",
+  "success_definition": "harvest: finite tomato center remains inside the workcell and moves 5-70 cm from seeded start; basket: center inside first basket bounds and above the base",
+  "conditions": {
+    "no_touch": {
+      "harvest_success": {
+        "successes": 0,
+        "episodes": 10,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.2775401687666166
+        ]
+      },
+      "harvest_success_valid_simulations": {
+        "successes": 0,
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "basket_success": {
+        "successes": 0,
+        "episodes": 10,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.2775401687666166
+        ]
+      },
+      "basket_success_valid_simulations": {
+        "successes": 0,
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "pick_and_place_success": {
+        "successes": 0,
+        "episodes": 10,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.2775401687666166
+        ]
+      },
+      "pick_and_place_success_valid_simulations": {
+        "successes": 0,
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "simulation_validity": {
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "valid_seeds": [
+          170,
+          178
+        ]
+      },
+      "mean_peak_fingertip_force_n": 0.0
+    },
+    "with_touch": {
+      "harvest_success": {
+        "successes": 0,
+        "episodes": 10,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.2775401687666166
+        ]
+      },
+      "harvest_success_valid_simulations": {
+        "successes": 0,
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "basket_success": {
+        "successes": 0,
+        "episodes": 10,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.2775401687666166
+        ]
+      },
+      "basket_success_valid_simulations": {
+        "successes": 0,
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "pick_and_place_success": {
+        "successes": 0,
+        "episodes": 10,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.2775401687666166
+        ]
+      },
+      "pick_and_place_success_valid_simulations": {
+        "successes": 0,
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "rate": 0.0,
+        "wilson_95_ci": [
+          0.0,
+          0.6576280471103807
+        ]
+      },
+      "simulation_validity": {
+        "valid_episodes": 2,
+        "invalid_episodes": 8,
+        "valid_seeds": [
+          170,
+          178
+        ]
+      },
+      "mean_peak_fingertip_force_n": 0.0
+    }
+  },
+  "paired_outcomes": {
+    "harvest_success": {
+      "seeds": [
+        170,
+        178
+      ],
+      "with_touch_only_successes": 0,
+      "no_touch_only_successes": 0
+    },
+    "basket_success": {
+      "seeds": [
+        170,
+        178
+      ],
+      "with_touch_only_successes": 0,
+      "no_touch_only_successes": 0
+    },
+    "pick_and_place_success": {
+      "seeds": [
+        170,
+        178
+      ],
+      "with_touch_only_successes": 0,
+      "no_touch_only_successes": 0
+    }
+  },
+  "interpretation": "Success rates over all scheduled episodes are shown, but only episodes with the tomato remaining inside the workcell and finite are valid for task inference. Numerical divergence invalidates the affected episode; valid-only rates are reported separately.",
+  "metrics": "harvest, basket, and combined task success plus peak fingertip force",
+  "touch_sensor_calibrated_to_hardware": false,
+  "episodes_csv": "episodes.csv"
+}

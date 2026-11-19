@@ -12,8 +12,7 @@ import sys
 from pathlib import Path
 
 PROJECT = Path(__file__).resolve().parents[1]
-TOMATO_PROJECT = PROJECT.parent / "tomato-pick-sim-local"
-DEFAULT_DATASET = Path("/path/to/local/company-remote-2/real/harvest-tomato/data/data-lerobot/sharpa")
+TOMATO_PROJECT = PROJECT.parent / "tomato-pick-sim"
 
 
 def _wilson(successes: int, total: int, z: float = 1.96) -> list[float] | None:
@@ -30,7 +29,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--no-touch", type=Path, default=PROJECT / "outputs/sharpa_chunks/no_touch/policy.pt")
     parser.add_argument("--with-touch", type=Path, default=PROJECT / "outputs/sharpa_chunks/with_touch/policy.pt")
-    parser.add_argument("--dataset", type=Path, default=DEFAULT_DATASET)
+    parser.add_argument("--dataset", type=Path, required=True)
     parser.add_argument("--output", type=Path, default=PROJECT / "outputs/isaac_tomato/ablation")
     parser.add_argument("--episodes", type=int, default=10, help="Paired randomized initial conditions")
     parser.add_argument("--start-seed", type=int, default=170)

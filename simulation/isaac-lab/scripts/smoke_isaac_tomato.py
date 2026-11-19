@@ -36,6 +36,7 @@ PI05_SHARPA_HAND_ORDER = (
     "pinky_CMC", "pinky_MCP_FE", "pinky_MCP_AA", "pinky_PIP", "pinky_DIP",
 )
 sys.path.insert(0, str(PROJECT / "handson"))
+sys.path.insert(0, str(SIM_ROOT / "scripts"))
 from isaaclab.app import AppLauncher
 
 parser = argparse.ArgumentParser()
@@ -3236,7 +3237,7 @@ def main() -> int:
                                     tactile_f6=f6_history, tactile_deform=deformation_frame)
                 client_result = subprocess.run([
                     str(args.trex_python.expanduser()),
-                    str(PROJECT / "scripts/trex_isaac_observation_client.py"),
+                    str(SIM_ROOT / "scripts/trex_isaac_observation_client.py"),
                     "--input-dir", str(call_dir.resolve()),
                     "--host", args.trex_host, "--port", str(args.trex_port),
                     "--task", args.trex_task, "--mode", request_mode,
@@ -3740,7 +3741,7 @@ def main() -> int:
                             tactile_f6=f6_history, tactile_deform=tactile_maps)
         client_result = subprocess.run([
             str(args.trex_python.expanduser()),
-            str(PROJECT / "scripts/trex_isaac_observation_client.py"),
+            str(SIM_ROOT / "scripts/trex_isaac_observation_client.py"),
             "--input-dir", str(args.output.resolve()),
             "--host", args.trex_host, "--port", str(args.trex_port),
             "--task", args.trex_task,

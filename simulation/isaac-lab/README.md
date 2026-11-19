@@ -11,7 +11,9 @@
 ```bash
 export HANDSON_ROOT=/path/to/HandsOn
 export ISAAC_PYTHON=/path/to/isaac-env/bin/python
-install -m 644 handson-overlay/*.py "$HANDSON_ROOT/handson/handson/sim/isaaclab/"
+install -m 644 handson-overlay/{sharpa_tactile,default_appearance}.py \
+  "$HANDSON_ROOT/handson/handson/sim/isaaclab/"
+install -m 644 handson-overlay/sharpa_lerobot_bridge.py "$HANDSON_ROOT/handson/handson/data/"
 
 RUN_DIR="$PWD/outputs/preview_$(date +%Y%m%d_%H%M%S)"
 "$ISAAC_PYTHON" scripts/build_dual_fr3_sharpa_mjcf.py \
@@ -29,6 +31,26 @@ RUN_DIR="$PWD/outputs/preview_$(date +%Y%m%d_%H%M%S)"
 - `scripts/smoke_isaac_tomato.py --help` 列出 T-Rex、pi05、相机、接触和形变选项。先记录只观察的短跑，再接入已验证的兼容服务，分别检查三路 RGB、关节、触觉有效区、动作坐标系、单位和刷新率。使用新的 `--output` 目录保存每次实验。
 - `scripts/trex_isaac_observation_client.py` 与 `scripts/pi05_isaac_policy_client.py` 是两条仿真策略接口。模型服务、检查点和归一化统计单独准备。Newton OpenPI 的绝对 TCP 合同需按主交接文档核对。
 - 仿真触觉和接触力只按对应模型的输出解释。PhysX 接触范数、离线番茄 FEM 反力、TacMap 代理深度以及真机 Wrench 分别记录。报表注明各自的来源、单位和采样方式。
+
+### 接入模型服务
+
+用普通仿真启动命令生成的 MJCF，准备新的 `--output` 目录。下面是两个独立试验，运行时只选择一组。`TREX_MODEL_PYTHON` 和 `TREX_CHECKPOINT` 分别指向 T-Rex 环境和检查点。历史 T-Rex 6250 服务采用 62 维动作、16 步动作块、384×288 输入，开启触觉向量与形变图。Isaac pi05 客户端使用匹配的 Sharpa 58 维策略服务。历史两类模型的权重和归一化文件由团队渠道提供。
+
+```bash
+"$ISAAC_PYTHON" scripts/smoke_isaac_tomato.py \
+  --headless --enable_cameras --mjcf "$RUN_DIR/robot/dual_fr3_sharpa.xml" \
+  --output "$RUN_DIR/trex" --episode-seconds 2 \
+  --trex-host 127.0.0.1 --trex-port 5687 --trex-closed-loop \
+  --trex-python "$TREX_MODEL_PYTHON" --trex-checkpoint "$TREX_CHECKPOINT" \
+  --trex-task "Pick a tomato from the bunch and place it in the target box."
+
+"$ISAAC_PYTHON" scripts/smoke_isaac_tomato.py \
+  --headless --enable_cameras --mjcf "$RUN_DIR/robot/dual_fr3_sharpa.xml" \
+  --output "$RUN_DIR/pi05" --episode-seconds 2 \
+  --pi05-closed-loop --pi05-url ws://127.0.0.1:8000
+```
+
+这些命令用于检查模型接口。复现对照实验要登记真实或名义初始姿态、相机方案、动作单位、触觉设置、种子和检查点。历史[有无触觉配对汇总](historical-evaluation/ablation_10_corrected/summary.json)的 10 个配对种子中只有 2 对数值有效。可另查 [T-Rex 策略比较](historical-evaluation/trex_sweep_summary/summary.json)。有无触觉配对使用 `scripts/evaluate_sharpa_isaac_success.py`，还需要两种训练权重、各自的 `summary.json` 及已授权的数据集。此次未重跑模型服务或配对实验。
 
 ## Episode 54 与单果诊断
 
