@@ -6,7 +6,7 @@
 
 使用 Linux、支持 Isaac Sim 5.1 的 NVIDIA GPU、与 Isaac Sim 匹配的 Isaac Lab 和 HandsOn。历史本机环境为 Isaac Lab 2.3.2，RTX 5090。先按 NVIDIA 和 HandsOn 上游说明完成安装并接受适用的许可。获取 HandsOn 到一个单独的目录，基线为提交 `be2b59aad016869e8cede1f485d64e3c2d191685`。[HandsOn 上游](https://github.com/TsinghuaC3I/HandsOn/tree/be2b59aad016869e8cede1f485d64e3c2d191685)
 
-从本目录执行下面的命令。`HANDSON_ROOT` 指向专用于仿真的 HandsOn 工作副本。`ISAAC_PYTHON` 指向已安装 Isaac Sim、Isaac Lab、NumPy、SciPy、Pillow 和 PyYAML 的 Python。两份 overlay 文件是原仿真实验的本地扩展。
+从本目录执行下面的命令。`HANDSON_ROOT` 指向专用于仿真的 HandsOn 工作副本。`ISAAC_PYTHON` 指向已安装 Isaac Sim、Isaac Lab、NumPy、SciPy、Pillow 和 PyYAML 的 Python。下列 overlay 文件是原仿真实验的本地扩展。
 
 ```bash
 export HANDSON_ROOT=/path/to/HandsOn
