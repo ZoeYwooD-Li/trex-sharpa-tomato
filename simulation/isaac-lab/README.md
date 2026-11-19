@@ -55,6 +55,6 @@ export EPISODE54_REPLAY_H5=/path/to/private-working-directory/episode54_joint_re
 "$ISAAC_PYTHON" episode54-real-input/run_episode54_new_material_replay.py
 ```
 
-回放还需要 OpenCV 和 FFmpeg。脚本以时间戳另建 `reruns/` 或 `material_runs/`。其中可能包含真机画面，按混合来源归档。两个历史实验分别进行了 3,804 步回放。刚体版本验证了轨迹回放。原生变形体版本产生 951 帧果实节点输出，出现明显过大的 85.5 mm 最大节点位移和 302.27 N 指尖峰值，适合定位接触与材料问题。新增参数化入口本次未用真机原始输入重跑。
+回放还需要 OpenCV 和 FFmpeg。脚本以时间戳另建 `reruns/` 或 `material_runs/`。其中可能包含真机画面，按混合来源归档。重新导出混合分析时，调用 `python episode54-real-input/build_deliverables.py PATH_TO_COMPLETED_RERUN`，输出到该次运行的 `mixed-analysis/`。两个历史实验分别进行了 3,804 步回放。刚体版本验证了轨迹回放。原生变形体版本产生 951 帧果实节点输出，出现明显过大的 85.5 mm 最大节点位移和 302.27 N 指尖峰值，适合定位接触与材料问题。新增参数化入口本次未用真机原始输入重跑。
 
-[单果诊断](single-fruit-real-pose/progress_report.md)从 Episode 54 首帧姿态出发，使用独立的番茄位置与闭合几何。在 `single-fruit-real-pose/` 中提供了固定果实的 FEM / 凝胶代理视频和逐帧结果。重新生成可视化或代理图前将实验目录复制到可写工作区，脚本会更新同名输出。TacMap 代理脚本另需用 `SHARPA_TACMAP_ASSETS` 指明官方 `tactilesensor_map` 资产路径。
+[单果诊断](single-fruit-real-pose/progress_report.md)从 Episode 54 首帧姿态出发，使用独立的番茄位置与闭合几何。在 `single-fruit-real-pose/` 中提供了固定果实的 FEM / 凝胶代理视频和逐帧结果。重新生成可视化或代理图前将实验目录复制到可写工作区，脚本会更新同名输出。重跑闭合探测时用 `--config` 传入授权工作区的 `selected_initial_state.json`，该文件含实测首帧姿态。TacMap 代理脚本另需用 `SHARPA_TACMAP_ASSETS` 指明官方 `tactilesensor_map` 资产路径。

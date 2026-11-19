@@ -11,3 +11,9 @@ __pycache__/
 *.rrd
 .env
 .env.*
+/isaac-lab/**/mixed-analysis/
+/isaac-lab/**/selected_initial_state.json
+/isaac-lab/**/episode54_real_vs_isaac.mp4
+/isaac-lab/**/real_joint_state_episode54.csv
+/isaac-lab/**/real_tactile_wrench_summary.csv
+/isaac-lab/**/wrist_camera_calibration_palm_left.json

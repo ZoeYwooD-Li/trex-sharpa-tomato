@@ -17,7 +17,8 @@ from isaaclab.app import AppLauncher
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(Path(os.environ["HANDSON_ROOT"]) / "handson"))
 parser = argparse.ArgumentParser(description=__doc__)
-parser.add_argument("--config", type=Path, default=HERE / "selected_initial_state.json")
+parser.add_argument("--config", type=Path, required=True,
+                    help="Private selected_initial_state.json with measured joint positions")
 AppLauncher.add_app_launcher_args(parser)
 args = parser.parse_args()
 args.headless = True

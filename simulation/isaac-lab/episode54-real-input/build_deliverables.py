@@ -9,10 +9,12 @@ import numpy as np
 import pyarrow.parquet as pq
 from PIL import Image
 
-OUT = Path(__file__).resolve().parent
 DATASET = Path(os.environ["EPISODE54_DATASET"]).expanduser().resolve()
 SOURCE_PARQUET = DATASET / 'data/chunk-000/episode_000054.parquet'
-SIM_RUN = Path(sys.argv[1])
+if len(sys.argv) != 2:
+    raise SystemExit('Usage: build_deliverables.py PATH_TO_COMPLETED_RERUN')
+SIM_RUN = Path(sys.argv[1]).resolve()
+OUT = SIM_RUN / 'mixed-analysis'
 FRAMES = SIM_RUN / 'captured_dashboard_frames'
 FPS = 15
 W, H = 640, 400
@@ -25,8 +27,7 @@ real_paths = [DATASET / f'videos/chunk-000/observation.images.cam{i}/episode_000
 frame_paths = sorted(FRAMES.glob('sim_*.png'))
 if len(frame_paths) != 476:
     raise RuntimeError(f'Expected 476 Isaac dashboard frames, found {len(frame_paths)}')
-if VIDEO.exists():
-    VIDEO.unlink()
+OUT.mkdir(exist_ok=False)
 caps = [cv2.VideoCapture(str(p)) for p in real_paths]
 if not all(c.isOpened() for c in caps):
     raise RuntimeError('Could not open all Episode 54 camera videos')
@@ -80,7 +81,7 @@ state=np.asarray(tab['observation.state'].combine_chunks().values.to_numpy(zero_
 time_s=np.asarray(tab['timestamp'].to_numpy(),dtype=np.float64)
 source_ns=np.asarray(tab['source_timestamp_ns'].to_numpy(),dtype=np.int64)
 frame_index=np.asarray(tab['frame_index'].to_numpy(),dtype=np.int64)
-with h5py.File(OUT/'episode54_joint_replay.h5','r') as f:
+with h5py.File(os.environ["EPISODE54_REPLAY_H5"],'r') as f:
     replay_pos=np.asarray(f['robot/joint_pos'])
     replay_t=np.asarray(f['robot/timestamps'])
     meta=json.loads(f['metadata'].attrs['extra'])
@@ -100,7 +101,7 @@ with (OUT/'real_joint_state_episode54.csv').open('w',newline='') as f:
     for t,row in zip(time_s,state_pos): w.writerow([f'{t:.9f}']+[f'{v:.9f}' for v in row])
 
 # Preserve the full 120 Hz simulated contact trace as a human-readable CSV.
-sim=np.load(OUT/'sim_contact_force_trace.npz')['time_peak_finger_force_and_target_position']
+sim=np.load(SIM_RUN/'replay_force_trace.npz')['time_peak_finger_force_and_target_position']
 sensor_names=[f'{side}_{finger}_force_n' for side in ('left','right') for finger in ('thumb','index','middle','ring','pinky')]
 headers=['time_s']+sensor_names+['tomato_x_m','tomato_y_m','tomato_z_m']
 with (OUT/'sim_contact_force_trace.csv').open('w',newline='') as f:
@@ -158,7 +159,7 @@ for side in ('left','right'):
     col=f'observation.tactile.{side}.{finger}.deformation'
     one=pq.read_table(SOURCE_PARQUET,columns=[col]).slice(len(state)-1,1).column(0)[0].as_py()
     real_last[f'{side}_{finger}']=np.asarray(one,dtype=np.uint8)
-sim_tac=np.load(OUT/'sim_tactile_snapshot.npz')['deformation']
+sim_tac=np.load(SIM_RUN/'isaac_tomato_tactile.npz')['deformation']
 fig,axes=plt.subplots(4,5,figsize=(15,12))
 for j,side in enumerate(('left','right')):
   for i,finger in enumerate(fingers):
